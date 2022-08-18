@@ -7,13 +7,13 @@
 {% endblock %}
 
 {% block content %}
-<div style="display:inline-block; padding:20px;margin:20px; box-shadow: 0 0 5px; justify-content:center">
-    <ul>
-        <li><h3>{{item.title}}</h3></li>
-        <li><img src="{{item.image.url }}" width="220px" height="150px"></li>
-        <li><small>description</small> {{item.description}}</li>
-        <li><small>price</small> ${{item.price}}</li>
-        <li><small>category</small> {{item.category}}</li>
-    </ul>
+<div style="display:flex; padding:20px;margin:20px; box-shadow: 1px 1px 20px; justify-content:center;">
+    <div style="margin:20px"><img src="{{item.image.url }}" width="320px" height="250px"></div>
+    <div style="display:inline-block; margin:50px; ">
+        <h1>{{item.title}}</h1>
+        <h3><small>price</small> ${{item.price}}</h3>
+        <h4><small>description</small> {{item.description}}</h4>
+        <h4><small>category</small> {{item.category}}</h4>
+    </div>
 </div>
 {% endblock %}
