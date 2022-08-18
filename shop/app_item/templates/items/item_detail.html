@@ -1,18 +1,19 @@
 {% extends 'index.html' %}
 {% load static %}
-{% block title %}ITEMS{% endblock %}
+{% load cache %}
+
+{% block title %}
+
+{% endblock %}
 
 {% block content %}
-{% for item in items %}
 <div style="display:inline-block; padding:20px;margin:20px; box-shadow: 0 0 5px">
-    <a href="{% url 'app_item:item_detail' pk=item.pk%}"><ul>
+    <ul>
         <li><h3>{{item.title}}</h3></li>
-        <li><img src="{{item.image.url }} " width="220px" height="150px"></li>
+        <li><img src="{{item.image.url }}" width="220px" height="150px"></li>
         <li><small>description</small> {{item.description}}</li>
         <li><small>price</small> ${{item.price}}</li>
         <li><small>category</small> {{item.category}}</li>
-
-    </ul>  </a>
+    </ul>
 </div>
-{% endfor %}
 {% endblock %}

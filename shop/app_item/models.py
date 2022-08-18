@@ -27,7 +27,7 @@ class Item(models.Model):
 class Category(models.Model):
     title = models.CharField(max_length=100, verbose_name='название')
     description = models.TextField(null=True, blank=True, verbose_name='описание')
-    image = models.ImageField(upload_to='category', null=True, verbose_bane='иконка')
+    image = models.ImageField(upload_to='category', null=True, verbose_name='иконка')
 
     class Meta:
         ordering = ['title']
