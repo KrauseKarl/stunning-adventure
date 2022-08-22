@@ -41,7 +41,7 @@ INSTALLED_APPS = [
 
     # my app
     'app_item.apps.AppItemConfig',
-    # 'app_user.apps.AppUserConfig',
+    'app_user.apps.AppUserConfig',
     # 'app_blog.apps.AppBlogConfig',
     # 'app_order.apps.AppOrderConfig',
 ]
@@ -70,6 +70,8 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.static',
+                'app_item.context_processors.categories',
             ],
         },
     },
@@ -110,7 +112,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'UTC    '
 
 USE_I18N = True
 
@@ -120,7 +122,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 STATIC_URL = '/assets/'
-STATICFILES_DIRS = (os.path.join(BASE_DIR, 'assets'),)
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'assets'), ]
 # STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 
 MEDIA_URL = '/media/'
