@@ -20,4 +20,15 @@ class ItemDetail(DetailView):
         obj = super().get_object()
         obj.reviews += 1
         obj.save()
+        print(obj)
         return obj
+
+    def get(self, request, *args, **kwargs):
+
+        """Добавляет товар к списку просмотренных товаров."""
+        self.object = self.get_object()
+        user = request.user.profile
+        if self.object not in user.review_items.all():
+            user.review_items.add(self.object)
+        context = self.get_context_data(object=self.object)
+        return self.render_to_response(context)

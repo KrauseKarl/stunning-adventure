@@ -4,7 +4,7 @@ from django.utils.text import slugify
 
 class Item(models.Model):
     title = models.CharField(max_length=100, db_index=True, verbose_name='название')
-    slug = models.SlugField(max_length=100, db_index=True)
+    slug = models.SlugField(max_length=100, db_index=True, allow_unicode=True)
     description = models.TextField(null=True, blank=True, verbose_name='описание')
     stock = models.PositiveIntegerField(verbose_name='количество')
     price = models.DecimalField(max_digits=10, decimal_places=0, verbose_name='цена')
@@ -34,7 +34,7 @@ class Item(models.Model):
 
 class Category(models.Model):
     title = models.CharField(max_length=100, verbose_name='название')
-    slug = models.SlugField(max_length=100, db_index=True)
+    slug = models.SlugField(max_length=100, db_index=True, allow_unicode=True)
     description = models.TextField(null=True, blank=True, verbose_name='описание')
     image = models.ImageField(upload_to='category', null=True, verbose_name='иконка')
     parent_category = models.ForeignKey('self', related_name='sub_categories',
@@ -51,3 +51,7 @@ class Category(models.Model):
         if not self.slug:
             self.slug = slugify(self.title)
         super(Category, self).save(*args, **kwargs)
+
+
+class Tag(models.Model):
+    pass
