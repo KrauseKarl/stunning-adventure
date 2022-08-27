@@ -23,11 +23,21 @@ class CreateProfile(CreateView):
 
 
 class DetailAccount(DetailView):
-    pass
+    model = User
+    template_name = 'users/account.html'
+    context_object_name = 'user'
 
 
 class DetailProfile(DetailView):
-    pass
+    model = User
+    template_name = 'users/profile.html'
+    context_object_name = 'user'
+
+
+class DetailHistoryView(DetailView):
+    model = User
+    template_name = 'users/history_view.html'
+    context_object_name = 'user'
 
 
 class UpdateProfile(UpdateView):

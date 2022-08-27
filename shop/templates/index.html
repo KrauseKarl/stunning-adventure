@@ -54,7 +54,7 @@
                     <div class="row ControlPanel-rowSplit">
                         <div class="row-block">
                             {% if request.user.is_authenticated %}
-                            <a class="ControlPanel-title" href="#">{{ request.user.profile }}</a> /
+                            <a class="ControlPanel-title" href="{% url 'app_user:account' request.user.pk %}">{{ request.user.profile }}</a> /
                             <a class="ControlPanel-title" href="#">Logout </a>
                             {% else %}
                             <a class="ControlPanel-title" href="#">Login</a>/

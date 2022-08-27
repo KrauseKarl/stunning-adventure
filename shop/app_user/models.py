@@ -10,7 +10,7 @@ class Profile(models.Model):
     avatar = models.ImageField(upload_to='avatar/')
     telephone = models.CharField(max_length=10, validators=[RegexValidator, ])
     date_joined = models.DateTimeField(auto_now_add=True, null=True)  # readonly_fields = ['date_joined',   ]
-    review_items = models.ManyToManyField(Item, related_name='items')
+    review_items = models.ManyToManyField(Item, related_name='items', null=True)
 
     class Meta:
         ordering = ['user']
@@ -27,6 +27,3 @@ class Profile(models.Model):
         review_items.save()
         return review_items
 
-
-class Comment(models.Model):
-    pass
