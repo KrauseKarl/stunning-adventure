@@ -24,6 +24,7 @@
                         </strong>
                     </header>
                     <div class="Section-columnContent">
+                        <!--    FORM    -->
                         <form class="form" action="#" method="post">
                             <div class="form-group">
                                 <div class="range Section-columnRange">
@@ -63,6 +64,7 @@
                             </div>
                         </form>
                     </div>
+                    <!--    FORM    -->
                 </div>
                 <div class="Section-columnSection">
                     <header class="Section-header">
@@ -73,12 +75,11 @@
                     <!--     TAGS        -->
                     <div class="Section-columnContent">
                         <div class="buttons">
-                            <a class="btn btn_default btn_sm" href="#">Video</a>
-                            <a class="btn btn_default btn_sm" href="#">Development</a>
-                            <a class="btn btn_default btn_sm" href="#">Gaming</a>
-                            <a class="btn btn_default btn_sm" href="#">Asus</a>
-                            <a class="btn btn_default btn_sm" href="#">Development</a>
-                            <a class="btn btn_default btn_sm" href="#">Video</a>
+
+                            {% for tag in tags %}
+                            <a class="btn btn_default btn_sm"
+                               href="{% url 'app_item:item_tag' tag=tag.slug %}">{{tag.title}}</a>
+                            {% endfor %}
                         </div>
                     </div>
                     <!--     TAGS        -->
@@ -90,8 +91,12 @@
                 <div class="Sort">
                     <div class="Sort-title">Сортировать по:
                     </div>
-                    <div class="Sort-variants"><a class="Sort-sortBy Sort-sortBy_dec" href="#">Популярности</a>
-                        <a class="Sort-sortBy" href="#">Цене</a><a class="Sort-sortBy" href="#">Отзывам</a>
+                    <div class="Sort-variants">
+                        <a class="Sort-sortBy  Sort-sortBy_dec"
+                           href="{% url 'app_item:item_sort' order_by='-reviews' %}">Популярности</a>
+
+                        <a class="Sort-sortBy Sort-sortBy_dec" href="{% url 'app_item:item_sort' order_by='-price' %}">Цене</a>
+                        <a class="Sort-sortBy" href="#">Отзывам</a>
                         <a class="Sort-sortBy Sort-sortBy_inc" href="#">Новизне</a>
                     </div>
                 </div>
@@ -105,18 +110,21 @@
                                 {% elif forloop.counter < 7 %}Card hide_md
                                 {% else %}Card hide_md hide_1450
                                 {% endif %}">
-                        <a class="Card-picture" href="{%url 'app_item:item_detail' item.pk %}">
+                        <a class="Card-picture" href="{% url 'app_item:item_detail' item.pk %}">
                             <img src="{{item.image.url }}" alt="card.jpg"/>
                         </a>
                         <div class="Card-content">
                             <strong class="Card-title">
-                                <a href="product.html">{{item.title}}|{{forloop.counter}}</a>
+                                <a href="product.html">{{item.title}}|{{item.reviews}}</a>
                             </strong>
                             <div class="Card-description">
                                 <div class="Card-cost">
                                     <span class="Card-price">${{item.price}}</span>
                                 </div>
-                                <div class="Card-category">Games / xbox
+                                <div class="Card-category">{% if item.category.parent_category %}
+                                    {{item.category.parent_category}} / {{item.category}}
+                                    {% else %}{{item.category}}
+                                    {% endif %}
                                 </div>
                                 <div class="Card-hover">
                                     <a class="Card-btn" href="#">
@@ -132,7 +140,7 @@
 
                 <!--       PAGINATION         -->
                 <div class="Pagination">
-                    <div class="Pagination-ins">
+                    <div class="Pagination-ins" id="#pag">
                         <a class="Pagination-element Pagination-element_prev" href="#">
                             <img src="/assets/img/icons/prevPagination.svg" alt="prevPagination.svg"/></a>
                         <a class="Pagination-element Pagination-element_current" href="#">

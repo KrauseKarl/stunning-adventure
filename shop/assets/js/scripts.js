@@ -48,14 +48,14 @@ var menu = function(){
     var $body = $('body');
     function refresh(){
         if (window.innerWidth<991) {
-            // $('.menuModal').each(function(){
-            //     var $this = $(this);
-            //     setTimeout(function(){
-            //         if ($this.attr('height') > 0) {
-            //             $this.css('height', 0);
-            //         }
-            //     }, 100);
-            // });
+             $('.menuModal').each(function(){
+                 var $this = $(this);
+                 setTimeout(function(){
+                     if ($this.attr('height') > 0) {
+                         $this.css('height', 0);
+                     }
+                 }, 100);
+             });
             $('.menuModal').css('height', 0);
             $menuMain.css('position', 'absolute');
             menuHeight = $('.menu_main').outerHeight();

@@ -54,11 +54,11 @@
                     <div class="row ControlPanel-rowSplit">
                         <div class="row-block">
                             {% if request.user.is_authenticated %}
-                            <a class="ControlPanel-title" href="{% url 'app_user:account' request.user.pk %}">{{ request.user.profile }}</a> /
-                            <a class="ControlPanel-title" href="#">Logout </a>
+                            <a class="ControlPanel-title" href="{% url 'app_user:account' request.user.pk %}">{{ request.user.username }}</a> /
+                            <a class="ControlPanel-title" href="{% url 'app_user:logout' %}">Logout </a>
                             {% else %}
-                            <a class="ControlPanel-title" href="#">Login</a>/
-                            <a class="ControlPanel-title" href="#">Register</a>
+                            <a class="ControlPanel-title" href="{% url 'app_user:login' %}">Login</a>/
+                            <a class="ControlPanel-title" href="{% url 'app_user:register' %}">Register</a>
                             {% endif %}
                         </div>
                     </div>
@@ -132,17 +132,18 @@
                         {% for cat in categories %}
                          {% if not cat.parent_category %}
                             <div class="CategoriesButton-link">
-                                <a href="#">
+                                <a href="{% url 'app_item:item_category' category=cat.slug %}">
                                     <div class="CategoriesButton-icon">
                                         <img src="{{cat.image.url}}" width="15px"/>
                                     </div>
-                                    <span class="CategoriesButton-text">{{cat.title}}</span>
+                                    <span class="CategoriesButton-text">{{cat.slug}}</span>
 
                                     {% if cat.sub_categories.all.count > 0 %}
                                         <a class="CategoriesButton-arrow" href="#"></a>
                                         <div class="CategoriesButton-submenu">
                                             {% for c in cat.sub_categories.all %}
-                                                <a class="CategoriesButton-link" href="#">
+                                                <a class="CategoriesButton-link"
+                                                   href="{% url 'app_item:item_category' category=c.slug %}">
                                                 <div class="CategoriesButton-icon">
                                                     <img src="{{ c.image.url }}" width="15px"/>
                                                 </div>
