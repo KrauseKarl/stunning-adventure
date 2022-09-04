@@ -1,7 +1,8 @@
 from django.urls import path
-from app_item.views import ItemList, ItemDetail
+from app_item.views import ItemList, ItemDetail, MainPage
 
 urlpatterns = [
+    path('', MainPage.as_view(), name='main_page'),
     path('list/', ItemList.as_view(), name='item_list'),
     path('category/<slug:category>/', ItemList.as_view(), name='item_category'),
     path('tag/<slug:tag>/', ItemList.as_view(), name='item_tag'),

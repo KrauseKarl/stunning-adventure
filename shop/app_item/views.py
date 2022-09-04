@@ -1,12 +1,30 @@
 from django.contrib.sessions.models import Session
-from django.db.models import Q
+from django.db.models import Q, Min, Max, Count
 from django.shortcuts import render, redirect, get_object_or_404
 from django.utils.datetime_safe import datetime
-from django.views.generic import ListView, DetailView, CreateView
+from django.views.generic import ListView, DetailView, CreateView, TemplateView
 from app_item.forms import CommentForm
-from app_item.models import Item, Category, Comment, Tag
+from app_item.models import Item, Category, Comment, Tag, ItemView
 from django.contrib.auth.models import User
 from django.core.serializers import serialize
+
+
+class MainPage(TemplateView):
+    model = Item
+    template_name = 'main-page.html'
+
+    def get_context_data(self, **kwargs):
+        kwargs['favorites'] = Category.objects.filter(sub_categories=None)
+
+        # kwargs['min_price'] = kwargs['favorites'].annotate(maximum=Min('items__price'))
+        print(kwargs['favorites'])
+
+        kwargs['popular'] = Item.objects.order_by('-reviews')
+        return kwargs
+
+    def get(self, request, *args, **kwargs):
+        context = self.get_context_data(**kwargs)
+        return self.render_to_response(context)
 
 
 class TagMixin(ListView):
