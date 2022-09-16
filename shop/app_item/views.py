@@ -3,10 +3,11 @@ from django.db.models import Q, Min, Max, Count
 from django.shortcuts import render, redirect, get_object_or_404
 from django.utils.datetime_safe import datetime
 from django.views.generic import ListView, DetailView, CreateView, TemplateView
-from app_item.forms import CommentForm
-from app_item.models import Item, Category, Comment, Tag, ItemView
 from django.contrib.auth.models import User
 from django.core.serializers import serialize
+
+from app_item.forms import CommentForm
+from app_item.models import Item, Category, Comment, Tag, ItemView
 
 
 class MainPage(TemplateView):
@@ -51,7 +52,7 @@ class FilterMixin(TagMixin, ListView):
 
 class ItemList(FilterMixin, TagMixin, ListView):
     model = Item
-    template_name = 'items/item_list.html'
+    template_name = 'app_item/item_list.html'
     context_object_name = 'items'
     queryset = Item.objects.filter(is_available=True).order_by('-reviews')
     extra_context = {'tags': Tag.objects.all()}
@@ -95,13 +96,13 @@ class ItemList(FilterMixin, TagMixin, ListView):
 
         tags = Tag.objects.all()
         # queryset = self.get_my_queryset(self.get_tag_queryset(**kwargs), **kwargs)
-        return render(request, 'items/item_list.html', context={'items': queryset, 'tags': tags})
+        return render(request, 'app_item/item_list.html', context={'items': queryset, 'tags': tags})
 
 
 class ItemDetail(DetailView, CreateView):
     model = Item
     context_object_name = 'item'
-    template_name = 'items/item_detail.html'
+    template_name = 'app_item/item_detail.html'
     form_class = CommentForm
     success_url = '/'
 
@@ -114,45 +115,46 @@ class ItemDetail(DetailView, CreateView):
         return obj
 
     def get(self, request, *args, **kwargs):
-
         """Добавляет товар к списку просмотренных товаров."""
-        item = self.get_object()
-        user = request.user
-        if self.request.user.is_anonymous:
-            if not User.objects.get(username='Anon'):
-                user = User.objects.create_user('Anon', 'anon@mail.com', 'Anon@123')
-                from django.forms.models import model_to_dict
-                data = model_to_dict(user, fields=('username',))
-                import json
-                serialized = json.dumps(data)
-                print(serialized)
-                request.session['user'] = serialized
-            else:
-                user = User.objects.get(username='Anon')
-                from django.forms.models import model_to_dict
-                data = model_to_dict(user, fields=('username',))
-                data['username'] = 'Oleg'
-                import json
-                serialized = json.dumps(data)
-                print(serialized)
-                request.session['user'] = serialized
-        else:
-            try:
-                del request.session['user']
-            except KeyError:
-                pass
-
-            # количество просмотров товара
-        item.record_view(self.request, item.id)
-
-        # создание записи с БД о просмотренном товаре пользователем
-        if user.is_authenticated:
-            if item not in user.profile.review_items.all():
-                user.profile.review_items.add(item)
-        self.object = self.get_object()
-
+        # if self.request.user.is_anonymous:
+        #     if not User.objects.get(username='Anon'):
+        #         user = User.objects.create_user('Anon', 'anon@mail.com', 'Anon@123')
+        #         from django.forms.models import model_to_dict
+        #         data = model_to_dict(user, fields=('username',))
+        #         import json
+        #         serialized = json.dumps(data)
+        #         print(serialized)
+        #         request.session['user'] = serialized
+        #     else:
+        #         user = User.objects.get(username='Anon')
+        #         from django.forms.models import model_to_dict
+        #         data = model_to_dict(user, fields=('username',))
+        #         data['username'] = 'Oleg'
+        #         import json
+        #         serialized = json.dumps(data)
+        #         print(serialized)
+        #         request.session['user'] = serialized
+        # else:
+        #     try:
+        #         del request.session['user']
+        #     except KeyError:
+        #         pass
+        #
+        #     # количество просмотров товара
+        # item.record_view(self.request, item.id)
+        #
+        # # создание записи с БД о просмотренном товаре пользователем
         # if user.is_authenticated:
-        form = CommentForm()
+        #     if item not in user.profile.review_items.all():
+        #         user.profile.review_items.add(item)
+        self.object = self.get_object()
+        item = self.object
+        user = request.user
+
+        if user.is_authenticated:
+            session = request.session.session_key
+
+        form = self.get_form()
 
         tags = Tag.objects.filter(item_tags=item.id)
         context = {'form': form, 'tags': tags, 'item': item}

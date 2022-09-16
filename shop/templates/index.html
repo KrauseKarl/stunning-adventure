@@ -101,9 +101,9 @@
 
             <!--    CART  -->
             <div class="row-block">
-                <div class="CartBlock"><a class="CartBlock-block" href="#">
+                <div class="CartBlock"><a class="CartBlock-block" href="{% url 'app_cart:cart' %}">
                     <img class="CartBlock-img" src="/assets/img/icons/cart.svg" alt="cart.svg"/><span
-                        class="CartBlock-amount">0</span></a>
+                        class="CartBlock-amount">{{request.user.user_add_items.count }}</span></a>
                     <div class="CartBlock-block"><span class="CartBlock-price">0.00$</span>
                     </div>
                 </div>
@@ -157,8 +157,6 @@
                                 </a>
                             </div>
                         {% endif %}
-
-
 
                         {% endfor %}
                     </div>

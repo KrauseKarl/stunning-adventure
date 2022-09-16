@@ -3,6 +3,7 @@ from datetime import datetime
 from django.contrib.sessions.models import Session
 from django.db import models
 from django.shortcuts import get_object_or_404
+from django.urls import reverse
 from django.utils.text import slugify
 from django.contrib.auth.models import User
 from django.views import View
@@ -13,6 +14,20 @@ class ItemView(models.Model):
     ip = models.CharField(max_length=40)
     session = models.CharField(max_length=40)
     created = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        db_table = 'app_views'
+        ordering = ['created']
+
+
+class AvailableManager(models.Manager):
+    def get_query_set(self):
+        return super().get_query_set().filter(is_available=True)
+
+
+class UnavailableManager(models.Manager):
+    def get_query_set(self):
+        return super().get_query_set().filter(is_available=False)
 
 
 class Item(models.Model):
@@ -34,7 +49,12 @@ class Item(models.Model):
                                  verbose_name='категория')
     tag = models.ManyToManyField('Tag', max_length=20, blank=True, related_name='item_tags', verbose_name='тег')
 
+    objects = models.Manager()
+    available_items = AvailableManager()
+    unavailable_items = UnavailableManager()
+
     class Meta:
+        db_table = 'app_items'
         ordering = ['created']
         verbose_name = 'товар'
         verbose_name_plural = 'товары'
@@ -85,7 +105,10 @@ class Category(models.Model):
                                         on_delete=models.SET_NULL, null=True, blank=True)
     item = models.ForeignKey('Item', on_delete=models.CASCADE, related_name='cats')
 
+    objects = models.Manager()
+
     class Meta:
+        db_table = 'app_categories'
         verbose_name = 'категория'
         verbose_name_plural = 'категории'
 
@@ -103,11 +126,13 @@ class Tag(models.Model):
     slug = models.SlugField(max_length=50, unique=True)
     is_active = models.BooleanField(default=True, verbose_name='активный')
 
+    objects = models.Manager()
+
     def __str__(self):
         return self.title
 
     class Meta:
-        db_table = 'app_tag'
+        db_table = 'app_tags'
         verbose_name = 'тег'
         verbose_name_plural = 'теги'
 
@@ -125,13 +150,15 @@ class Comment(models.Model):
     is_published = models.BooleanField(default=False, verbose_name='опубликовано')
     item = models.ForeignKey(Item, on_delete=models.CASCADE, related_name='item_comments', verbose_name='товар')
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='user_comments', verbose_name='пользователь')
+
     # session = models.ForeignKey(Session, on_delete=models.SET_NULL, blank=True, null=True)
+    objects = models.Manager()
 
     def __str__(self):
         return self.review[:15]
 
     class Meta:
-        db_table = 'app_item_comments'
+        db_table = 'app_comments'
         ordering = ['-created_at']
         verbose_name = 'комментарий'
         verbose_name_plural = 'комментарии'
@@ -144,8 +171,10 @@ class Image(models.Model):
     main_image = models.BooleanField(default=False, verbose_name='главное изображения')
     image = models.ImageField(upload_to='gallery/%Y/%m/%d', default='static/img/default_flat.jpg', null=True,
                               blank=True, verbose_name='изображение')
+    objects = models.Manager()
 
     class Meta:
+        db_table = 'app_images'
         ordering = ['title']
         verbose_name = 'изображение'
         verbose_name_plural = 'изображения'

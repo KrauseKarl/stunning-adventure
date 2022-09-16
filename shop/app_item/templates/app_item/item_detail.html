@@ -73,7 +73,8 @@
                                     </button>
                                 </div>
                             </div>
-                            <div class="ProductCard-cartElement"><a class="btn btn_primary" href="#">
+                            <div class="ProductCard-cartElement">
+                                <a class="btn btn_primary" href="{% url 'app_cart:add_cart' pk=item.pk  %}">
                                 <img class="btn-icon" src="/assets/img/icons/card/cart_white.svg" alt="cart_white.svg"/>
                                 <span class="btn-content">Add To Cart</span></a>
                             </div>

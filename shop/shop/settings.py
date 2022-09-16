@@ -27,8 +27,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-# Application definition
-
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -42,11 +40,15 @@ INSTALLED_APPS = [
     "debug_toolbar",
 
     # my app
-    'app_item.apps.AppItemConfig',
     'app_user.apps.AppUserConfig',
+    'app_item.apps.AppItemConfig',
+
     # 'app_blog.apps.AppBlogConfig',
-    # 'app_order.apps.AppOrderConfig',
+    'app_order.apps.AppOrderConfig',
+    'app_cart.apps.AppCartConfig',
 ]
+# Application definition
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
