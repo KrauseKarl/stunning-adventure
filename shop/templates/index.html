@@ -31,8 +31,9 @@
                         </div>
                         <div class="row-block hide_700"><span class="ControlPanel-title">Follow Us</span>
                             <ul class="menu menu_img menu_smallImg ControlPanel-menu">
-                                <li class="menu-item"><a class="menu-link" href="#"><img
-                                        src="/assets/img/icons/socialHeader/fb.svg" alt="fb.svg"/></a>
+                                <li class="menu-item"><a class="menu-link" href="#">
+                                    <img src="/assets/img/icons/socialHeader/fb.svg" alt="fb.svg"/>
+                                </a>
                                 </li>
                                 <li class="menu-item"><a class="menu-link" href="#"><img
                                         src="/assets/img/icons/socialHeader/tw.svg" alt="tw.svg"/></a>
@@ -54,10 +55,14 @@
                     <div class="row ControlPanel-rowSplit">
                         <div class="row-block">
                             {% if request.user.is_authenticated %}
-                            <a class="ControlPanel-title" href="{% url 'app_user:account' request.user.pk %}">{{ request.user.username }}</a> /
-                            <a class="ControlPanel-title" href="{% url 'app_user:logout' %}">Logout </a>
+                            <a class="ControlPanel-title" href="{% url 'app_user:account' request.user.pk %}">
+                                {% if request.user.get_full_name %}
+                                {{ request.user.get_full_name| truncatechars:10 }}
+                                {% else %} {{ request.user.username }}
+                                {% endif %}</a>&#160;/&#160;
+                            <a class="ControlPanel-title" href="{% url 'app_user:logout' %}">Logout</a>
                             {% else %}
-                            <a class="ControlPanel-title" href="{% url 'app_user:login' %}">Login</a>/
+                            <a class="ControlPanel-title" href="{% url 'app_user:login' %}">Login</a>&#160;/&#160;
                             <a class="ControlPanel-title" href="{% url 'app_user:register' %}">Register</a>
                             {% endif %}
                         </div>
@@ -78,21 +83,24 @@
     </div>
     <div class="wrap">
         <div class="row Header-rowMain">
-            <div class="row-block Header-logo"><a class="logo" href="{% url 'app_item:item_list' %}">
+            <div class="row-block Header-logo"><a class="logo" href="{% url 'app_item:main_page' %}">
                 <img class="logo-image" src="/assets/img/logo.png" alt="logo.png"/></a>
             </div>
             <!--    NAVBAR  -->
             <nav class="row-block row-block_right Header-menu">
                 <div class="menuModal" id="navigate">
                     <ul class="menu menu_main">
-                        <li class="menu-item"><a class="menu-link" href="#">Home</a>
+                        <li class="menu-item"><a class="menu-link" href="{% url 'app_item:main_page' %}">Home</a>
                         </li>
-                        <li class="menu-item"><a class="menu-link" href="#">Blog</a>
+                        <li class="menu-item"><a class="menu-link" href="{% url 'app_item:item_list' %}">Catalog</a>
                         </li>
                         <li class="menu-item"><span class="menu-label menu-label_success">Hot</span>
                             <a class="menu-link" href="#">Gallery</a>
                         </li>
-                        <li class="menu-item"><a class="menu-link" href="#">Purchase</a>
+                        <li class="menu-item"><a class="menu-link" href="#">Blog</a>
+                        </li>
+                        <li class="menu-item">
+
                         </li>
                     </ul>
                 </div>
@@ -101,10 +109,21 @@
 
             <!--    CART  -->
             <div class="row-block">
-                <div class="CartBlock"><a class="CartBlock-block" href="{% url 'app_cart:cart' %}">
-                    <img class="CartBlock-img" src="/assets/img/icons/cart.svg" alt="cart.svg"/><span
-                        class="CartBlock-amount">{{request.user.user_add_items.count }}</span></a>
-                    <div class="CartBlock-block"><span class="CartBlock-price">0.00$</span>
+                <div class="CartBlock">
+                    <a class="CartBlock-block" href="{% url 'app_cart:cart' %}">
+                        <img class="CartBlock-img" src="/assets/img/icons/cart.svg" alt="cart.svg"/>
+                        <span class="CartBlock-amount">
+                        {% with total_items=request.user.user_add_items.count  %}
+                            {% if total_items > 0 %}
+                                {{total_items }}
+                            {% else %}
+                                0
+                            {% endif %}
+                        {% endwith %}
+                    </span>
+                    </a>
+                    <div class="CartBlock-block">
+                        <span class="CartBlock-price">{{ cart_total_sum }} $</span>
                     </div>
                 </div>
             </div>
@@ -130,32 +149,32 @@
                     </div>
                     <div class="CategoriesButton-content">
                         {% for cat in categories %}
-                         {% if not cat.parent_category %}
-                            <div class="CategoriesButton-link">
-                                <a href="{% url 'app_item:item_category' category=cat.slug %}">
-                                    <div class="CategoriesButton-icon">
-                                        <img src="{{cat.image.url}}" width="15px"/>
-                                    </div>
-                                    <span class="CategoriesButton-text">{{cat.slug}}</span>
+                        {% if not cat.parent_category %}
+                        <div class="CategoriesButton-link">
+                            <a href="{% url 'app_item:item_category' category=cat.slug %}">
+                                <div class="CategoriesButton-icon">
+                                    <img src="{{cat.image.url}}" width="15px"/>
+                                </div>
+                                <span class="CategoriesButton-text">{{cat.title}}({{cat.item_count}})</span>
 
-                                    {% if cat.sub_categories.all.count > 0 %}
-                                        <a class="CategoriesButton-arrow" href="#"></a>
-                                        <div class="CategoriesButton-submenu">
-                                            {% for c in cat.sub_categories.all %}
-                                                <a class="CategoriesButton-link"
-                                                   href="{% url 'app_item:item_category' category=c.slug %}">
-                                                <div class="CategoriesButton-icon">
-                                                    <img src="{{ c.image.url }}" width="15px"/>
-                                                </div>
-                                                    <span class="CategoriesButton-text">
+                                {% if cat.sub_categories.all.count > 0 %}
+                                <a class="CategoriesButton-arrow" href="#"></a>
+                                <div class="CategoriesButton-submenu">
+                                    {% for c in cat.sub_categories.all %}
+                                    <a class="CategoriesButton-link"
+                                       href="{% url 'app_item:item_category' category=c.slug %}">
+                                        <div class="CategoriesButton-icon">
+                                            <img src="{{ c.image.url }}" width="15px"/>
+                                        </div>
+                                        <span class="CategoriesButton-text">
                                                         {{c.title|truncatechars:10}} ({{c.items.count }})
                                                     </span>
-                                            </a>
-                                            {% endfor %}
-                                        </div>
-                                    {% endif %}
-                                </a>
-                            </div>
+                                    </a>
+                                    {% endfor %}
+                                </div>
+                                {% endif %}
+                            </a>
+                        </div>
                         {% endif %}
 
                         {% endfor %}
@@ -190,27 +209,37 @@
 <footer class="Footer">
     <div class="wrap">
         <div class="row Footer-main">
-            <div class="row-block"><a class="logo Footer-logo" href="index.html"><img class="logo-image"
-                                                                                      src="/assets/img/logo_footer.png"
-                                                                                      alt="logo_footer.png"/></a>
+            <div class="row-block">
+                <a class="logo Footer-logo" href="index.html">
+                    <img class="logo-image" src="/assets/img/logo_footer.png" alt="logo_footer.png"/>
+                </a>
                 <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincid unt ut
                     laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad
                 </p>
                 <ul class="menu menu_img menu_smallImg Footer-menuSoc">
-                    <li class="menu-item"><a class="menu-link" href="#"><img src="/assets/img/icons/socialFooter/fb.svg"
-                                                                             alt="fb.svg"/></a>
+                    <li class="menu-item">
+                        <a class="menu-link" href="#">
+                            <img src="/assets/img/icons/socialFooter/fb.svg" alt="fb.svg"/>
+                        </a>
                     </li>
-                    <li class="menu-item"><a class="menu-link" href="#"><img src="/assets/img/icons/socialFooter/tw.svg"
-                                                                             alt="tw.svg"/></a>
+                    <li class="menu-item">
+                        <a class="menu-link" href="#">
+                            <img src="/assets/img/icons/socialFooter/tw.svg" alt="tw.svg"/>
+                        </a>
                     </li>
-                    <li class="menu-item"><a class="menu-link" href="#"><img src="/assets/img/icons/socialFooter/in.svg"
-                                                                             alt="in.svg"/></a>
+                    <li class="menu-item">
+                        <a class="menu-link" href="#">
+                            <img src="/assets/img/icons/socialFooter/in.svg" alt="in.svg"/>
+                        </a>
                     </li>
-                    <li class="menu-item"><a class="menu-link" href="#"><img src="/assets/img/icons/socialFooter/pt.svg"
-                                                                             alt="pt.svg"/></a>
+                    <li class="menu-item">
+                        <a class="menu-link" href="#">
+                            <img src="/assets/img/icons/socialFooter/pt.svg" alt="pt.svg"/>
+                        </a>
                     </li>
-                    <li class="menu-item"><a class="menu-link" href="#"><img
-                            src="/assets/img/icons/socialFooter/mail.svg" alt="mail.svg"/></a>
+                    <li class="menu-item"><a class="menu-link" href="#">
+                        <img src="/assets/img/icons/socialFooter/mail.svg" alt="mail.svg"/>
+                    </a>
                     </li>
                 </ul>
             </div>
@@ -218,17 +247,29 @@
                 <strong class="Footer-title">Useful Links
                 </strong>
                 <ul class="menu menu_vt Footer-menu">
-                    <li class="menu-item"><a class="menu-link" href="#">Checkout</a>
+                    <li class="menu-item">
+                        <a class="menu-link" href="#">Checkout
+                        </a>
                     </li>
-                    <li class="menu-item"><a class="menu-link" href="#">My Cart</a>
+                    <li class="menu-item">
+                        <a class="menu-link" href="#">My Cart
+                        </a>
                     </li>
-                    <li class="menu-item"><a class="menu-link" href="#">Delivery</a>
+                    <li class="menu-item">
+                        <a class="menu-link" href="#">Delivery
+                        </a>
                     </li>
-                    <li class="menu-item"><a class="menu-link" href="#">Order Info</a>
+                    <li class="menu-item">
+                        <a class="menu-link" href="#">Order Info
+                        </a>
                     </li>
-                    <li class="menu-item"><a class="menu-link" href="#">Terms</a>
+                    <li class="menu-item">
+                        <a class="menu-link" href="#">Terms
+                        </a>
                     </li>
-                    <li class="menu-item"><a class="menu-link" href="#">Conditions</a>
+                    <li class="menu-item">
+                        <a class="menu-link" href="#">Conditions
+                        </a>
                     </li>
                 </ul>
             </div>
@@ -236,25 +277,40 @@
                 <strong class="Footer-title">My Account
                 </strong>
                 <ul class="menu menu_vt Footer-menu">
-                    <li class="menu-item"><a class="menu-link" href="#">Accessories</a>
+                    <li class="menu-item">
+                        <a class="menu-link" href="#">Accessories
+                        </a>
                     </li>
-                    <li class="menu-item"><a class="menu-link" href="#">Bags</a>
+                    <li class="menu-item">
+                        <a class="menu-link" href="#">Bags
+                        </a>
                     </li>
-                    <li class="menu-item"><a class="menu-link" href="#">Cameras</a>
+                    <li class="menu-item">
+                        <a class="menu-link" href="#">Cameras
+                        </a>
                     </li>
-                    <li class="menu-item"><a class="menu-link" href="#">Clothings</a>
+                    <li class="menu-item">
+                        <a class="menu-link" href="#">Clothings
+                        </a>
                     </li>
-                    <li class="menu-item"><a class="menu-link" href="#">Electronics</a>
+                    <li class="menu-item">
+                        <a class="menu-link" href="#">Electronics
+                        </a>
                     </li>
-                    <li class="menu-item"><a class="menu-link" href="#">Fashion</a>
+                    <li class="menu-item">
+                        <a class="menu-link" href="#">Fashion
+                        </a>
                     </li>
                 </ul>
             </div>
             <div class="row-block">
                 <strong class="Footer-title">Contacts
                 </strong>
-                <p>Phone: 8.800.200.600<br>Email: Support@ninzio.com<br>Skype: techno<br>Address: New York, north<br>Avenue
-                    26/7<br>0057
+                <p>Phone: 8.800.200.600<br>
+                    Email: Support@ninzio.com<br>
+                    Skype: techno<br>
+                    Address: New York, north<br>
+                    Avenue 26/7<br>0057
                 </p>
             </div>
         </div>
@@ -262,7 +318,8 @@
     <div class="Footer-copy">
         <div class="wrap">
             <div class="row row_space">
-                <div class="row-block">© Copyright&#32;<a href="#">Megano Store.</a>&#32;All rights reserved.
+                <div class="row-block">© Copyright&#32;
+                    <a href="#">Megano Store.</a>&#32;All rights reserved.
                 </div>
                 <div class="row-block"><span>Accepted Payments</span>
                     <div class="Footer-payments">

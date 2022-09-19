@@ -1,6 +1,8 @@
 from django.urls import path
 from app_item.views import ItemList, ItemDetail, MainPage
 
+app_name = 'app_item'
+
 urlpatterns = [
     path('', MainPage.as_view(), name='main_page'),
     path('list/', ItemList.as_view(), name='item_list'),
@@ -9,5 +11,3 @@ urlpatterns = [
     path('sorted/<slug:order_by>/', ItemList.as_view(), name='item_sort'),
     path('detail/<int:pk>/', ItemDetail.as_view(), name='item_detail'),
 ]
-
-

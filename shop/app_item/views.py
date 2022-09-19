@@ -8,6 +8,7 @@ from django.core.serializers import serialize
 
 from app_item.forms import CommentForm
 from app_item.models import Item, Category, Comment, Tag, ItemView
+from app_item.services.item_services import AddItemToReview, ItemHandler
 
 
 class MainPage(TemplateView):
@@ -15,12 +16,11 @@ class MainPage(TemplateView):
     template_name = 'main-page.html'
 
     def get_context_data(self, **kwargs):
-        kwargs['favorites'] = Category.objects.filter(sub_categories=None)
-
-        # kwargs['min_price'] = kwargs['favorites'].annotate(maximum=Min('items__price'))
-        print(kwargs['favorites'])
-
-        kwargs['popular'] = Item.objects.order_by('-reviews')
+        favorite = AddItemToReview()
+        item_handler = ItemHandler()
+        kwargs['favorites'] = favorite.get_favorite_category_items(user=self.request.user)
+        kwargs['popular'] = item_handler.get_popular_items
+        kwargs['limited_edition_items'] = item_handler.get_limited_edition_items()[:8]
         return kwargs
 
     def get(self, request, *args, **kwargs):
@@ -73,26 +73,23 @@ class ItemList(FilterMixin, TagMixin, ListView):
             #     queryset = serialize(queryset=queryset, format='json')
             #     request.session['queryset'] = queryset
 
-        else:
-            queryset = self.queryset
-
-        if tag:
+        elif tag:
 
             tag = get_object_or_404(Tag, slug=tag)
             queryset = self.queryset.filter(tag=tag.id)
 
         else:
             queryset = self.queryset
-        #
-        # if order_by:
-        #     try:
-        #         queryset = request.session['queryset']
-        #         queryset = queryset.order_by(order_by)
-        #         request.session['queryset'] = queryset
-        #     except:
-        #         queryset = self.queryset.order_by(order_by)
-        #         queryset = serialize(queryset=queryset, format='json')
-        #         request.session['queryset'] = queryset
+
+            # if order_by:
+            #     try:
+            #         queryset = request.session['queryset']
+            #         queryset = queryset.order_by(order_by)
+            #         request.session['queryset'] = queryset
+            #     except:
+            #         queryset = self.queryset.order_by(order_by)
+            #         queryset = serialize(queryset=queryset, format='json')
+            #         request.session['queryset'] = queryset
 
         tags = Tag.objects.all()
         # queryset = self.get_my_queryset(self.get_tag_queryset(**kwargs), **kwargs)
@@ -106,16 +103,11 @@ class ItemDetail(DetailView, CreateView):
     form_class = CommentForm
     success_url = '/'
 
-    def get_object(self, *args, **kwargs):
-        """ Увеличивает количество просмотров товара при каждом просмотре. """
-
-        obj = super().get_object()
-        obj.reviews += 1
-        obj.save()
-        return obj
-
     def get(self, request, *args, **kwargs):
         """Добавляет товар к списку просмотренных товаров."""
+
+        add_to_reviews = AddItemToReview()
+        add_to_reviews.add_item_to_review(item=self.get_object(), user=request.user)
         # if self.request.user.is_anonymous:
         #     if not User.objects.get(username='Anon'):
         #         user = User.objects.create_user('Anon', 'anon@mail.com', 'Anon@123')
@@ -148,17 +140,18 @@ class ItemDetail(DetailView, CreateView):
         #     if item not in user.profile.review_items.all():
         #         user.profile.review_items.add(item)
         self.object = self.get_object()
-        item = self.object
+        item = self.get_object()
         user = request.user
 
-        if user.is_authenticated:
-            session = request.session.session_key
-
+        # if user.is_authenticated:
+        #     session = request.session.session_key
         form = self.get_form()
-
         tags = Tag.objects.filter(item_tags=item.id)
         context = {'form': form, 'tags': tags, 'item': item}
         return self.render_to_response(context)
+
+    def post(self, request, *args, **kwargs):
+        return redirect(self.request.get_full_path())
 
     def form_valid(self, form):
         item = self.get_object()

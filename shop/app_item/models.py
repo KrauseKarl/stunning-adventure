@@ -2,6 +2,7 @@ from datetime import datetime
 
 from django.contrib.sessions.models import Session
 from django.db import models
+from django.db.models import Q
 from django.shortcuts import get_object_or_404
 from django.urls import reverse
 from django.utils.text import slugify
@@ -53,6 +54,7 @@ class Item(models.Model):
     available_items = AvailableManager()
     unavailable_items = UnavailableManager()
 
+
     class Meta:
         db_table = 'app_items'
         ordering = ['created']
@@ -61,6 +63,9 @@ class Item(models.Model):
 
     def __str__(self):
         return self.title
+
+    def get_price(self):
+        return self.price
 
     def save(self, *args, **kwargs):
         """Функция по созданию slug"""
@@ -120,6 +125,9 @@ class Category(models.Model):
             self.slug = slugify(self.title)
         super(Category, self).save(*args, **kwargs)
 
+    def item_count(self):
+        return Item.objects.filter(Q(category__parent_category=self) | Q(category=self)).count()
+
 
 class Tag(models.Model):
     title = models.CharField(max_length=50, unique=True, blank=True, verbose_name='название тега')
@@ -143,7 +151,14 @@ class Tag(models.Model):
         super(Tag, self).save(*args, **kwargs)
 
 
+class ModeratedCommentsManager(models.Manager):
+    """ """
+    def get_query_set(self):
+        return super().get_query_set().filter(is_published=True)
+
+
 class Comment(models.Model):
+    """ """
     review = models.TextField(verbose_name='комментарий')
     created_at = models.DateTimeField(auto_now_add=True, verbose_name='дата создания')
     updated_at = models.DateTimeField(auto_now_add=True, verbose_name='дата обновления')
@@ -152,7 +167,10 @@ class Comment(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='user_comments', verbose_name='пользователь')
 
     # session = models.ForeignKey(Session, on_delete=models.SET_NULL, blank=True, null=True)
+
+    # Managers
     objects = models.Manager()
+    published_comments = ModeratedCommentsManager()
 
     def __str__(self):
         return self.review[:15]
@@ -165,12 +183,14 @@ class Comment(models.Model):
 
 
 class Image(models.Model):
+    """ """
     title = models.CharField(max_length=200, null=True, verbose_name='название')
     created = models.DateTimeField(auto_now_add=True, verbose_name='дата создания')
     updated = models.DateTimeField(auto_now_add=True, verbose_name='дата изменения')
     main_image = models.BooleanField(default=False, verbose_name='главное изображения')
     image = models.ImageField(upload_to='gallery/%Y/%m/%d', default='static/img/default_flat.jpg', null=True,
                               blank=True, verbose_name='изображение')
+
     objects = models.Manager()
 
     class Meta:

@@ -46,7 +46,7 @@
                         <div class="ProductCard-header">
                             <h2 class="ProductCard-title">{{item.title}}
                             </h2>
-                            <div class="ProductCard-info">
+                            <div class="ProductCard-info" id="maz">
                                 <div class="ProductCard-cost">
                                     <div class="ProductCard-price">${{item.price}}
                                     </div>
@@ -74,15 +74,26 @@
                                 </div>
                             </div>
                             <div class="ProductCard-cartElement">
-                                <a class="btn btn_primary" href="{% url 'app_cart:add_cart' pk=item.pk  %}">
-                                <img class="btn-icon" src="/assets/img/icons/card/cart_white.svg" alt="cart_white.svg"/>
-                                <span class="btn-content">Add To Cart</span></a>
+                                {% if item.cart_item.first in cart.items.all %}
+                                <a class="btn btn_primary" href="{% url 'app_cart:add_cart' pk=item.pk  %}#maz">
+                                    <img class="btn-icon" src="/assets/img/icons/card/cart_white.svg"
+                                         alt="cart_white.svg"/>
+                                    <span class="btn-content">+  </span></a>
+                                <a class="btn btn_danger" href="{% url 'app_cart:remove_cart' pk=item.pk  %}#maz">
+                                    <img class="btn-icon" src="/assets/img/icons/card/cart_white.svg"
+                                         alt="cart_white.svg"/>
+                                    <span class="btn-content">-</span></a>
+                                {% else %}
+                                <a class="btn btn_primary" href="{% url 'app_cart:add_cart' pk=item.pk  %}#maz">
+                                    <img class="btn-icon" src="/assets/img/icons/card/cart_white.svg"
+                                         alt="cart_white.svg"/>
+                                    <span class="btn-content">+  в корзину</span></a>
+                                {% endif %}
                             </div>
                         </div>
                         <div class="ProductCard-footer">
                             <div class="ProductCard-tags">
-                                <strong class="ProductCard-tagsTitle">Tags:
-                                </strong>
+                                <strong class="ProductCard-tagsTitle">Tags: </strong>
                                 {% for tag in tags %}
                                 <a href="{% url 'app_item:item_tag' tag=tag.slug %}">{{tag.title}}</a>,
                                 {% endfor %}
@@ -91,58 +102,51 @@
                     </div>
                 </div>
                 <div class="Tabs Tabs_default">
-                    <div class="Tabs-links"><a class="Tabs-link_ACTIVE Tabs-link" href="#description">
-                        <span>Описание</span></a>
-                        <a class="Tabs-link" href="#addit"><span>AdditionaL Info</span></a>
-                        <a class="Tabs-link" href="#reviews"><span>Reviews ({{ item.item_comments.count }})</span></a>
+                    <div class="Tabs-links">
+                        <a class="Tabs-link_ACTIVE Tabs-link" href="#description">
+                            <span>Описание</span>
+                        </a>
+                        <a class="Tabs-link" href="#addit">
+                            <span>Дополнительная информация</span>
+                        </a>
+                        <a class="Tabs-link" href="#reviews">
+                            <span>Reviews ({{ item.item_comments.count }})</span>
+                        </a>
                     </div>
                     <div class="Tabs-wrap">
                         <div class="Tabs-block" id="description">
-                            <h2>Megano Store Hystory
-                            </h2>
+                            <h2>{{item.title}} </h2>
                             <p>Lorem ipsum dolor sit amet, consectetuer&#32;
-                                <strong>adipiscing
-                                </strong>&#32;elit doli. Aenean commodo ligula eget dolor. Aenean massa.&#32;
+                                <strong>adipiscing </strong>&#32;elit doli. Aenean commodo ligula eget dolor. Aenean
+                                massa.&#32;
                                 <a href="#">Cumtipsu</a>&#32;sociis natoque penatibus et magnis dis parturient montesti,
                                 nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eutu, pretiumem.
-                            </p><img class="pict pict_right" src="{{item.image.url}}"
-                                     alt="bigGoods.png"/>
+                            </p>
+                            <img class="pict pict_right" src="{{item.image.url}}" alt="bigGoods.png"/>
                             <ul>
-                                <li>Lorem ipsum dolor sit amet, consectetuer
-                                </li>
-                                <li>adipiscing elit doli.&#32;<em>Aenean</em>&#32;commodo ligula
-                                </li>
-                                <li>eget dolor. Aenean massa. Cumtipsu sociis
-                                </li>
-                                <li>natoque penatibus et magnis dis parturient
-                                </li>
-                                <li>montesti, nascetur ridiculus mus. Donec
-                                </li>
-                                <li>quam felis, ultricies nec, pellentesque eutu
-                                </li>
+                                <li>Lorem ipsum dolor sit amet, consectetuer</li>
+                                <li>adipiscing elit doli.&#32;<em>Aenean</em>&#32;commodo ligula</li>
+                                <li>eget dolor. Aenean massa. Cumtipsu sociis</li>
+                                <li>natoque penatibus et magnis dis parturient</li>
+                                <li>montesti, nascetur ridiculus mus. Donec</li>
+                                <li>quam felis, ultricies nec, pellentesque eutu</li>
                             </ul>
-                            <div class="clearfix">
-                            </div>
+                            <div class="clearfix"></div>
                             <div class="table">
                                 <table>
                                     <tr>
-                                        <th>Характеристика
-                                        </th>
-                                        <th>Значение
-                                        </th>
+                                        <th>Характеристика</th>
+                                        <th>Значение</th>
                                     </tr>
                                     <tr>
-                                        <td>ываыв
-                                        </td>
-                                        <td>llslssl
-                                        </td>
+                                        <td>ываыв</td>
+                                        <td>llslss</td>
                                     </tr>
                                 </table>
                             </div>
                         </div>
                         <div class="Tabs-block" id="sellers">
-                            <div class="Categories Categories_product">
-                            </div>
+                            <div class="Categories Categories_product"></div>
                         </div>
                         <div class="Tabs-block" id="addit">
                             <div class="Product-props">
@@ -151,23 +155,22 @@
                                     </strong><span> Pfizer</span>
                                 </div>
                                 <div class="Product-prop">
-                                    <strong>ipsum
-                                    </strong><span> Lorem ipsum dolor sit</span>
+                                    <strong>ipsum </strong>
+                                    <span> Lorem ipsum dolor sit</span>
                                 </div>
                                 <div class="Product-prop">
-                                    <strong>dolor sit
-                                    </strong><span> 5 ans</span>
+                                    <strong>dolor sit </strong>
+                                    <span> 5 ans</span>
                                 </div>
                                 <div class="Product-prop">
-                                    <strong>psum dolo
-                                    </strong><span> 2–3 jours</span>
+                                    <strong>psum dolo </strong>
+                                    <span> 2–3 jours</span>
                                 </div>
                             </div>
                         </div>
                         <div class="Tabs-block" id="reviews">
                             <header class="Section-header">
-                                <h3 class="Section-title">{{item.item_comments.count}} Reviews
-                                </h3>
+                                <h3 class="Section-title">{{item.item_comments.count}} Отзывы </h3>
                             </header>
                             <div class="Comments">
 
@@ -175,8 +178,10 @@
                                 <div class="Comment">
                                     <div class="Comment-column Comment-column_pict">
                                         {% if comment.user.profile.avatar %}
-                                        <div><img class="Comment-avatar-exist"
-                                                  src="{{ comment.user.profile.avatar.url }}"></div>
+                                        <div>
+                                            <img class="Comment-avatar-exist"
+                                                 src="{{ comment.user.profile.avatar.url }}">
+                                        </div>
                                         {% else %}
                                         <div class="Comment-avatar"></div>
                                         {% endif %}
@@ -201,23 +206,20 @@
 
                             </div>
                             <header class="Section-header Section-header_product">
-                                <h3 class="Section-title">Add Review</h3>
+                                <h3 class="Section-title">Добавить отзыв</h3>
                             </header>
                             <div class="Tabs-addComment">
-
-
                                 <form class="form" action="#" method="post">
                                     {% csrf_token %}
-
-
                                     <h3 class="Section-title">{{request.user.get_full_name}}</h3>
                                     <div class="form-group">
                                         <textarea class="form-textarea" name="review" id="review"
-                                                  placeholder="Review"></textarea>
-                                    </div>
+                                                  placeholder="Review">
 
+                                        </textarea>
+                                    </div>
                                     <div class="form-group">
-                                        <button class="btn btn_muted" type="submit">Submit Review</button>
+                                        <button class="btn btn_muted" type="submit">Оставить отзыв</button>
                                     </div>
                                 </form>
 

@@ -126,8 +126,9 @@
                                     {% else %}{{item.category}}
                                     {% endif %}
                                 </div>
+
                                 <div class="Card-hover">
-                                    <a class="Card-btn" href="#">
+                                    <a class="Card-btn" href="{% url 'app_cart:add_cart' pk=item.pk %}">
                                         <img src="/assets/img/icons/card/cart.svg" alt="cart.svg"/></a>
                                 </div>
                             </div>

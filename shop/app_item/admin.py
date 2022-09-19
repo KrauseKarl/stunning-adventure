@@ -10,10 +10,13 @@ class ItemTagsInline(admin.TabularInline):
 
 class ItemAdmin(admin.ModelAdmin):
     fields = (
-        ('title', 'slug'), ('price', 'stock'),
-        ('is_available', 'limited_edition', 'reviews', 'comments'), 'category')
+        ('title', 'slug'), ('price', 'stock', 'is_available', 'limited_edition'),
+        ('reviews', 'comments'), ('category', 'image'))
     prepopulated_fields = {'slug': ('title',)}
     inlines = [ItemTagsInline, ]
+    list_filter = ('is_available', 'category')
+    readonly_fields = ('reviews', 'comments')
+
 
 
 class CategoryAdmin(admin.ModelAdmin):

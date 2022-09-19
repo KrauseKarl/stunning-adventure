@@ -23,6 +23,7 @@ class UserLoginView(LoginView):
 
 class UserLogoutView(LogoutView):
     template_name = 'users/logout.html'
+    next_page = reverse_lazy('app_item:item_list')
 
 
 class CreateProfile(SuccessMessageMixin, CreateView):
@@ -97,5 +98,4 @@ class UpdateProfile(UpdateView):
     form_class = UpdateUserForm
 
     def get_success_url(self):
-        return reverse('app_user:account',
-                       kwargs={'pk': self.request.user.pk})
+        return reverse('app_user:account', kwargs={'pk': self.request.user.pk})

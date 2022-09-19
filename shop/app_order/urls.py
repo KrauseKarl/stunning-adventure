@@ -1,5 +1,5 @@
 from django.urls import path
-from app_cart.views import CartDetail, AddItemCart, RemoveItemCart
+
 
 app_name = 'app_order'
 

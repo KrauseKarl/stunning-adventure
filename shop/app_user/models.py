@@ -1,5 +1,3 @@
-
-
 from django.db import models
 from django.contrib.auth.models import User, Group, Permission
 from django.core.validators import RegexValidator
@@ -14,7 +12,7 @@ class Profile(models.Model):
     avatar = models.ImageField(upload_to='avatar/')
     telephone = models.CharField(max_length=10)
     date_joined = models.DateTimeField(auto_now_add=True, null=True)  # readonly_fields = ['date_joined',   ]
-    review_items = models.ManyToManyField(Item, related_name='items', blank=True)
+    review_items = models.ManyToManyField(Item, related_name='item_views', blank=True)
 
     class Meta:
         ordering = ['user']
@@ -27,10 +25,4 @@ class Profile(models.Model):
     # def get_absolute_url(self):
     #     return reverse('app_users:profile', kwargs={'pk': self.pk})
 
-    def add(self, obj):
-        item = Item.objects.get(obj)
-        review_items = self.review_items
-        review_items.add(item)
-        review_items.save()
-        return review_items
 
