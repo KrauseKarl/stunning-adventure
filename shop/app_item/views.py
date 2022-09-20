@@ -2,13 +2,14 @@ from django.contrib.sessions.models import Session
 from django.db.models import Q, Min, Max, Count
 from django.shortcuts import render, redirect, get_object_or_404
 from django.utils.datetime_safe import datetime
-from django.views.generic import ListView, DetailView, CreateView, TemplateView
+from django.views.generic import ListView, DetailView, CreateView, TemplateView, UpdateView
 from django.contrib.auth.models import User
 from django.core.serializers import serialize
 
 from app_item.forms import CommentForm
 from app_item.models import Item, Category, Comment, Tag, ItemView
 from app_item.services.item_services import AddItemToReview, ItemHandler
+from app_item.services.comment_services import AddComment
 
 
 class MainPage(TemplateView):
@@ -150,14 +151,49 @@ class ItemDetail(DetailView, CreateView):
         context = {'form': form, 'tags': tags, 'item': item}
         return self.render_to_response(context)
 
-    def post(self, request, *args, **kwargs):
-        return redirect(self.request.get_full_path())
-
     def form_valid(self, form):
-        item = self.get_object()
-        form = CommentForm(self.request.POST)
-        new_comment = form.save(commit=False)
-        new_comment.item = item
-
-        new_comment.save()
+        item = self.kwargs['pk']
+        user = self.request.user
+        data = self.request.POST
+        comment = AddComment()
+        comment.add_comment(user, item, data)
         return redirect(self.request.get_full_path())
+
+
+class DeleteComment(DetailView):
+    model = Item
+    template_name = 'app_item/item_detail.html'
+    context_object_name = 'item'
+
+    def get(self, request, *args, **kwargs):
+        item = kwargs['pk']
+        comment = kwargs['comment_id']
+        user = request.user
+        com = AddComment()
+        com.delete_comment(user=user, comment_id=comment)
+        return redirect('app_item:item_detail', item)
+
+
+class EditComment(UpdateView):
+    model = Comment
+    context_object_name = 'comments'
+    template_name = 'app_item/comment_edit.html'
+    form_class = CommentForm
+
+    def get(self, request, *args, **kwargs):
+        comment_id = kwargs['comment_id']
+        comm = Comment.objects.filter(id=comment_id)[0]
+        form = CommentForm(instance=comm)
+        # comments['update'] = CommentForm(initial={'review': comm})
+        return render(request, self.template_name, {'form': form, 'comments': comm})
+
+    def post(self, request, *args, **kwargs):
+        comment_id = kwargs['comment_id']
+        comm = Comment.objects.get(id=comment_id)
+        form = CommentForm(request.POST, instance=comm)
+        item = kwargs['pk']
+
+        if form.is_valid():
+            comm.save(force_update=True)
+            return redirect('app_item:item_detail', item)
+        return render(request, self.template_name, {'form': form, 'comments': comm})

@@ -160,11 +160,11 @@ class ModeratedCommentsManager(models.Manager):
 class Comment(models.Model):
     """ """
     review = models.TextField(verbose_name='комментарий')
-    created_at = models.DateTimeField(auto_now_add=True, verbose_name='дата создания')
-    updated_at = models.DateTimeField(auto_now_add=True, verbose_name='дата обновления')
     is_published = models.BooleanField(default=False, verbose_name='опубликовано')
     item = models.ForeignKey(Item, on_delete=models.CASCADE, related_name='item_comments', verbose_name='товар')
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='user_comments', verbose_name='пользователь')
+    created_at = models.DateTimeField(auto_now_add=True, verbose_name='дата создания')
+    updated_at = models.DateTimeField(auto_now_add=True, verbose_name='дата обновления')
 
     # session = models.ForeignKey(Session, on_delete=models.SET_NULL, blank=True, null=True)
 

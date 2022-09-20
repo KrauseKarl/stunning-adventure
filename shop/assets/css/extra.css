@@ -2254,6 +2254,20 @@ a.Cart-title {
     display: none;
   }
 }
+/* my style */
+.CommentHandleButton {
+  color: #777;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.2em;
+  text-transform: uppercase;
+  margin-top: 60px;
+  letter-spacing: 1.3px;
+  vertical-align: middle;
+}
+/* my style  */
+
+
 .ControlPanel-title {
   color: #777;
   font-size: 13px;

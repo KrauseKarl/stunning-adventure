@@ -55,12 +55,7 @@
                         </div>
                         <div class="ProductCard-text">
                             <ul>
-                                <li>{{item.description}}
-                                </li>
-                                <li>tempor incididunt ut labore et dolore magna aliqua. Lorem
-                                </li>
-                                <li>ipsum dolor sit ameabore et dolore magna aliqua. Lorem ipsum
-                                </li>
+                                <li>{{item.description}}</li>
                             </ul>
                         </div>
                         <div class="ProductCard-cart">
@@ -84,7 +79,7 @@
                                          alt="cart_white.svg"/>
                                     <span class="btn-content">-</span></a>
                                 {% else %}
-                                <a class="btn btn_primary" href="{% url 'app_cart:add_cart' pk=item.pk  %}#maz">
+                                <a class="btn btn_primary" href="{% url 'app_cart:add_cart' pk=item.pk %}#maz">
                                     <img class="btn-icon" src="/assets/img/icons/card/cart_white.svg"
                                          alt="cart_white.svg"/>
                                     <span class="btn-content">+  в корзину</span></a>
@@ -189,6 +184,7 @@
                                     <div class="Comment-column">
                                         <header class="Comment-header">
                                             <div>
+
                                                 <strong class="Comment-title">{{ comment.user.get_full_name }}</strong>
                                                 <span class="Comment-date">
 <!--                                                {{comment.created_at|naturaltime}}-->
@@ -200,6 +196,13 @@
                                             </div>
                                         </header>
                                         <div class="Comment-content">{{comment.review}}</div>
+                                        {% if request.user == comment.user %}
+                                        <a class="CommentHandleButton"
+                                           href="{% url 'app_item:comment_delete' pk=item.pk comment_id=comment.id %}">удалить</a>&#160;&#160;
+                                        <a class="CommentHandleButton"
+                                           href="{% url 'app_item:comment_edit' pk=item.pk comment_id=comment.id %}">редактировать</a>
+
+                                        {% endif %}
                                     </div>
                                 </div>
                                 {% endfor %}
@@ -209,6 +212,7 @@
                                 <h3 class="Section-title">Добавить отзыв</h3>
                             </header>
                             <div class="Tabs-addComment">
+
                                 <form class="form" action="#" method="post">
                                     {% csrf_token %}
                                     <h3 class="Section-title">{{request.user.get_full_name}}</h3>
@@ -217,6 +221,7 @@
                                                   placeholder="Review">
 
                                         </textarea>
+
                                     </div>
                                     <div class="form-group">
                                         <button class="btn btn_muted" type="submit">Оставить отзыв</button>
