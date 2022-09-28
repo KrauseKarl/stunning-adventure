@@ -7,102 +7,104 @@
 {% endblock %}
 
 {% block content %}
- <div class="Middle Middle_top">
+<div class="Middle Middle_top">
     <div class="Middle-top">
-      <div class="wrap">
-        <div class="Middle-header">
-          <h1 class="Middle-title">История просмотра
-          </h1>
-          <ul class="breadcrumbs Middle-breadcrumbs">
-            <li class="breadcrumbs-item"><a href="index.html">home</a>
-            </li>
-            <li class="breadcrumbs-item breadcrumbs-item_current"><span>История просмотра</span>
-            </li>
-          </ul>
+        <div class="wrap">
+            <div class="Middle-header">
+                <h1 class="Middle-title">История просмотра
+                </h1>
+                <ul class="breadcrumbs Middle-breadcrumbs">
+                    <li class="breadcrumbs-item"><a href="index.html">home</a>
+                    </li>
+                    <li class="breadcrumbs-item breadcrumbs-item_current"><span>История просмотра</span>
+                    </li>
+                </ul>
+            </div>
         </div>
-      </div>
     </div>
     <div class="Section Section_column Section_columnLeft">
-      <div class="wrap">
-        <div class="Section-column">
-          <div class="Section-columnSection">
-            <header class="Section-header">
-              <strong class="Section-title">Навигация
-              </strong>
-            </header>
-               <div class="Section-columnContent">
-    <div class="NavigateProfile">
-        <ul class="menu menu_vt">
-            <li class=" menu-item">
-                <a class="menu-link" href="{% url 'app_user:account' user.id %}">Личный кабинет</a>
-            </li>
-            <li class="menu-item">
-                <a class="menu-link" href="{% url 'app_user:profile' user.id %}">Профиль</a>
-            </li>
-            <li class="menu-item">
-                <a class="menu-link" href="historyorder.html">История заказов</a>
-            </li>
-            <li class="menu-item_ACTIVE menu-item">
-                <a class="menu-link" href="{% url 'app_user:history_view' user.id %}">История просмотра</a>
-            </li>
-        </ul>
+        <div class="wrap">
+            <div class="Section-column">
+                <div class="Section-columnSection">
+                    <header class="Section-header">
+                        <strong class="Section-title">Навигация
+                        </strong>
+                    </header>
+                    <div class="Section-columnContent">
+                        <div class="NavigateProfile">
+                            <ul class="menu menu_vt">
+                                <li class=" menu-item">
+                                    <a class="menu-link" href="{% url 'app_user:account' user.id %}">Личный кабинет</a>
+                                </li>
+                                <li class="menu-item">
+                                    <a class="menu-link" href="{% url 'app_user:profile' user.id %}">Профиль</a>
+                                </li>
+                                <li class="menu-item">
+                                    <a class="menu-link" href="historyorder.html">История заказов</a>
+                                </li>
+                                <li class="menu-item_ACTIVE menu-item">
+                                    <a class="menu-link" href="{% url 'app_user:history_view' user.id %}">История
+                                        просмотра</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="Section-content">
+                <div class="Orders">
+                    {% for item in user.profile.review_items.all %}
+                    <div class="Order Order_anons">
+                        <div class="Order-personal">
+                            <div class="row">
+                                <div class="row-block">
+                                    <a class="Order-title" href="{% url 'app_item:item_detail' item.pk %}">
+                                        <div class="Account-avatar">
+                                            <img src="{{ item.image.url }}" alt="card.jpg"/>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="row-block">
+                                    <div class="Order-info Order-info_delivery">
+                                        <div class="Order-infoType"> Название:
+                                        </div>
+                                        <div class="Order-infoContent">{{item.title}}
+                                        </div>
+                                    </div>
+                                    <div class="Order-info Order-info_pay">
+                                        <div class="Order-infoType">Категория:
+                                        </div>
+                                        <div class="Order-infoContent">{{item.category}}
+                                        </div>
+                                    </div>
+                                    <div class="Order-info">
+                                        <div class="Order-infoType">Цена:
+                                        </div>
+                                        <div class="Order-infoContent"><span class="Order-price">{{item.price}}$</span>
+                                        </div>
+                                    </div>
+                                    <div class="Order-info Order-info_status">
+                                        <div class="Order-infoType">Просмотров:
+                                        </div>
+                                        <div class="Order-infoContent">{{item.views.count}}
+                                        </div>
+                                    </div>
+                                    <div class="Order-info Order-info_status">
+                                        <div class="Order-infoType">Отзывы:
+                                        </div>
+                                        <div class="Order-infoContent">{{item.comments}}
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+
+                </div>
+            </div>
+        </div>
     </div>
 </div>
-          </div>
-        </div>
-        <div class="Section-content">
-          <div class="Orders">
-            {% for item in user.profile.review_items.all %}
-            <div class="Order Order_anons">
-              <div class="Order-personal">
-                <div class="row">
-                  <div class="row-block">
-                    <a class="Order-title" href="{% url 'app_item:item_detail' item.pk %}">
-                      <div class="Account-avatar">
-                        <img src="{{ item.image.url }}" alt="card.jpg"/>
-                      </div>
-                    </a>
-                  </div>
-                  <div class="row-block">
-                    <div class="Order-info Order-info_delivery">
-                      <div class="Order-infoType"> Название:
-                      </div>
-                      <div class="Order-infoContent">{{item.title}}
-                      </div>
-                    </div>
-                    <div class="Order-info Order-info_pay">
-                      <div class="Order-infoType">Категория:
-                      </div>
-                      <div class="Order-infoContent">{{item.category}}
-                      </div>
-                    </div>
-                    <div class="Order-info">
-                      <div class="Order-infoType">Цена:
-                      </div>
-                      <div class="Order-infoContent"><span class="Order-price">{{item.price}}$</span>
-                      </div>
-                    </div>
-                    <div class="Order-info Order-info_status">
-                      <div class="Order-infoType">Просмотров:
-                      </div>
-                      <div class="Order-infoContent">{{item.views.count}}
-                      </div>
-                    </div>
-                    <div class="Order-info Order-info_status">
-                      <div class="Order-infoType">Отзывы:
-                      </div>
-                      <div class="Order-infoContent">{{item.comments}}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            {% endfor %}
-
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 {% endblock %}

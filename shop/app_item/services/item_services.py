@@ -1,6 +1,7 @@
 from dataclasses import dataclass, InitVar
 from datetime import datetime, timezone
-
+from typing import List, Dict, Union
+from django.db.models.query import QuerySet
 from django.contrib.auth.models import User
 from django.core.cache.utils import make_template_fragment_key
 from django.db.models import Count, Max, Sum, Min
@@ -57,42 +58,75 @@ class CountView:
 
 class ItemHandler:
     def get_popular_items(self):
+        """Функция возвращает список экземпляров популярных товаров"""
         return Item.available_items.order_by('-reviews')[:8]
 
     def get_limited_edition_items(self):
+        """Функция возвращает список экземпляров товаров «Ограниченный тираж»"""
         return Item.available_items.filter(limited_edition=True)
 
 
 class AddItemToReview:
 
+    def _get_all_category(self, category_id=None):
+        """Функция возвращает одну категорию по ID или при отсутствии ID все категории товаров """
+        if category_id:
+            return Category.objects.get(id=category_id)
+        return Category.objects.all()
+
     def _get_item(self, item):
+        """Функция возвращает экземпляр  товара"""
         item = get_object_or_404(Item, pk=item.pk)
         return item
 
-    def _get_reviews_items(self, user):
+    def _get_reviews_items(self, user) -> QuerySet[ItemView]:
+        """Функция возвращает все товары, которые просматривал пользователь """
         return user.profile.review_items.all()
 
-    def get_favorite_category_items(self, user):
-        all_reviewed_item = self._get_reviews_items(user)
-        favorite_cat = all_reviewed_item.values_list('category').annotate(rating=Count('category')). \
+    def _get_favorite_category_list(self, all_reviewed_item: QuerySet[ItemView]):
+        """Функция возвращает список самых просматриваемых категорий товаров"""
+        return all_reviewed_item.values_list('category').annotate(rating=Count('category')). \
             order_by('-rating')
-        cats = Category.objects.all()
-        favorite_category_list = [(cats.get(id=item[0]), self._get_minimum_price(item[0])) for item in favorite_cat]
-        fav = [{'category': key, 'price': value} for key, value in favorite_category_list]
-        return fav[:3]
 
-    def _get_minimum_price(self, category):
-        cat = Category.objects.get(id=category)
+    def _get_favorite_category_and_price_dict(
+            self,
+            favorite_category_list: List[str],
+            category_list: QuerySet[Category]) -> List[Dict[str, Union[str, float]]]:
+        """Функция возвращает список словарей(категория, цена) """
+
+        favorite_category = []
+        for item in favorite_category_list:
+            favorite_category.append({
+                'category': category_list.get(id=item[0]),
+                'price': self._get_minimum_price(item[0])
+            })
+        return favorite_category
+
+    def get_favorite_category_best_price(self, user):
+        """Функция возвращает самые популярные категории товаров у пользователя"""
+
+        all_reviewed_item = self._get_reviews_items(user)
+        favorite_category_list = self._get_favorite_category_list(all_reviewed_item)
+        all_category_list = self._get_all_category()
+        favorite_category_best_price = self._get_favorite_category_and_price_dict(
+            favorite_category_list, all_category_list
+        )
+
+        return favorite_category_best_price
+
+    def _get_minimum_price(self, category_id):
+        """Функция возвращает самую низкую цену на товар в категории"""
+        cat = self._get_all_category(category_id)
         min_price = cat.items.aggregate(min_price=Min('price'))
-
         return float(min_price.get('min_price'))
 
     def add_item_to_review(self, user, item):
+        """Функция добавляет товар в список просмотренных"""
         item = self._get_item(item)
         reviews = self._get_reviews_items(user)
         if item not in reviews:
             user.profile.review_items.add(item)
-        self.get_favorite_category_items(user)
+        self.get_favorite_category_best_price(user)
         return reviews
 
 # from django.db import models

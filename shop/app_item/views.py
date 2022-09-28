@@ -19,7 +19,7 @@ class MainPage(TemplateView):
     def get_context_data(self, **kwargs):
         favorite = AddItemToReview()
         item_handler = ItemHandler()
-        kwargs['favorites'] = favorite.get_favorite_category_items(user=self.request.user)
+        kwargs['favorites'] = favorite.get_favorite_category_best_price(user=self.request.user)
         kwargs['popular'] = item_handler.get_popular_items
         kwargs['limited_edition_items'] = item_handler.get_limited_edition_items()[:8]
         return kwargs
@@ -169,8 +169,8 @@ class DeleteComment(DetailView):
         item = kwargs['pk']
         comment = kwargs['comment_id']
         user = request.user
-        com = AddComment()
-        com.delete_comment(user=user, comment_id=comment)
+        removed_comment = AddComment()
+        removed_comment.delete_comment(user=user, comment_id=comment)
         return redirect('app_item:item_detail', item)
 
 
@@ -182,18 +182,18 @@ class EditComment(UpdateView):
 
     def get(self, request, *args, **kwargs):
         comment_id = kwargs['comment_id']
-        comm = Comment.objects.filter(id=comment_id)[0]
-        form = CommentForm(instance=comm)
-        # comments['update'] = CommentForm(initial={'review': comm})
-        return render(request, self.template_name, {'form': form, 'comments': comm})
+        comment = Comment.objects.filter(id=comment_id)[0]
+        form = CommentForm(instance=comment)
+
+        return render(request, self.template_name, {'form': form, 'comments': comment})
 
     def post(self, request, *args, **kwargs):
         comment_id = kwargs['comment_id']
-        comm = Comment.objects.get(id=comment_id)
-        form = CommentForm(request.POST, instance=comm)
-        item = kwargs['pk']
+        comment = Comment.objects.get(id=comment_id)
+        form = CommentForm(request.POST, instance=comment)
+        item_id = kwargs['pk']
 
         if form.is_valid():
-            comm.save(force_update=True)
-            return redirect('app_item:item_detail', item)
-        return render(request, self.template_name, {'form': form, 'comments': comm})
+            comment.save(force_update=True)
+            return redirect('app_item:item_detail', item_id)
+        return render(request, self.template_name, {'form': form, 'comments': comment})

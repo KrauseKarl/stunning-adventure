@@ -16,10 +16,7 @@ class AddComment:
 
     def add_comment(self, user, item, data):
         item = self._get_item(item)
-        print(data)
-
         form = CommentForm(data)
-
         new_comment = form.save(commit=False)
         new_comment.item = item
         new_comment.user = user
@@ -37,7 +34,6 @@ class AddComment:
         return Comment.objects.filter(id=comment_id)[0]
 
     def delete_comment(self, user, comment_id):
-        print('comment_id', comment_id)
         comment = self._get_comment(comment_id)
         permission = self._get_permission(user, comment)
         if permission:
