@@ -16,9 +16,12 @@ class AddComment:
 
     def add_comment(self, user, item, data):
         item = self._get_item(item)
+        item.comments += 1
+        item.save()
         form = CommentForm(data)
         new_comment = form.save(commit=False)
         new_comment.item = item
+
         new_comment.user = user
         new_comment.is_published = False
         new_comment.save()

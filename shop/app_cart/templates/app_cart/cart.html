@@ -38,13 +38,13 @@
                             </a>
                         </div>
                         <div class="Cart-block Cart-block_info">
-                            <a class="Cart-title" href="{% url 'app_item:item_detail' item.item.pk %}">{{ item.item.title }}</a>
-                            <div class="Cart-desc">{{ item.item.description }}
+                            <a class="Cart-title" href="{% url 'app_item:item_detail' item.item.pk %}">
+                                {{ item.item.title }}</a>
+                            <div class="Cart-desc">{% if item.item.description %}{{ item.item.description }}{% endif %}
                             </div>
                         </div>
                         <div class="Cart-block Cart-block_price">
-                            <div class="Cart-price">{{ item.total_price }}$
-                            </div>
+                            <div class="Cart-price">${{ item.total_price }}</div>
                         </div>
                     </div>
                     <div class="Cart-block Cart-block_row">
@@ -52,47 +52,51 @@
                             <!-- - var options = setOptions(items, ['value', 'selected', 'disabled']);-->
 
                         </div>
+
+                        <!--    Добавление или ужаление единиц товара  -->
                         <div class="Cart-block Cart-block_amount">
                             <div class="Cart-amount">
                                 <div class="Amount">
-                                    <button class="Amount-remove" type="button">
-                                    </button>
+                                    <button class="Amount-remove" type="button"></button>
                                     <input class="Amount-input form-input" name="amount" type="text"
                                            value="{{item.quantity}}"/>
-                                    <button class="Amount-add" type="button">
-                                    </button>
+                                    <button class="Amount-add" type="button"></button>
                                 </div>
                             </div>
                         </div>
+                        <!--    Добавление или ужаление единиц товара     -->
+
                         <div class="Cart-block Cart-block_delete">
                             <a class="Cart-delete" href="{% url 'app_cart:remove_cart' item.item.pk  %}">
-                            <img src="/assets/img/icons/card/delete.svg" alt="delete.svg"/>
-                        </a>
+                                <img src="/assets/img/icons/card/delete.svg" alt="delete.svg"/>
+                            </a>
                         </div>
                     </div>
                 </div>
                 {% empty %}
-                  <div class="Middle Middle_top">
-                      <div class="Section">
-                          <div class="wrap">
-                              <div class="ProgressPayment">
-                                  <div class="ProgressPayment-title">Ваша корзина пуста</div>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
+                <div class="Middle Middle_top">
+                    <div class="Section">
+                        <div class="wrap">
+                            <div class="ProgressPayment">
+                                <div class="ProgressPayment-title">Ваша корзина пуста</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 {% endfor %}
 
                 {% if cart.items.count > 0 %}
                 <div class="Cart-total">
                     <div class="Cart-block Cart-block_total">
-                        <strong class="Cart-title">Итого:
-                        </strong><span class="Cart-price">{{cart.get_total_quantity}} | {{cart.get_total_price }} $ </span>
+                        <strong class="Cart-title">Итого:</strong>
+                        <span class="Cart-total-price">{{cart.get_total_quantity}} | {{cart.get_total_price }} $ </span>
                     </div>
                     <div class="Cart-block">
                         <a class="btn btn_success btn_lg" href="order.html">Оформить заказ</a>
                     </div>
-                </div>{% endif %}
+                </div>
+                {% endif %}
+
             </form>
         </div>
     </div>

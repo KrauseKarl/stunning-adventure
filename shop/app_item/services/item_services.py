@@ -81,7 +81,9 @@ class AddItemToReview:
 
     def _get_reviews_items(self, user) -> QuerySet[ItemView]:
         """Функция возвращает все товары, которые просматривал пользователь """
-        return user.profile.review_items.all()
+        if user.is_authenticated:
+            return user.profile.review_items.all()
+        return Item.objects.order_by('reviews')
 
     def _get_favorite_category_list(self, all_reviewed_item: QuerySet[ItemView]):
         """Функция возвращает список самых просматриваемых категорий товаров"""
@@ -125,7 +127,10 @@ class AddItemToReview:
         item = self._get_item(item)
         reviews = self._get_reviews_items(user)
         if item not in reviews:
-            user.profile.review_items.add(item)
+            try:
+                user.profile.review_items.add(item)
+            except:
+                pass
         self.get_favorite_category_best_price(user)
         return reviews
 

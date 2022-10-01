@@ -63,34 +63,15 @@ class ItemList(FilterMixin, TagMixin, ListView):
         if category:
             category = get_object_or_404(Category, slug=category)
             queryset = self.queryset.filter(category=category.id)
-            # try:
-            #     queryset = request.session['queryset']
-            #     queryset = queryset.filter(category=category.id)
-            #     queryset = serialize(queryset=queryset, format='json')
-            #     request.session['queryset'] = queryset
-            #
-            # except:
-            #     queryset = self.queryset.filter(category=category.id)
-            #     queryset = serialize(queryset=queryset, format='json')
-            #     request.session['queryset'] = queryset
-
         elif tag:
-
             tag = get_object_or_404(Tag, slug=tag)
             queryset = self.queryset.filter(tag=tag.id)
-
+        elif order_by:
+            queryset = self.queryset.order_by(order_by)
         else:
             queryset = self.queryset
 
-            # if order_by:
-            #     try:
-            #         queryset = request.session['queryset']
-            #         queryset = queryset.order_by(order_by)
-            #         request.session['queryset'] = queryset
-            #     except:
-            #         queryset = self.queryset.order_by(order_by)
-            #         queryset = serialize(queryset=queryset, format='json')
-            #         request.session['queryset'] = queryset
+
 
         tags = Tag.objects.all()
         # queryset = self.get_my_queryset(self.get_tag_queryset(**kwargs), **kwargs)

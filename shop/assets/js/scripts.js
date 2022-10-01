@@ -655,6 +655,7 @@ var Amount = function(){
     var $add = $('.Amount-add');
     var $input = $('.Amount-input');
     var $remove = $('.Amount-remove');
+    var $price = $('.Cart-price');
     return {
         init: function(){
             $add.on('click', function(e){
@@ -662,6 +663,10 @@ var Amount = function(){
                 var $inputThis = $(this).siblings($input).filter($input);
                 var value = parseFloat($inputThis.val());
                 $inputThis.val( value + 1);
+                var $priceThis = $(this).siblings($price).filter($price);
+                var valuePrice = parseFloat($priceThis.val());
+                $priceThis.val( valuePrice + valuePrice);
+
             });
             $remove.on('click', function(e){
                 e.preventDefault();

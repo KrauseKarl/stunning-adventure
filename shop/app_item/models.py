@@ -54,7 +54,6 @@ class Item(models.Model):
     available_items = AvailableManager()
     unavailable_items = UnavailableManager()
 
-
     class Meta:
         db_table = 'app_items'
         ordering = ['created']
@@ -129,6 +128,25 @@ class Category(models.Model):
         return Item.objects.filter(Q(category__parent_category=self) | Q(category=self)).count()
 
 
+# class TagColor(models.Model):
+#     COLORS = (
+#         ('red', '#f00'),
+#         ('orange', ''),
+#         ('yellow', ''),
+#         ('green', '4aff35'),
+#         ('blue', ''),
+#         ('magenta', ''),
+#         ('white', ''),
+#         ('black', ''),
+#
+#     )
+#
+#     color = models.CharField(max_length=6, choices=COLORS)
+#
+#     class Meta:
+#         abstract = True
+
+
 class Tag(models.Model):
     title = models.CharField(max_length=50, unique=True, blank=True, verbose_name='название тега')
     slug = models.SlugField(max_length=50, unique=True)
@@ -153,6 +171,7 @@ class Tag(models.Model):
 
 class ModeratedCommentsManager(models.Manager):
     """ """
+
     def get_query_set(self):
         return super().get_query_set().filter(is_published=True)
 

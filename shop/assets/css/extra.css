@@ -1155,6 +1155,13 @@ a.Cart-title {
   font-size: 22px;
   color: #0063d1;
 }
+/* my style */
+.Cart-total-price {
+    font-size: 29px;
+    color: #0063d1;
+}
+/* my style */
+
 .Cart-price_old {
   color: #999;
   text-decoration: line-through;
