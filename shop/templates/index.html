@@ -55,11 +55,15 @@
                     <div class="row ControlPanel-rowSplit">
                         <div class="row-block">
                             {% if request.user.is_authenticated %}
-                            <a class="ControlPanel-title" href="{% url 'app_user:account' request.user.pk %}">
+                            <a class="ControlPanel-title"
+                               href="{% url 'app_user:account' request.user.pk %}"
+                               style="color:{% if request.user.profile.group.id == 3 %} red {% endif %}">
                                 {% if request.user.get_full_name %}
                                 {{ request.user.get_full_name| truncatechars:10 }}
-                                {% else %} {{ request.user.username }}
-                                {% endif %}</a>&#160;/&#160;
+                                {% else %}
+                                {{ request.user.username }}
+                                {% endif %}
+                            </a>&#160;/&#160;
                             <a class="ControlPanel-title" href="{% url 'app_user:logout' %}">Logout</a>
                             {% else %}
                             <a class="ControlPanel-title" href="{% url 'app_user:login' %}">Login</a>&#160;/&#160;
@@ -87,7 +91,7 @@
                 <img class="logo-image" src="/assets/img/logo.png" alt="logo.png"/></a>
             </div>
 
-<!--    NAVBAR  -->
+            <!--    NAVBAR  -->
             <nav class="row-block row-block_right Header-menu">
                 <div class="menuModal" id="navigate">
                     <ul class="menu menu_main">
@@ -108,15 +112,15 @@
                     </ul>
                 </div>
             </nav>
-<!--    NAVBAR END -->
+            <!--    NAVBAR END -->
 
-<!--    CART  -->
+            <!--    CART  -->
             <div class="row-block">
                 <div class="CartBlock">
                     <a class="CartBlock-block" href="{% url 'app_cart:cart' %}">
                         <img class="CartBlock-img" src="/assets/img/icons/cart.svg" alt="cart.svg"/>
 
-<!--  ITEM'S COUNTER OF THE CART   -->
+                        <!--  ITEM'S COUNTER OF THE CART   -->
                         <span class="CartBlock-amount">
                             {% with total_items=request.user.user_add_items.count  %}
                                 {% if total_items > 0 %}
@@ -126,19 +130,19 @@
                                 {% endif %}
                             {% endwith %}
                         </span>
-<!--  ITEM'S COUNTER OF THE CART   -->
+                        <!--  ITEM'S COUNTER OF THE CART   -->
 
                     </a>
 
- <!--  ITEM'S COST COUNTER OF THE CART   -->
+                    <!--  ITEM'S COST COUNTER OF THE CART   -->
                     <div class="CartBlock-block">
                         <span class="CartBlock-price">{{ cart_total_sum }} $</span>
                     </div>
-<!--  ITEM'S COST COUNTER OF THE CART   -->
+                    <!--  ITEM'S COST COUNTER OF THE CART   -->
 
                 </div>
             </div>
-<!--    CART END -->
+            <!--    CART END -->
 
             <div class="row-block Header-trigger"><a class="menuTrigger" href="#navigate">
                 <div class="menuTrigger-content">Показать навигацию

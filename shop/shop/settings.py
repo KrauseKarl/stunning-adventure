@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.humanize',
 
     # third party app
-    "debug_toolbar",
+    'debug_toolbar',
+    'six',
 
     # my app
     'app_user.apps.AppUserConfig',
@@ -157,3 +158,13 @@ INTERNAL_IPS = [
 ]
 LOGIN_REDIRECT_URL = 'item/list/'
 LOGIN_URL = '/accounts/login/'
+
+# Email setting
+EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+SENDGRID_API_KEY = os.getenv('SENDGRID_API_KEY')
+
+EMAIL_HOST = 'smtp.sendgrid.net'
+EMAIL_HOST_USER = 'apikey' # this is exactly the value 'apikey'
+EMAIL_HOST_PASSWORD = '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'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True

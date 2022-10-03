@@ -1,0 +1,36 @@
+<style type="text/css">
+   .c-button {
+      appearance: none;
+      border: 0;
+      border-radius: 5px;
+      background: #4676D7;
+      color: #fff;
+      padding: 16px 16px;
+      font-size: 16px;
+      text-decoration: none;
+      text: center;
+      margin-top: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center
+
+
+   }
+   .c-button:hover {
+        background: #1d49aa;
+    }
+
+   .c-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px #cbd6ee;
+    }
+</style>
+{% autoescape off %}
+<div>Здравствуйте,  <strong>{{ user.username }}</strong>,
+    <p> Ваша учетная запись на сайте {{domain}} успешно создана.</p>
+    <p>Пожалуйста, нажмите на ссылку ниже, чтобы активировать свою учетную запись</p>
+    <a class="c-button" href="http://{{ domain }}{% url 'app_user:activate' uidb64=uid token=token %}">
+        <b>нажмите, чтобы подтвердить свою почту</b>
+    </a>
+</div>
+{% endautoescape %}
