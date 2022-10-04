@@ -23,16 +23,6 @@ class RegisterUserForm(UserCreationForm):
     username = forms.CharField(max_length=30, label='имя пользователя',
                                widget=forms.Textarea(attrs={'rows': 1, 'cols': 20})
                                )
-    # first_name = forms.CharField(
-    #     max_length=30,
-    #     label='Имя',
-    #     widget=forms.Textarea(attrs={'rows': 1, 'cols': 20})
-    # )
-    # last_name = forms.CharField(
-    #     max_length=30,
-    #     label='Фамилия',
-    #     widget=forms.Textarea(attrs={'rows': 1, 'cols': 20})
-    # )
     password1 = forms.CharField(label="пароль", strip=False,
                                 widget=forms.PasswordInput(attrs={'autocomplete': 'new-password'})
                                 )
@@ -41,11 +31,11 @@ class RegisterUserForm(UserCreationForm):
 
     telephone = forms.CharField(label='телефон')
 
-    # avatar = forms.ImageField(required=False, label='аватарка')
+    email = forms.EmailField(required=False, label='E-mail')
 
     class Meta:
         model = User
-        fields = ('username', 'password1', 'password2', 'telephone')
+        fields = ('username', 'password1', 'password2', 'telephone','email')
 
     # def clean_password_confirm(self):
     #     # Check that the two password entries match
