@@ -10,7 +10,7 @@ from sendgrid.helpers.mail import Mail
 from python_http_client import exceptions, HTTPError
 from six import text_type
 
-SENDGRID_API_KEY = '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'
+SENDGRID_API_KEY = os.environ.get('SENDGRID_API_KEY')
 ADMIN_EMAIL = 'karlvonkrause@protonmail.com'
 SUBJECT = 'Активируйте Ваш аккаунт '
 SUBJECT_ERROR = 'Ошибка активации аккаунта'
