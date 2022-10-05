@@ -8,6 +8,7 @@ class ItemTagsInline(admin.TabularInline):
     model = Item.tag.through
 
 
+
 class ItemAdmin(admin.ModelAdmin):
     fields = (
         ('title', 'slug'), ('price', 'stock', 'is_available', 'limited_edition'),
@@ -18,9 +19,8 @@ class ItemAdmin(admin.ModelAdmin):
     readonly_fields = ('reviews', 'comments')
 
 
-
 class CategoryAdmin(admin.ModelAdmin):
-    list_display = ['title', 'description']
+    list_display = ['title', 'parent_category', 'description']
     prepopulated_fields = {'slug': ('title',)}
 
 
