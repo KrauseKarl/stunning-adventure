@@ -1,7 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User, Group, Permission
 from django.core.validators import RegexValidator
-from django.urls import reverse
 
 from app_item.models import Item
 
@@ -13,6 +12,10 @@ class Profile(models.Model):
     telephone = models.CharField(max_length=10)
     date_joined = models.DateTimeField(auto_now_add=True, null=True)  # readonly_fields = ['date_joined',   ]
     review_items = models.ManyToManyField(Item, related_name='item_views', blank=True)
+    email = models.EmailField(max_length=200) # unique=True
+
+    # is_active = models.BooleanField(default=False)
+    # is_staff = models.BooleanField(default=False)
 
     class Meta:
         ordering = ['user']
@@ -24,5 +27,3 @@ class Profile(models.Model):
 
     # def get_absolute_url(self):
     #     return reverse('app_users:profile', kwargs={'pk': self.pk})
-
-
