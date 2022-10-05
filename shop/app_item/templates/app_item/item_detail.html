@@ -165,14 +165,26 @@
                         </div>
                         <div class="Tabs-block" id="reviews">
                             <header class="Section-header">
-                                <h3 class="Section-title">{{item.item_comments.count}} Отзывы </h3>
+                                <h3 class="Section-title">
+                                    {% if item.item_comments.count != 0 %}
+                                    {{item.item_comments.count}}
+                                    {% endif %}
+
+                                    {% if item.item_comments.count > 1 and item.item_comments.count < 5 %}
+                                    Отзыва
+                                    {% elif item.item_comments.count == 1 %}
+                                    Отзыв
+                                    {% elif  item.item_comments.count > 4 %} Отзывов
+                                    {% else %} 0 отзывов
+                                    {% endif %}
+                                </h3>
                             </header>
                             <div class="Comments">
 
                                 {% for comment in item.item_comments.all %}
                                 <div class="Comment">
                                     <div class="Comment-column Comment-column_pict">
-                                        {% if comment.user.profile.avatar %}
+                                        {% if comment.user.is_authenticated and comment.user.profile.avatar %}
                                         <div>
                                             <img class="Comment-avatar-exist"
                                                  src="{{ comment.user.profile.avatar.url }}">
@@ -208,9 +220,11 @@
                                 {% endfor %}
 
                             </div>
+                            {% if  request.user.is_authenticated %}
                             <header class="Section-header Section-header_product">
                                 <h3 class="Section-title">Добавить отзыв</h3>
                             </header>
+
                             <div class="Tabs-addComment">
 
                                 <form class="form" action="#" method="post">
@@ -230,6 +244,7 @@
 
 
                             </div>
+                            {% endif %}
                         </div>
                     </div>
                 </div>

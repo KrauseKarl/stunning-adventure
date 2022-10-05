@@ -17,6 +17,9 @@ class Profile(models.Model):
     # is_active = models.BooleanField(default=False)
     # is_staff = models.BooleanField(default=False)
 
+    # is_active = models.BooleanField(default=False)
+    # is_staff = models.BooleanField(default=False)
+
     class Meta:
         ordering = ['user']
         verbose_name = 'пользователь'
