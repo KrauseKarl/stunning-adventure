@@ -157,3 +157,14 @@ INTERNAL_IPS = [
 ]
 LOGIN_REDIRECT_URL = 'item/list/'
 LOGIN_URL = '/accounts/login/'
+
+
+#
+#
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = os.environ.get('FROM_MAIL')
+EMAIL_HOST_PASSWORD = os.environ.get('PASSWORD')
+EMAIL_PORT = 465
+
+EMAIL_USE_TLS = True
+EMAIL_USE_SSL = False
