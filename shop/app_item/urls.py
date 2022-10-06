@@ -4,7 +4,7 @@ from app_item.views import ItemList, ItemDetail, MainPage, DeleteComment, EditCo
 app_name = 'app_item'
 
 urlpatterns = [
-    path('', MainPage.as_view(), name='main_page'),
+    # path('', MainPage.as_view(), name='main_page'),
     path('list/', ItemList.as_view(), name='item_list'),
     path('category/<slug:category>/', ItemList.as_view(), name='item_category'),
     path('tag/<slug:tag>/', ItemList.as_view(), name='item_tag'),

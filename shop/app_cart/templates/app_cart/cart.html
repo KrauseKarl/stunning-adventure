@@ -11,12 +11,13 @@
     <div class="Middle-top">
         <div class="wrap">
             <div class="Middle-header">
-                <h1 class="Middle-title">Корзина
-                </h1>
+                <h1 class="Middle-title">Корзина</h1>
                 <ul class="breadcrumbs Middle-breadcrumbs">
-                    <li class="breadcrumbs-item"><a href="index.html">home</a>
+                    <li class="breadcrumbs-item">
+                        <a href="index.html">home</a>
                     </li>
-                    <li class="breadcrumbs-item breadcrumbs-item_current"><span>Корзина</span>
+                    <li class="breadcrumbs-item breadcrumbs-item_current">
+                        <span>Корзина</span>
                     </li>
                 </ul>
             </div>
@@ -27,7 +28,8 @@
 
     <div class="Section">
         <div class="wrap">
-            <form class="form Cart" action="#" method="post">
+            <form class="form Cart" action="" method="post">
+                {% csrf_token %}
 
                 {% for item in cart.items.all %}
                 <div class="Cart-product">
@@ -44,7 +46,7 @@
                             </div>
                         </div>
                         <div class="Cart-block Cart-block_price">
-                            <div class="Cart-price">${{ item.total_price }}</div>
+                            <div class="Cart-price" data-value="{{ item.total_price }}">${{ item.total_price }}</div>
                         </div>
                     </div>
                     <div class="Cart-block Cart-block_row">
@@ -53,7 +55,7 @@
 
                         </div>
 
-                        <!--    Добавление или ужаление единиц товара  -->
+                        <!--    Добавление или удаление единиц товара  -->
                         <div class="Cart-block Cart-block_amount">
                             <div class="Cart-amount">
                                 <div class="Amount">
@@ -64,7 +66,7 @@
                                 </div>
                             </div>
                         </div>
-                        <!--    Добавление или ужаление единиц товара     -->
+                        <!--    Добавление или удаление единиц товара     -->
 
                         <div class="Cart-block Cart-block_delete">
                             <a class="Cart-delete" href="{% url 'app_cart:remove_cart' item.item.pk  %}">
@@ -89,15 +91,18 @@
                 <div class="Cart-total">
                     <div class="Cart-block Cart-block_total">
                         <strong class="Cart-title">Итого:</strong>
-                        <span class="Cart-total-price">{{cart.get_total_quantity}} | {{cart.get_total_price }} $ </span>
+                        <span class="Cart-total-quantity">{{cart.get_total_quantity}} </span>|
+                         <span class="Cart-total-price" data-value="{{ cart.get_total_price }} ">{{cart.get_total_price }} $ </span>
                     </div>
                     <div class="Cart-block">
-                        <a class="btn btn_success btn_lg" href="order.html">Оформить заказ</a>
+<!--                        <a class="btn btn_success btn_lg" href="order.html" onclick="alert('заказ оформлен')">Оформить заказ</a>-->
+<!--                    <div class="btn btn_success btn_lg js-button-campaign"><span>Оформить заказ</span></div>-->
                     </div>
                 </div>
                 {% endif %}
-
             </form>
+               <a href="{% url 'app_order:order_create' pk=cart.user.pk %}" class="btn btn_success btn_lg js-button-campaign">
+                   <span>Оформить заказ</span></a>
         </div>
     </div>
 
@@ -105,5 +110,14 @@
 
 </div>
 
+    <div class="overlay js-overlay-campaign">
+        <div class="popup js-popup-campaign">
+            <h2>Внимание, акция!</h2>
+            На протяжении 40 лет BMW 3 серии представляет собой идеальное воплощение спортивного седана.
+            В шестом поколении комбинация динамики, непревзойденной управляемости, инновационных функций и
+            максимальной практичности впечатляет как никогда раньше.
+            <div class="close-popup js-close-campaign"></div>
+        </div>
+    </div>
 
 {% endblock %}

@@ -32,6 +32,18 @@ class UnavailableManager(models.Manager):
 
 
 class Item(models.Model):
+    COLOURS = (
+        ('red',''),
+        ('orange', ''),
+        ('yellow', ''),
+        ('green', ''),
+        ('blue', ''),
+        ('magenta', ''),
+        ('white', ''),
+        ('black', ''),
+        ('grey', ''),
+
+    )
     title = models.CharField(max_length=100, db_index=True, verbose_name='название')
     slug = models.SlugField(max_length=100, db_index=True, allow_unicode=True)
     description = models.TextField(null=True, blank=True, verbose_name='описание')
@@ -43,6 +55,7 @@ class Item(models.Model):
     comments = models.SmallIntegerField(default=0, verbose_name='комментарии')
     created = models.DateTimeField(auto_now_add=True, verbose_name='дата создания')
     updated = models.DateTimeField(auto_now_add=True, verbose_name='дата обновления')
+    color = models.CharField(max_length=10, choices=COLOURS, null=True, verbose_name='цвет товара')
 
     image = models.ImageField(upload_to='item/%Y/%m/%d', null=True, blank=True, verbose_name='изображение')
 

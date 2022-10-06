@@ -1,10 +1,12 @@
 from django.urls import path
 
+from app_order.views import OrderCreate, SuccessOrdered, FailedOrdered, OrderList
 
 app_name = 'app_order'
 
 urlpatterns = [
-    # path('add/<int:pk>/', AddItemCart.as_view(), name='add_cart'),
-    # path('remove/<int:pk>/', RemoveItemCart.as_view(), name='remove_cart'),
-    # path('cart/', CartDetail.as_view(), name='cart'),
+    path('create/<int:pk>/', OrderCreate.as_view(), name='order_create'),
+    path('order_list/', OrderList.as_view(), name='order_list'),
+    path('success_order/', SuccessOrdered.as_view(), name='success_order'),
+    path('failed_order/', FailedOrdered.as_view(), name='failed_order'),
 ]

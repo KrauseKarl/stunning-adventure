@@ -17,6 +17,7 @@
     <link rel="stylesheet" type="text/css" href="/assets/css/fonts.css?v=65245665">
     <link rel="stylesheet" type="text/css" href="/assets/css/basic.css?v=65245665">
     <link rel="stylesheet" type="text/css" href="/assets/css/extra.css?v=65245665">
+    <link rel="stylesheet" type="text/css" href="/assets/css/my_css.css?v=65245665">
     <script src="/assets/plg/CountDown/countdown.js"></script>
 
 </head>
@@ -83,7 +84,7 @@
     </div>
     <div class="wrap">
         <div class="row Header-rowMain">
-            <div class="row-block Header-logo"><a class="logo" href="{% url 'app_item:main_page' %}">
+            <div class="row-block Header-logo"><a class="logo" href="{% url 'main_page' %}">
                 <img class="logo-image" src="/assets/img/logo.png" alt="logo.png"/></a>
             </div>
 
@@ -92,7 +93,7 @@
                 <div class="menuModal" id="navigate">
                     <ul class="menu menu_main">
                         <li class="menu-item">
-                            <a class="menu-link" href="{% url 'app_item:main_page' %}">Home</a>
+                            <a class="menu-link" href="{% url 'main_page' %}">Home</a>
                         </li>
                         <li class="menu-item">
                             <a class="menu-link" href="{% url 'app_item:item_list' %}">Catalog</a>
@@ -358,6 +359,7 @@
         </div>
     </div>
 </footer>
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
 <script type="text/javascript" src="/assets/plg/jQuery/jquery-3.5.0.slim.min.js"></script>
 <script type="text/javascript" src="/assets/plg/form/jquery.form.js"></script>
 <script type="text/javascript" src="/assets/plg/form/jquery.maskedinput.min.js"></script>
