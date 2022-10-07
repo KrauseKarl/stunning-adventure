@@ -56,9 +56,9 @@ class ItemList(FilterMixin, TagMixin, ListView):
     template_name = 'app_item/item_list.html'
     context_object_name = 'items'
     queryset = Item.objects.filter(is_available=True).order_by('-reviews')
-    extra_context = {'tags': Tag.objects.all()}
 
-    def get(self, request, category=None, tag=None, order_by=None, **kwargs):
+
+    def get(self, request, category=None, tag=None, order_by=None, color=None, **kwargs):
 
         if category:
             category = get_object_or_404(Category, slug=category)
@@ -66,16 +66,24 @@ class ItemList(FilterMixin, TagMixin, ListView):
         elif tag:
             tag = get_object_or_404(Tag, slug=tag)
             queryset = self.queryset.filter(tag=tag.id)
+        elif color:
+            queryset = self.queryset.filter(color=color)
         elif order_by:
             queryset = self.queryset.order_by(order_by)
         else:
             queryset = self.queryset
 
-
+        tags = Item.objects.exclude(color='').values('color').distinct()
+        colors = list(tags.values('color'))
+        res = []
+        for col in colors:
+            for key, val in col.items():
+                res.append(val)
+        colors = list(set(res))
 
         tags = Tag.objects.all()
         # queryset = self.get_my_queryset(self.get_tag_queryset(**kwargs), **kwargs)
-        return render(request, 'app_item/item_list.html', context={'items': queryset, 'tags': tags})
+        return render(request, 'app_item/item_list.html', context={'items': queryset, 'tags': tags, 'colors': colors})
 
 
 class ItemDetail(DetailView, CreateView):

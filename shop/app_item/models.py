@@ -5,6 +5,7 @@ from django.db import models
 from django.db.models import Q
 from django.shortcuts import get_object_or_404
 from django.urls import reverse
+from django.utils.safestring import mark_safe
 from django.utils.text import slugify
 from django.contrib.auth.models import User
 from django.views import View
@@ -33,16 +34,15 @@ class UnavailableManager(models.Manager):
 
 class Item(models.Model):
     COLOURS = (
-        ('red',''),
-        ('orange', ''),
-        ('yellow', ''),
-        ('green', ''),
-        ('blue', ''),
-        ('magenta', ''),
-        ('white', ''),
-        ('black', ''),
-        ('grey', ''),
-
+        ('red', 'red'),
+        ('orange', 'orange'),
+        ('yellow', 'yellow'),
+        ('green', 'green'),
+        ('blue', 'blue'),
+        ('magenta', 'magenta'),
+        ('white', 'white'),
+        ('black', 'black'),
+        ('grey', 'grey'),
     )
     title = models.CharField(max_length=100, db_index=True, verbose_name='название')
     slug = models.SlugField(max_length=100, db_index=True, allow_unicode=True)
@@ -126,6 +126,7 @@ class Category(models.Model):
 
     class Meta:
         db_table = 'app_categories'
+        ordering = ('title', )
         verbose_name = 'категория'
         verbose_name_plural = 'категории'
 
@@ -141,24 +142,6 @@ class Category(models.Model):
         return Item.objects.filter(Q(category__parent_category=self) | Q(category=self)).count()
 
 
-# class TagColor(models.Model):
-#     COLORS = (
-#         ('red', '#f00'),
-#         ('orange', ''),
-#         ('yellow', ''),
-#         ('green', '4aff35'),
-#         ('blue', ''),
-#         ('magenta', ''),
-#         ('white', ''),
-#         ('black', ''),
-#
-#     )
-#
-#     color = models.CharField(max_length=6, choices=COLORS)
-#
-#     class Meta:
-#         abstract = True
-
 
 class Tag(models.Model):
     title = models.CharField(max_length=50, unique=True, blank=True, verbose_name='название тега')
@@ -172,6 +155,7 @@ class Tag(models.Model):
 
     class Meta:
         db_table = 'app_tags'
+        ordering = ('title',)
         verbose_name = 'тег'
         verbose_name_plural = 'теги'
 
