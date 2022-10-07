@@ -38,5 +38,5 @@ class CartDetail(ListView):
     def get_queryset(self):
         user = self.request.user
         queryset = get_cart(user)
-
         return queryset
+

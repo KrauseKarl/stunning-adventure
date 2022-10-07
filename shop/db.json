@@ -1,0 +1,6346 @@
+[
+{
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+        "action_time": "2022-08-21T08:47:01.460Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "1",
+        "object_repr": "Телефоны",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+        "action_time": "2022-08-21T08:47:13.455Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "2",
+        "object_repr": "Бюджетные телефоны",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 3,
+    "fields": {
+        "action_time": "2022-08-21T08:47:26.763Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "3",
+        "object_repr": "Смартфоны",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 4,
+    "fields": {
+        "action_time": "2022-08-21T08:47:36.754Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "4",
+        "object_repr": "Лампы",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 5,
+    "fields": {
+        "action_time": "2022-08-21T08:47:45.972Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "5",
+        "object_repr": "Стиральные машины",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 6,
+    "fields": {
+        "action_time": "2022-08-21T09:48:26.007Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "6",
+        "object_repr": "Кухонные",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 7,
+    "fields": {
+        "action_time": "2022-08-21T09:48:39.786Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "7",
+        "object_repr": "Чайники",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 8,
+    "fields": {
+        "action_time": "2022-08-21T09:48:59.452Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "8",
+        "object_repr": "Микроволновки",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 9,
+    "fields": {
+        "action_time": "2022-08-21T09:49:17.296Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "9",
+        "object_repr": "Плиты",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 10,
+    "fields": {
+        "action_time": "2022-08-24T06:49:48.750Z",
+        "user": 1,
+        "content_type": 3,
+        "object_id": "1",
+        "object_repr": "Пользователь",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 11,
+    "fields": {
+        "action_time": "2022-08-24T06:50:30.383Z",
+        "user": 1,
+        "content_type": 3,
+        "object_id": "2",
+        "object_repr": "Администратор",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 12,
+    "fields": {
+        "action_time": "2022-08-24T06:52:18.177Z",
+        "user": 1,
+        "content_type": 4,
+        "object_id": "2",
+        "object_repr": "auth_user_1",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 13,
+    "fields": {
+        "action_time": "2022-08-24T06:52:58.005Z",
+        "user": 1,
+        "content_type": 4,
+        "object_id": "2",
+        "object_repr": "auth_user_1",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"First name\", \"Last name\", \"Email address\", \"Groups\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 14,
+    "fields": {
+        "action_time": "2022-08-24T06:57:17.513Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "1",
+        "object_repr": "Profile object (1)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 15,
+    "fields": {
+        "action_time": "2022-08-24T07:03:13.273Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "1",
+        "object_repr": "44444445",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 16,
+    "fields": {
+        "action_time": "2022-08-24T07:26:36.832Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "1",
+        "object_repr": " user auth_user_1",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 17,
+    "fields": {
+        "action_time": "2022-08-24T08:04:48.241Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "1",
+        "object_repr": "Cellphone 800",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 18,
+    "fields": {
+        "action_time": "2022-08-24T08:05:14.351Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "2",
+        "object_repr": "Cellphone 1200",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 19,
+    "fields": {
+        "action_time": "2022-08-24T08:05:45.898Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "3",
+        "object_repr": "Microwave 200",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 20,
+    "fields": {
+        "action_time": "2022-08-24T08:06:39.034Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "4",
+        "object_repr": "Microwave 800",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 21,
+    "fields": {
+        "action_time": "2022-08-24T08:07:14.968Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "5",
+        "object_repr": "Smartphone LUX",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 22,
+    "fields": {
+        "action_time": "2022-08-25T12:17:07.555Z",
+        "user": 1,
+        "content_type": 4,
+        "object_id": "3",
+        "object_repr": "user_1",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 23,
+    "fields": {
+        "action_time": "2022-08-25T12:17:44.201Z",
+        "user": 1,
+        "content_type": 4,
+        "object_id": "3",
+        "object_repr": "user_1",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"First name\", \"Last name\", \"Email address\", \"Groups\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 24,
+    "fields": {
+        "action_time": "2022-08-25T12:18:46.770Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "1",
+        "object_repr": "John Summers",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 25,
+    "fields": {
+        "action_time": "2022-08-25T12:21:31.386Z",
+        "user": 1,
+        "content_type": 4,
+        "object_id": "3",
+        "object_repr": "user_1",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Staff status\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 26,
+    "fields": {
+        "action_time": "2022-08-25T16:20:40.754Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "6",
+        "object_repr": "Чайник металлический",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 27,
+    "fields": {
+        "action_time": "2022-08-25T16:21:31.423Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "7",
+        "object_repr": "Чайник синий",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 28,
+    "fields": {
+        "action_time": "2022-08-25T16:22:14.609Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "8",
+        "object_repr": "Чайник оранжевый",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 29,
+    "fields": {
+        "action_time": "2022-08-25T16:23:19.949Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "9",
+        "object_repr": "Плита 2300",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 30,
+    "fields": {
+        "action_time": "2022-08-25T16:24:18.209Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "10",
+        "object_repr": "Газовая плита",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 31,
+    "fields": {
+        "action_time": "2022-08-25T16:25:33.309Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "11",
+        "object_repr": "Лампа Lux",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 32,
+    "fields": {
+        "action_time": "2022-08-25T16:26:23.610Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "12",
+        "object_repr": "Лампа classic",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 33,
+    "fields": {
+        "action_time": "2022-08-25T16:27:35.307Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "13",
+        "object_repr": "Микроволновка Pansic",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 34,
+    "fields": {
+        "action_time": "2022-08-25T16:28:41.607Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "14",
+        "object_repr": "Микроволновка Introvert",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 35,
+    "fields": {
+        "action_time": "2022-08-26T12:24:50.824Z",
+        "user": 1,
+        "content_type": 4,
+        "object_id": "4",
+        "object_repr": "user_2",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 36,
+    "fields": {
+        "action_time": "2022-08-26T12:25:18.690Z",
+        "user": 1,
+        "content_type": 4,
+        "object_id": "4",
+        "object_repr": "user_2",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"First name\", \"Last name\", \"Email address\", \"Groups\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 37,
+    "fields": {
+        "action_time": "2022-08-26T12:26:06.157Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "2",
+        "object_repr": "Anna Annson",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 38,
+    "fields": {
+        "action_time": "2022-08-26T12:27:23.740Z",
+        "user": 1,
+        "content_type": 4,
+        "object_id": "4",
+        "object_repr": "user_2",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 39,
+    "fields": {
+        "action_time": "2022-08-26T12:28:26.399Z",
+        "user": 1,
+        "content_type": 4,
+        "object_id": "4",
+        "object_repr": "user_2",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 40,
+    "fields": {
+        "action_time": "2022-08-26T12:28:50.039Z",
+        "user": 1,
+        "content_type": 4,
+        "object_id": "4",
+        "object_repr": "user_2",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Staff status\", \"User permissions\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 41,
+    "fields": {
+        "action_time": "2022-08-26T12:30:33.942Z",
+        "user": 1,
+        "content_type": 4,
+        "object_id": "5",
+        "object_repr": "user_3",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 42,
+    "fields": {
+        "action_time": "2022-08-26T12:31:06.462Z",
+        "user": 1,
+        "content_type": 4,
+        "object_id": "5",
+        "object_repr": "user_3",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"First name\", \"Last name\", \"Email address\", \"Staff status\", \"Groups\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 43,
+    "fields": {
+        "action_time": "2022-08-26T12:32:26.752Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "3",
+        "object_repr": "Иван Крылов",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 44,
+    "fields": {
+        "action_time": "2022-08-27T10:43:27.221Z",
+        "user": 1,
+        "content_type": 4,
+        "object_id": "6",
+        "object_repr": "user_4",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 45,
+    "fields": {
+        "action_time": "2022-08-27T10:43:49.415Z",
+        "user": 1,
+        "content_type": 4,
+        "object_id": "6",
+        "object_repr": "user_4",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"First name\", \"Last name\", \"Email address\", \"Staff status\", \"Groups\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 46,
+    "fields": {
+        "action_time": "2022-08-27T10:44:48.915Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "4",
+        "object_repr": "Mary Burton",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 47,
+    "fields": {
+        "action_time": "2022-08-27T10:51:06.834Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "1",
+        "object_repr": "John Summers",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Avatar\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 48,
+    "fields": {
+        "action_time": "2022-08-27T10:52:57.574Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "4",
+        "object_repr": "Mary Burton",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Avatar\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 49,
+    "fields": {
+        "action_time": "2022-08-27T10:53:10.054Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "3",
+        "object_repr": "Иван Крылов",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Avatar\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 50,
+    "fields": {
+        "action_time": "2022-08-27T10:53:28.908Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "2",
+        "object_repr": "Anna Annson",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Avatar\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 51,
+    "fields": {
+        "action_time": "2022-08-27T11:07:18.931Z",
+        "user": 1,
+        "content_type": 4,
+        "object_id": "7",
+        "object_repr": "user_5",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 52,
+    "fields": {
+        "action_time": "2022-08-27T11:08:06.431Z",
+        "user": 1,
+        "content_type": 4,
+        "object_id": "7",
+        "object_repr": "user_5",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"First name\", \"Last name\", \"Email address\", \"Staff status\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 53,
+    "fields": {
+        "action_time": "2022-08-27T11:08:33.336Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "5",
+        "object_repr": "Dolores Umbridge",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 54,
+    "fields": {
+        "action_time": "2022-08-27T14:03:08.626Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "1",
+        "object_repr": "для кухни",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 55,
+    "fields": {
+        "action_time": "2022-08-27T14:04:02.262Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "2",
+        "object_repr": "телефоны",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 56,
+    "fields": {
+        "action_time": "2022-08-27T14:04:12.509Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "3",
+        "object_repr": "чайники",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 57,
+    "fields": {
+        "action_time": "2022-08-27T14:04:22.419Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "4",
+        "object_repr": "плиты",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 58,
+    "fields": {
+        "action_time": "2022-08-27T14:04:39.701Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "5",
+        "object_repr": "микроволновки",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 59,
+    "fields": {
+        "action_time": "2022-08-27T14:05:18.248Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "1",
+        "object_repr": "Cellphone 800",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0422\\u0435\\u0433\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 60,
+    "fields": {
+        "action_time": "2022-08-27T14:05:34.522Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "7",
+        "object_repr": "Чайник синий",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0422\\u0435\\u0433\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 61,
+    "fields": {
+        "action_time": "2022-08-27T14:06:07.979Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "6",
+        "object_repr": "синий",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 62,
+    "fields": {
+        "action_time": "2022-08-27T14:06:16.358Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "7",
+        "object_repr": "металлический",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 63,
+    "fields": {
+        "action_time": "2022-08-27T14:06:38.451Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "7",
+        "object_repr": "Чайник синий",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0422\\u0435\\u0433\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 64,
+    "fields": {
+        "action_time": "2022-08-27T16:44:33.405Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "6",
+        "object_repr": "Чайник металлический",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0422\\u0435\\u0433\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 65,
+    "fields": {
+        "action_time": "2022-08-27T16:44:50.460Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "8",
+        "object_repr": "Чайник оранжевый",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0422\\u0435\\u0433\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 66,
+    "fields": {
+        "action_time": "2022-08-27T16:45:06.564Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "9",
+        "object_repr": "Плита 2300",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0422\\u0435\\u0433\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 67,
+    "fields": {
+        "action_time": "2022-08-27T16:45:35.642Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "10",
+        "object_repr": "Газовая плита",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0422\\u0435\\u0433\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 68,
+    "fields": {
+        "action_time": "2022-08-27T16:45:51.757Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "13",
+        "object_repr": "Микроволновка Pansic",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0422\\u0435\\u0433\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 69,
+    "fields": {
+        "action_time": "2022-08-27T16:46:04.163Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "14",
+        "object_repr": "Микроволновка Introvert",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0422\\u0435\\u0433\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 70,
+    "fields": {
+        "action_time": "2022-08-30T10:16:34.124Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "8",
+        "object_repr": "Лампы",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 71,
+    "fields": {
+        "action_time": "2022-08-30T10:17:02.196Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "38",
+        "object_repr": "Лампа red",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0422\\u0435\\u0433\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 72,
+    "fields": {
+        "action_time": "2022-08-30T12:10:37.679Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "9",
+        "object_repr": "зеленый",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 73,
+    "fields": {
+        "action_time": "2022-08-30T12:10:41.302Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "37",
+        "object_repr": "Лампа green",
+        "action_flag": 2,
+        "change_message": "[{\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (21)\"}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (22)\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 74,
+    "fields": {
+        "action_time": "2022-08-30T12:11:07.344Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "10",
+        "object_repr": "красный",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 75,
+    "fields": {
+        "action_time": "2022-08-30T12:11:09.610Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "43",
+        "object_repr": "Чайник красный",
+        "action_flag": 2,
+        "change_message": "[{\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (23)\"}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (24)\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 76,
+    "fields": {
+        "action_time": "2022-08-30T12:11:22.539Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "38",
+        "object_repr": "Лампа red",
+        "action_flag": 2,
+        "change_message": "[{\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (25)\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 77,
+    "fields": {
+        "action_time": "2022-08-30T16:47:41.522Z",
+        "user": 1,
+        "content_type": 4,
+        "object_id": "18",
+        "object_repr": "user_6",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 78,
+    "fields": {
+        "action_time": "2022-08-30T16:47:41.552Z",
+        "user": 1,
+        "content_type": 4,
+        "object_id": "19",
+        "object_repr": "user_7",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 79,
+    "fields": {
+        "action_time": "2022-08-30T18:08:08.328Z",
+        "user": 1,
+        "content_type": 4,
+        "object_id": "20",
+        "object_repr": "user_6",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 80,
+    "fields": {
+        "action_time": "2022-08-30T18:08:08.337Z",
+        "user": 1,
+        "content_type": 4,
+        "object_id": "21",
+        "object_repr": "user_7",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 81,
+    "fields": {
+        "action_time": "2022-09-13T19:16:12.809Z",
+        "user": 1,
+        "content_type": 16,
+        "object_id": "1",
+        "object_repr": "21 of Чайник синий",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 82,
+    "fields": {
+        "action_time": "2022-09-15T19:09:57.999Z",
+        "user": 1,
+        "content_type": 15,
+        "object_id": "1",
+        "object_repr": "user_1",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 83,
+    "fields": {
+        "action_time": "2022-09-15T19:09:58.039Z",
+        "user": 1,
+        "content_type": 15,
+        "object_id": "2",
+        "object_repr": "user_3",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 84,
+    "fields": {
+        "action_time": "2022-09-15T19:09:58.049Z",
+        "user": 1,
+        "content_type": 15,
+        "object_id": "3",
+        "object_repr": "user_4",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 85,
+    "fields": {
+        "action_time": "2022-09-15T19:10:09.939Z",
+        "user": 1,
+        "content_type": 16,
+        "object_id": "12",
+        "object_repr": "1 of Cellphone 800",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 86,
+    "fields": {
+        "action_time": "2022-09-15T19:10:09.949Z",
+        "user": 1,
+        "content_type": 16,
+        "object_id": "6",
+        "object_repr": "1 of Cellphone 800",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 87,
+    "fields": {
+        "action_time": "2022-09-15T19:10:09.959Z",
+        "user": 1,
+        "content_type": 16,
+        "object_id": "3",
+        "object_repr": "5 of Cellphone 800",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 88,
+    "fields": {
+        "action_time": "2022-09-15T19:10:09.969Z",
+        "user": 1,
+        "content_type": 16,
+        "object_id": "5",
+        "object_repr": "1 of Smartphone LUX",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 89,
+    "fields": {
+        "action_time": "2022-09-15T19:10:09.979Z",
+        "user": 1,
+        "content_type": 16,
+        "object_id": "15",
+        "object_repr": "1 of Чайник металлический",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 90,
+    "fields": {
+        "action_time": "2022-09-15T19:10:09.989Z",
+        "user": 1,
+        "content_type": 16,
+        "object_id": "19",
+        "object_repr": "2 of Чайник красный",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 91,
+    "fields": {
+        "action_time": "2022-09-15T19:10:09.999Z",
+        "user": 1,
+        "content_type": 16,
+        "object_id": "13",
+        "object_repr": "3 of Чайник оранжевый",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 92,
+    "fields": {
+        "action_time": "2022-09-15T19:10:10.009Z",
+        "user": 1,
+        "content_type": 16,
+        "object_id": "2",
+        "object_repr": "1 of Чайник оранжевый",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 93,
+    "fields": {
+        "action_time": "2022-09-15T19:10:10.019Z",
+        "user": 1,
+        "content_type": 16,
+        "object_id": "17",
+        "object_repr": "1 of Плита 2300",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 94,
+    "fields": {
+        "action_time": "2022-09-15T19:10:10.029Z",
+        "user": 1,
+        "content_type": 16,
+        "object_id": "11",
+        "object_repr": "1 of Плита 2300",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 95,
+    "fields": {
+        "action_time": "2022-09-15T19:10:10.039Z",
+        "user": 1,
+        "content_type": 16,
+        "object_id": "10",
+        "object_repr": "1 of Газовая плита",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 96,
+    "fields": {
+        "action_time": "2022-09-15T19:10:10.049Z",
+        "user": 1,
+        "content_type": 16,
+        "object_id": "8",
+        "object_repr": "1 of Газовая плита",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 97,
+    "fields": {
+        "action_time": "2022-09-15T19:10:10.059Z",
+        "user": 1,
+        "content_type": 16,
+        "object_id": "14",
+        "object_repr": "1 of Лампа Lux",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 98,
+    "fields": {
+        "action_time": "2022-09-15T19:10:10.069Z",
+        "user": 1,
+        "content_type": 16,
+        "object_id": "7",
+        "object_repr": "3 of Лампа Lux",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 99,
+    "fields": {
+        "action_time": "2022-09-15T19:10:10.079Z",
+        "user": 1,
+        "content_type": 16,
+        "object_id": "4",
+        "object_repr": "3 of Лампа Lux",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 100,
+    "fields": {
+        "action_time": "2022-09-15T19:10:10.089Z",
+        "user": 1,
+        "content_type": 16,
+        "object_id": "18",
+        "object_repr": "1 of Лампа green",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 101,
+    "fields": {
+        "action_time": "2022-09-15T19:10:10.099Z",
+        "user": 1,
+        "content_type": 16,
+        "object_id": "9",
+        "object_repr": "1 of Лампа green",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 102,
+    "fields": {
+        "action_time": "2022-09-15T19:10:10.109Z",
+        "user": 1,
+        "content_type": 16,
+        "object_id": "16",
+        "object_repr": "1 of Микроволновка Introvert",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 103,
+    "fields": {
+        "action_time": "2022-09-17T19:01:57.572Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "11",
+        "object_repr": "Стиральные машины",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 104,
+    "fields": {
+        "action_time": "2022-09-17T19:02:12.193Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "44",
+        "object_repr": "Стиральная машина C-900",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (26)\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 105,
+    "fields": {
+        "action_time": "2022-09-17T19:02:51.193Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "45",
+        "object_repr": "Стиральная машина C-2000",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (27)\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 106,
+    "fields": {
+        "action_time": "2022-09-17T19:04:00.185Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "46",
+        "object_repr": "Стиральная машина V-09gy",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (28)\"}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (29)\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 107,
+    "fields": {
+        "action_time": "2022-09-17T19:05:13.775Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "12",
+        "object_repr": "желтый",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 108,
+    "fields": {
+        "action_time": "2022-09-17T19:05:19.791Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "47",
+        "object_repr": "Стиральная машина Yllw-100",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (30)\"}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (31)\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 109,
+    "fields": {
+        "action_time": "2022-09-17T19:06:03.090Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "48",
+        "object_repr": "Стиральная машина Blue-900",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (32)\"}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (33)\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 110,
+    "fields": {
+        "action_time": "2022-09-17T19:06:55.087Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "49",
+        "object_repr": "Стиральная машина GreenHouse",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (34)\"}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (35)\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 111,
+    "fields": {
+        "action_time": "2022-09-17T19:11:25.889Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "30",
+        "object_repr": "Cellphone 5800",
+        "action_flag": 2,
+        "change_message": "[{\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (36)\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 112,
+    "fields": {
+        "action_time": "2022-09-17T19:13:59.855Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "35",
+        "object_repr": "Лампа yellow",
+        "action_flag": 2,
+        "change_message": "[{\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (37)\"}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (38)\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 113,
+    "fields": {
+        "action_time": "2022-09-17T19:15:53.194Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "13",
+        "object_repr": "черный",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 114,
+    "fields": {
+        "action_time": "2022-09-17T19:15:56.709Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "39",
+        "object_repr": "Лампа black",
+        "action_flag": 2,
+        "change_message": "[{\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (39)\"}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (40)\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 115,
+    "fields": {
+        "action_time": "2022-09-17T19:17:58.304Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "11",
+        "object_repr": "Лампа Lux",
+        "action_flag": 2,
+        "change_message": "[{\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (41)\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 116,
+    "fields": {
+        "action_time": "2022-09-17T19:18:06.256Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "40",
+        "object_repr": "Лампа white",
+        "action_flag": 2,
+        "change_message": "[{\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (42)\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 117,
+    "fields": {
+        "action_time": "2022-09-17T19:18:15.896Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "38",
+        "object_repr": "Лампа red",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 118,
+    "fields": {
+        "action_time": "2022-09-17T19:18:28.872Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "37",
+        "object_repr": "Лампа green",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 119,
+    "fields": {
+        "action_time": "2022-09-17T19:18:37.022Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "36",
+        "object_repr": "Лампа orange",
+        "action_flag": 2,
+        "change_message": "[{\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (43)\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 120,
+    "fields": {
+        "action_time": "2022-09-17T19:18:53.076Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "12",
+        "object_repr": "Лампа classic",
+        "action_flag": 2,
+        "change_message": "[{\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (44)\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 121,
+    "fields": {
+        "action_time": "2022-09-19T12:37:04.052Z",
+        "user": 1,
+        "content_type": 18,
+        "object_id": "1",
+        "object_repr": "cart 1",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 122,
+    "fields": {
+        "action_time": "2022-09-19T12:37:04.083Z",
+        "user": 1,
+        "content_type": 18,
+        "object_id": "2",
+        "object_repr": "cart 2",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 123,
+    "fields": {
+        "action_time": "2022-09-19T12:37:04.083Z",
+        "user": 1,
+        "content_type": 18,
+        "object_id": "3",
+        "object_repr": "cart 3",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 124,
+    "fields": {
+        "action_time": "2022-09-19T12:37:04.101Z",
+        "user": 1,
+        "content_type": 18,
+        "object_id": "4",
+        "object_repr": "cart 4",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 125,
+    "fields": {
+        "action_time": "2022-09-19T12:38:15.185Z",
+        "user": 1,
+        "content_type": 17,
+        "object_id": "22",
+        "object_repr": "1 of Cellphone 800",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 126,
+    "fields": {
+        "action_time": "2022-09-19T12:38:15.201Z",
+        "user": 1,
+        "content_type": 17,
+        "object_id": "17",
+        "object_repr": "2 of Cellphone 800",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 127,
+    "fields": {
+        "action_time": "2022-09-19T12:38:15.201Z",
+        "user": 1,
+        "content_type": 17,
+        "object_id": "14",
+        "object_repr": "1 of Cellphone 900",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 128,
+    "fields": {
+        "action_time": "2022-09-19T12:38:15.217Z",
+        "user": 1,
+        "content_type": 17,
+        "object_id": "13",
+        "object_repr": "1 of Cellphone xc800",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 129,
+    "fields": {
+        "action_time": "2022-09-19T12:38:15.232Z",
+        "user": 1,
+        "content_type": 17,
+        "object_id": "11",
+        "object_repr": "1 of Cellphone 700",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 130,
+    "fields": {
+        "action_time": "2022-09-19T12:38:15.232Z",
+        "user": 1,
+        "content_type": 17,
+        "object_id": "18",
+        "object_repr": "2 of Cellphone 1200",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 131,
+    "fields": {
+        "action_time": "2022-09-19T12:38:15.248Z",
+        "user": 1,
+        "content_type": 17,
+        "object_id": "12",
+        "object_repr": "1 of Cellphone XCL",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 132,
+    "fields": {
+        "action_time": "2022-09-19T12:38:15.248Z",
+        "user": 1,
+        "content_type": 17,
+        "object_id": "3",
+        "object_repr": "3 of Чайник синий",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 133,
+    "fields": {
+        "action_time": "2022-09-19T12:38:15.264Z",
+        "user": 1,
+        "content_type": 17,
+        "object_id": "16",
+        "object_repr": "1 of Чайник заворной",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 134,
+    "fields": {
+        "action_time": "2022-09-19T12:38:15.264Z",
+        "user": 1,
+        "content_type": 17,
+        "object_id": "15",
+        "object_repr": "1 of Лампа yellow",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 135,
+    "fields": {
+        "action_time": "2022-09-19T12:38:15.286Z",
+        "user": 1,
+        "content_type": 17,
+        "object_id": "6",
+        "object_repr": "1 of Стиральная машина GreenHouse",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 136,
+    "fields": {
+        "action_time": "2022-10-01T18:24:20.970Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "50",
+        "object_repr": "Microwave oven red",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (45)\"}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (46)\"}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (47)\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 137,
+    "fields": {
+        "action_time": "2022-10-01T18:25:22.770Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "51",
+        "object_repr": "Microwave oven LUX",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (48)\"}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (49)\"}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (50)\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 138,
+    "fields": {
+        "action_time": "2022-10-04T16:07:26.531Z",
+        "user": 1,
+        "content_type": 3,
+        "object_id": "3",
+        "object_repr": "unverified",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 139,
+    "fields": {
+        "action_time": "2022-10-05T09:24:47.671Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "4",
+        "object_repr": "Лампы",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u043a\\u043e\\u043d\\u043a\\u0430\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 140,
+    "fields": {
+        "action_time": "2022-10-05T09:25:52.415Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "4",
+        "object_repr": "Лампы",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u043a\\u043e\\u043d\\u043a\\u0430\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 141,
+    "fields": {
+        "action_time": "2022-10-05T09:59:17.944Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "24",
+        "object_repr": "Cellphone 900",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 142,
+    "fields": {
+        "action_time": "2022-10-05T10:03:07.577Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "40",
+        "object_repr": "Лампа white",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 143,
+    "fields": {
+        "action_time": "2022-10-05T10:03:19.768Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "39",
+        "object_repr": "Лампа black",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 144,
+    "fields": {
+        "action_time": "2022-10-05T10:06:57.141Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "52",
+        "object_repr": "Чайник Yellow",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (51)\"}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (52)\"}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (53)\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 145,
+    "fields": {
+        "action_time": "2022-10-05T10:07:45.191Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "14",
+        "object_repr": "белый",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 146,
+    "fields": {
+        "action_time": "2022-10-05T10:07:47.242Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "53",
+        "object_repr": "Чайник White",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (54)\"}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (55)\"}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (56)\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 147,
+    "fields": {
+        "action_time": "2022-10-05T10:08:19.301Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "54",
+        "object_repr": "Чайник Green",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (57)\"}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (58)\"}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (59)\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 148,
+    "fields": {
+        "action_time": "2022-10-05T10:09:15.055Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "55",
+        "object_repr": "Микроволновая печь RED",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (60)\"}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (61)\"}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (62)\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 149,
+    "fields": {
+        "action_time": "2022-10-05T10:13:24.121Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "6",
+        "object_repr": "Чайник металлический",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 150,
+    "fields": {
+        "action_time": "2022-10-05T10:15:55.027Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "7",
+        "object_repr": "Чайник Blue",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u041d\\u0430\\u0437\\u0432\\u0430\\u043d\\u0438\\u0435\", \"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 151,
+    "fields": {
+        "action_time": "2022-10-05T10:32:37.758Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "51",
+        "object_repr": "Microwave oven LUX",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435\"]}}, {\"changed\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (50)\", \"fields\": [\"Tag\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 152,
+    "fields": {
+        "action_time": "2022-10-05T10:35:45.196Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "3",
+        "object_repr": "Microwave 200",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 153,
+    "fields": {
+        "action_time": "2022-10-05T10:35:45.214Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "4",
+        "object_repr": "Microwave 800",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 154,
+    "fields": {
+        "action_time": "2022-10-05T10:35:45.227Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "13",
+        "object_repr": "Микроволновка Pansic",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 155,
+    "fields": {
+        "action_time": "2022-10-05T10:35:45.253Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "14",
+        "object_repr": "Микроволновка Introvert",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 156,
+    "fields": {
+        "action_time": "2022-10-05T10:35:45.272Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "50",
+        "object_repr": "Microwave oven red",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 157,
+    "fields": {
+        "action_time": "2022-10-05T10:35:45.278Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "51",
+        "object_repr": "Microwave oven LUX",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 158,
+    "fields": {
+        "action_time": "2022-10-05T10:35:45.306Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "55",
+        "object_repr": "Микроволновая печь RED",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 159,
+    "fields": {
+        "action_time": "2022-10-05T10:36:53.276Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "15",
+        "object_repr": "Оранжевый",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 160,
+    "fields": {
+        "action_time": "2022-10-05T10:36:56.389Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "56",
+        "object_repr": "Микроволновая печь ORANGE",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (63)\"}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (64)\"}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (65)\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 161,
+    "fields": {
+        "action_time": "2022-10-05T10:37:34.458Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "57",
+        "object_repr": "Микроволновая печь BLUE",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (66)\"}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (67)\"}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (68)\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 162,
+    "fields": {
+        "action_time": "2022-10-05T10:38:21.923Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "58",
+        "object_repr": "Микроволновая печь Green",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (69)\"}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (70)\"}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (71)\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 163,
+    "fields": {
+        "action_time": "2022-10-05T10:39:07.451Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "59",
+        "object_repr": "Микроволновая печь",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (72)\"}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (73)\"}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (74)\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 164,
+    "fields": {
+        "action_time": "2022-10-05T10:53:20.324Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "60",
+        "object_repr": "Микроволноавая печь Black",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (75)\"}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (76)\"}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (77)\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 165,
+    "fields": {
+        "action_time": "2022-10-05T10:54:00.520Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "61",
+        "object_repr": "Микроволновая печь RED",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (78)\"}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (79)\"}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (80)\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 166,
+    "fields": {
+        "action_time": "2022-10-05T11:24:45.081Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "16",
+        "object_repr": "камеры",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 167,
+    "fields": {
+        "action_time": "2022-10-05T11:25:29.208Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "10",
+        "object_repr": "Камеры",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 168,
+    "fields": {
+        "action_time": "2022-10-05T11:26:05.360Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "62",
+        "object_repr": "Фотокамера 100",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (81)\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 169,
+    "fields": {
+        "action_time": "2022-10-05T11:26:27.894Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "63",
+        "object_repr": "Фотокамера 200",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (82)\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 170,
+    "fields": {
+        "action_time": "2022-10-05T11:26:55.071Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "64",
+        "object_repr": "Фотокамера 300",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (83)\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 171,
+    "fields": {
+        "action_time": "2022-10-05T11:27:15.509Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "65",
+        "object_repr": "Фотокамера 400",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (84)\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 172,
+    "fields": {
+        "action_time": "2022-10-05T11:27:37.449Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "66",
+        "object_repr": "Фотокамера 500",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (85)\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 173,
+    "fields": {
+        "action_time": "2022-10-05T11:29:07.802Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "4",
+        "object_repr": "Лампы",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u043a\\u043e\\u043d\\u043a\\u0430\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 174,
+    "fields": {
+        "action_time": "2022-10-05T11:29:45.154Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "3",
+        "object_repr": "Смартфоны",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u043a\\u043e\\u043d\\u043a\\u0430\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 175,
+    "fields": {
+        "action_time": "2022-10-05T11:32:00.535Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "11",
+        "object_repr": "Бытовая  техника",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 176,
+    "fields": {
+        "action_time": "2022-10-05T11:33:40.214Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "11",
+        "object_repr": "Звук",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u041d\\u0430\\u0437\\u0432\\u0430\\u043d\\u0438\\u0435\", \"Slug\", \"\\u041e\\u043f\\u0438\\u0441\\u0430\\u043d\\u0438\\u0435\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 177,
+    "fields": {
+        "action_time": "2022-10-05T11:34:06.147Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "12",
+        "object_repr": "Колонки",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 178,
+    "fields": {
+        "action_time": "2022-10-05T11:34:14.285Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "12",
+        "object_repr": "Колонки",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Parent category\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 179,
+    "fields": {
+        "action_time": "2022-10-05T11:38:17.131Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "13",
+        "object_repr": "Наушники",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 180,
+    "fields": {
+        "action_time": "2022-10-05T12:49:05.989Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "67",
+        "object_repr": "Плита  i900",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (86)\"}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (87)\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 181,
+    "fields": {
+        "action_time": "2022-10-05T12:49:53.739Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "68",
+        "object_repr": "Плита E-1200",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (88)\"}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (89)\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 182,
+    "fields": {
+        "action_time": "2022-10-05T12:50:45.414Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "69",
+        "object_repr": "Плита Yellow",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (90)\"}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (91)\"}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (92)\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 183,
+    "fields": {
+        "action_time": "2022-10-05T12:51:28.419Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "70",
+        "object_repr": "Варочная панел",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (93)\"}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (94)\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 184,
+    "fields": {
+        "action_time": "2022-10-05T12:52:26.337Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "71",
+        "object_repr": "Варочная панель LMN-90",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (95)\"}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (96)\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 185,
+    "fields": {
+        "action_time": "2022-10-05T12:53:42.906Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "72",
+        "object_repr": "Варочная панель Big-100",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (97)\"}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (98)\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 186,
+    "fields": {
+        "action_time": "2022-10-05T13:29:44.566Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "17",
+        "object_repr": "Наушники",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 187,
+    "fields": {
+        "action_time": "2022-10-05T13:30:16.355Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "18",
+        "object_repr": "Вакуумные нааушники",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 188,
+    "fields": {
+        "action_time": "2022-10-05T13:30:35.435Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "19",
+        "object_repr": "беспроводные",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 189,
+    "fields": {
+        "action_time": "2022-10-05T13:30:40.111Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "73",
+        "object_repr": "Наушники VB-987",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (99)\"}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (100)\"}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (101)\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 190,
+    "fields": {
+        "action_time": "2022-10-05T13:31:33.156Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "74",
+        "object_repr": "Наушники вакуумные",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (102)\"}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (103)\"}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (104)\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 191,
+    "fields": {
+        "action_time": "2022-10-05T13:32:22.090Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "75",
+        "object_repr": "Наушники",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (105)\"}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (106)\"}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (107)\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 192,
+    "fields": {
+        "action_time": "2022-10-05T13:33:35.296Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "76",
+        "object_repr": "Наушники вакуумные BX-89",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (108)\"}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (109)\"}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (110)\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 193,
+    "fields": {
+        "action_time": "2022-10-05T13:35:35.193Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "77",
+        "object_repr": "Наушники",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (111)\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 194,
+    "fields": {
+        "action_time": "2022-10-05T13:36:23.463Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "78",
+        "object_repr": "Наушники PINK",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (112)\"}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (113)\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 195,
+    "fields": {
+        "action_time": "2022-10-05T13:37:10.624Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "79",
+        "object_repr": "Наушники вакуумные RED",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (114)\"}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (115)\"}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (116)\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 196,
+    "fields": {
+        "action_time": "2022-10-05T13:38:31.802Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "80",
+        "object_repr": "Наушники  GALAXY",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (117)\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 197,
+    "fields": {
+        "action_time": "2022-10-05T13:39:31.021Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "81",
+        "object_repr": "НАушники вакуумные ABC-100",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (118)\"}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (119)\"}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (120)\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 198,
+    "fields": {
+        "action_time": "2022-10-05T13:40:53.833Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "20",
+        "object_repr": "+ с кейсом",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 199,
+    "fields": {
+        "action_time": "2022-10-05T13:40:56.771Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "82",
+        "object_repr": "Наушники ORANGE",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (121)\"}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (122)\"}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (123)\"}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (124)\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 200,
+    "fields": {
+        "action_time": "2022-10-05T13:41:43.857Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "83",
+        "object_repr": "Наушники CITRUSE",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (125)\"}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (126)\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 201,
+    "fields": {
+        "action_time": "2022-10-05T13:42:22.336Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "84",
+        "object_repr": "Наушники Yellow",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (127)\"}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (128)\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 202,
+    "fields": {
+        "action_time": "2022-10-05T13:43:37.492Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "84",
+        "object_repr": "Наушники Yellow",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 203,
+    "fields": {
+        "action_time": "2022-10-05T13:45:05.503Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "21",
+        "object_repr": "колонка",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 204,
+    "fields": {
+        "action_time": "2022-10-05T13:45:23.143Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "22",
+        "object_repr": "bluetoothe",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 205,
+    "fields": {
+        "action_time": "2022-10-05T13:45:35.817Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "85",
+        "object_repr": "Беспроводная колонка B-987",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (129)\"}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (130)\"}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (131)\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 206,
+    "fields": {
+        "action_time": "2022-10-05T13:50:30.010Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "23",
+        "object_repr": "парные колонки",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 207,
+    "fields": {
+        "action_time": "2022-10-05T13:50:31.169Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "86",
+        "object_repr": "Колонки 2х2",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (132)\"}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (133)\"}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (134)\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 208,
+    "fields": {
+        "action_time": "2022-10-05T13:51:58.639Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "87",
+        "object_repr": "Беспроводная колонка BLCK",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (135)\"}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (136)\"}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (137)\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 209,
+    "fields": {
+        "action_time": "2022-10-05T13:52:22.525Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "85",
+        "object_repr": "Беспроводная колонка B-987",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 210,
+    "fields": {
+        "action_time": "2022-10-05T13:53:13.929Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "88",
+        "object_repr": "Колонка POCKET SPEAKER",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (138)\"}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (139)\"}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (140)\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 211,
+    "fields": {
+        "action_time": "2022-10-05T13:54:05.904Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "89",
+        "object_repr": "Колонка POCKET BLCK",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (141)\"}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (142)\"}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (143)\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 212,
+    "fields": {
+        "action_time": "2022-10-05T13:55:00.319Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "90",
+        "object_repr": "Колонка напольная W1000",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (144)\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 213,
+    "fields": {
+        "action_time": "2022-10-05T13:55:59.210Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "91",
+        "object_repr": "Колонка WHITE",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (145)\"}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (146)\"}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (147)\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 214,
+    "fields": {
+        "action_time": "2022-10-05T13:57:10.959Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "92",
+        "object_repr": "Колонка HG-876",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (148)\"}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (149)\"}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (150)\"}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (151)\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 215,
+    "fields": {
+        "action_time": "2022-10-05T13:57:54.888Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "93",
+        "object_repr": "RED SPEAKER",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (152)\"}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (153)\"}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (154)\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 216,
+    "fields": {
+        "action_time": "2022-10-05T13:58:45.892Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "94",
+        "object_repr": "Музыкальные колонки RED EDITION",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (155)\"}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (156)\"}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (157)\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 217,
+    "fields": {
+        "action_time": "2022-10-05T13:59:51.018Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "95",
+        "object_repr": "Колонка \"ЛАРИСА\"",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (158)\"}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (159)\"}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (160)\"}}, {\"added\": {\"name\": \"item-tag relationship\", \"object\": \"Item_tag object (161)\"}}]"
+    }
+},
+{
+    "model": "auth.group",
+    "pk": 1,
+    "fields": {
+        "name": "Пользователь",
+        "permissions": [
+            28,
+            32,
+            33,
+            34,
+            35,
+            36
+        ]
+    }
+},
+{
+    "model": "auth.group",
+    "pk": 2,
+    "fields": {
+        "name": "Администратор",
+        "permissions": [
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31,
+            32,
+            33,
+            34,
+            35,
+            36,
+            13,
+            14,
+            15,
+            16
+        ]
+    }
+},
+{
+    "model": "auth.group",
+    "pk": 3,
+    "fields": {
+        "name": "unverified",
+        "permissions": [
+            77,
+            78,
+            79,
+            80,
+            73,
+            74,
+            75,
+            76,
+            65,
+            57,
+            66,
+            58,
+            67,
+            59,
+            68,
+            60,
+            69,
+            61,
+            70,
+            62,
+            71,
+            63,
+            72,
+            64,
+            28,
+            56,
+            52,
+            32,
+            44,
+            40,
+            48,
+            36
+        ]
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+        "password": "pbkdf2_sha256$320000$cbLeS27z8XNFp24TjmjoSt$IHbysOvjzTRrCzDF0X16Wg4uWNsnFUNH5ikxiUpCpig=",
+        "last_login": "2022-10-05T13:28:25.106Z",
+        "is_superuser": true,
+        "username": "admin",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2022-08-21T08:46:31.737Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 3,
+    "fields": {
+        "password": "pbkdf2_sha256$320000$nsYA8F71nSJzV3Y1xkX4v3$uHXOmccbN/p8u86atzkGiDjh9TPakG6V7DCi0FC8pd8=",
+        "last_login": "2022-10-06T16:26:28.193Z",
+        "is_superuser": false,
+        "username": "user_1",
+        "first_name": "John",
+        "last_name": "Summers",
+        "email": "john_summers@mail.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2022-08-25T12:17:07Z",
+        "groups": [
+            1
+        ],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 4,
+    "fields": {
+        "password": "pbkdf2_sha256$320000$EcazRxCDanRvLjpodXRtQx$ZiMw9P1DmDj8KDgOkw/QIeyXti61rKchvlpXM5idK8A=",
+        "last_login": "2022-10-06T17:03:54.351Z",
+        "is_superuser": false,
+        "username": "user_2",
+        "first_name": "Anna",
+        "last_name": "Annson",
+        "email": "anna_annson@mai.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2022-08-26T12:24:50Z",
+        "groups": [
+            1
+        ],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 5,
+    "fields": {
+        "password": "pbkdf2_sha256$320000$FvzcQ4INEzQ1XppPi1DqUl$k2sg093ndyx/LYOYxid7Z1ieyeRCh0NDuf+2fr0ZRRE=",
+        "last_login": "2022-10-06T20:03:01.850Z",
+        "is_superuser": false,
+        "username": "user_3",
+        "first_name": "Иван",
+        "last_name": "Крылов",
+        "email": "ivan_krylov@mail.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2022-08-26T12:30:33Z",
+        "groups": [
+            1
+        ],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 6,
+    "fields": {
+        "password": "pbkdf2_sha256$320000$fBIr6nA5b2uA5kPu6DSMKy$wOpJYmx6rsvobBPwCtfeG/oACO8yZahvOYmQ4ba1wEU=",
+        "last_login": "2022-10-05T14:23:38.377Z",
+        "is_superuser": false,
+        "username": "user_4",
+        "first_name": "Mary",
+        "last_name": "Burton",
+        "email": "MaryBurton@mail.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2022-08-27T10:43:26Z",
+        "groups": [
+            1
+        ],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 7,
+    "fields": {
+        "password": "pbkdf2_sha256$320000$q1KoaUDqBiU4S936CCqVeW$TlUgEOkUDKiiTPF/76NiYp8OAuHdTCWzNrKqrpuw+NA=",
+        "last_login": "2022-09-17T19:25:23.579Z",
+        "is_superuser": false,
+        "username": "user_5",
+        "first_name": "Dolores",
+        "last_name": "Umbridge",
+        "email": "DoloresUmbridge@mail.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2022-08-27T11:07:18Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 22,
+    "fields": {
+        "password": "pbkdf2_sha256$320000$LRyzMwhXumIbPuKg468Jhv$ovn3kMclj1snfQTRDmFRa4VlOB7dPw6Acj84yLTUR0w=",
+        "last_login": "2022-09-19T12:55:24.103Z",
+        "is_superuser": false,
+        "username": "user_6",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2022-08-30T18:08:26.317Z",
+        "groups": [
+            1
+        ],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 23,
+    "fields": {
+        "password": "pbkdf2_sha256$320000$h6mPQzl8B9iKFnsTUfDI90$OFtxXRBMxVFubSsqRdkixIWoq0z4FThiQeZ1gwH3oUo=",
+        "last_login": "2022-08-30T18:09:58.107Z",
+        "is_superuser": false,
+        "username": "user_7",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2022-08-30T18:09:57.357Z",
+        "groups": [
+            1
+        ],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 24,
+    "fields": {
+        "password": "pbkdf2_sha256$320000$QnkayUkz7o8LWwpxoWjRs3$ljGMVwp2o+mPeqKSGhN+QEFZGY274wKnjImgNtRMo0c=",
+        "last_login": "2022-08-30T18:38:30.589Z",
+        "is_superuser": false,
+        "username": "user_8",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2022-08-30T18:38:29.839Z",
+        "groups": [
+            1
+        ],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 25,
+    "fields": {
+        "password": "pbkdf2_sha256$320000$IAg8nqnWDTegPOgdHHtVZv$X+jBWfvLQteFNyi2dDlXD3e1xgliZu8pLQ/32nCLHM4=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "user_134",
+        "first_name": "",
+        "last_name": "",
+        "email": "karlvonkrause@hotmail.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2022-10-04T15:59:12.728Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 26,
+    "fields": {
+        "password": "pbkdf2_sha256$320000$xiDFEphf9LZ4JHjRpMfetu$J85Te/qvuoVHaPBWwtgIMt0iwXCBtxmJQ/VgZMTJPlY=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "user-213",
+        "first_name": "",
+        "last_name": "",
+        "email": "karlvonkrause@hotmail.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2022-10-04T16:08:10.837Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 27,
+    "fields": {
+        "password": "pbkdf2_sha256$320000$PRz2OYgkah95r3SJG9zTX7$O//TAoDYDJ1dBop0GpayK9gcQ+0iYmkQPJxpGWKRDbk=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "User_0000",
+        "first_name": "",
+        "last_name": "",
+        "email": "karlvonkrause@hotmail.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2022-10-04T16:14:30.406Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 28,
+    "fields": {
+        "password": "pbkdf2_sha256$320000$D1Zb8rjml3XN0QbxqfN7aU$DUnn2vvbty/FRP6+mXRqkiLrMhjDi40BOqoq3q/3EnA=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "tyt_778",
+        "first_name": "",
+        "last_name": "",
+        "email": "karlvonkrause@hotmail.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2022-10-04T16:44:55.992Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "5qkq5cq1dhkld3uhcagl8s1bq7o1czqs",
+    "fields": {
+        "session_data": ".eJxVjDsOwjAQBe_iGln-kXUo6XMGa9dr4wCypTipEHeHSCmgfTPzXiLgtpaw9bSEmcVFOHH63QjjI9Ud8B3rrcnY6rrMJHdFHrTLqXF6Xg_376BgL98a_OghGjIJBx6QImFy1gIoxcoDs3aWXQZDmY0_J8U0go6sydistRXvD_M_OCc:1ogUfQ:wsjEzjM4hONM4bhpYkhI3nz9AJqVUFuV2sA0btf8454",
+        "expire_date": "2022-10-20T17:28:16.651Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "djg4usi5dat5qmkb0qglm3avygc7at87",
+    "fields": {
+        "session_data": ".eJxVjDsOwyAQBe9CHSEwX6dM7zOghV2CkwgkY1dR7h5bcpG0M_PemwXY1hK2TkuYkV2ZYpdfFiE9qR4CH1DvjadW12WO_Ej4aTufGtLrdrZ_BwV62ddgyEiRRkkxe0IEMt5LaxGJUEU1DEkKbbV2tOPRC4HZZQMp2iSEdezzBQAwODM:1ogUHB:iwtueyGTdxSW7evVbf_qni-cWNAG_aE98DNqu3LtrtI",
+        "expire_date": "2022-10-20T17:03:13.072Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "ilydeg0jlbwhkcqi4xcwipb6sy4zo7z7",
+    "fields": {
+        "session_data": ".eJxVjDkOwjAURO_iGll4jU1Jzxmsv9g4gBwpTirE3UmkFFDOvDfzFgnWpaa15zmNLC7CidNvh0DP3HbAD2j3SdLUlnlEuSvyoF3eJs6v6-H-HVTodVsbVTSBsjYai4OijMb7swpe6SEYsgwcNPotZqTgGMlRjKUUo5UPmsTnC86LN6E:1ogXOX:E2jx8Dvj6s6v-LIDm8ethLbZHtVs3jMLJ3uvWnnsqNI",
+        "expire_date": "2022-10-20T20:23:01.167Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "zi66n6napfob2skjsl687fxwpdwzwkrv",
+    "fields": {
+        "session_data": ".eJxVjEEOwiAQRe_C2hAcChSX7nsGMgODVA0kpV0Z765NutDtf-_9lwi4rSVsnZcwJ3ERVpx-N8L44LqDdMd6azK2ui4zyV2RB-1yaomf18P9OyjYy7cG8JydVkpFa60jiyYrYzxZ0P7MxjkaHAIngGFQCUf2QJm81zw6BUm8P78sNyE:1ogNRG:iidTpla90gDGJ_-ekPp9ns7syc-ec-tZM64Tx47lSOQ",
+        "expire_date": "2022-10-20T09:45:10.912Z"
+    }
+},
+{
+    "model": "app_user.profile",
+    "pk": 1,
+    "fields": {
+        "user": 3,
+        "group": 1,
+        "avatar": "avatar/Avatar_3.png",
+        "telephone": "+789009889",
+        "date_joined": "2022-08-25T12:18:46.763Z",
+        "review_items": [
+            1,
+            26,
+            2,
+            6,
+            7,
+            8,
+            10,
+            11,
+            35,
+            36,
+            39,
+            40,
+            48,
+            49
+        ]
+    }
+},
+{
+    "model": "app_user.profile",
+    "pk": 2,
+    "fields": {
+        "user": 4,
+        "group": 1,
+        "avatar": "avatar/Avatar_7_tPIhJsT.jpg",
+        "telephone": "+799988889",
+        "date_joined": "2022-08-26T12:26:06.149Z",
+        "review_items": [
+            1,
+            26,
+            6,
+            7,
+            8,
+            36,
+            47
+        ]
+    }
+},
+{
+    "model": "app_user.profile",
+    "pk": 3,
+    "fields": {
+        "user": 5,
+        "group": 1,
+        "avatar": "avatar/Avatar_13_r59bsKy.jpg",
+        "telephone": "+100010101",
+        "date_joined": "2022-08-26T12:32:26.731Z",
+        "review_items": [
+            1,
+            31,
+            6,
+            7,
+            8,
+            11
+        ]
+    }
+},
+{
+    "model": "app_user.profile",
+    "pk": 4,
+    "fields": {
+        "user": 6,
+        "group": 1,
+        "avatar": "avatar/Avatar_1_E6NwdYg.png",
+        "telephone": "+400099909",
+        "date_joined": "2022-08-27T10:44:48.915Z",
+        "review_items": [
+            1,
+            5,
+            34,
+            6,
+            7,
+            41,
+            10,
+            36
+        ]
+    }
+},
+{
+    "model": "app_user.profile",
+    "pk": 5,
+    "fields": {
+        "user": 7,
+        "group": 1,
+        "avatar": "avatar/Avatar_11_XunA3BX.jpg",
+        "telephone": "+100010109",
+        "date_joined": "2022-08-27T11:08:33.320Z",
+        "review_items": [
+            7
+        ]
+    }
+},
+{
+    "model": "app_user.profile",
+    "pk": 10,
+    "fields": {
+        "user": 22,
+        "group": 1,
+        "avatar": "",
+        "telephone": "2232323232",
+        "date_joined": "2022-08-30T18:08:26.667Z",
+        "review_items": []
+    }
+},
+{
+    "model": "app_user.profile",
+    "pk": 11,
+    "fields": {
+        "user": 23,
+        "group": 1,
+        "avatar": "",
+        "telephone": "5545445545",
+        "date_joined": "2022-08-30T18:09:57.747Z",
+        "review_items": []
+    }
+},
+{
+    "model": "app_user.profile",
+    "pk": 12,
+    "fields": {
+        "user": 24,
+        "group": 1,
+        "avatar": "",
+        "telephone": "4534543634",
+        "date_joined": "2022-08-30T18:38:30.229Z",
+        "review_items": []
+    }
+},
+{
+    "model": "app_user.profile",
+    "pk": 13,
+    "fields": {
+        "user": 27,
+        "group": 3,
+        "avatar": "",
+        "telephone": "3483",
+        "date_joined": "2022-10-04T16:14:30.787Z",
+        "review_items": []
+    }
+},
+{
+    "model": "app_user.profile",
+    "pk": 14,
+    "fields": {
+        "user": 28,
+        "group": 3,
+        "avatar": "",
+        "telephone": "8698696988",
+        "date_joined": "2022-10-04T16:44:56.397Z",
+        "review_items": []
+    }
+},
+{
+    "model": "app_item.itemview",
+    "pk": 11,
+    "fields": {
+        "item": 7,
+        "ip": "127.0.0.1",
+        "session": "bemn0n69qm2p5bhl1a6dh9olnh0j2bzq",
+        "created": "2022-08-26T17:24:05.690Z"
+    }
+},
+{
+    "model": "app_item.itemview",
+    "pk": 12,
+    "fields": {
+        "item": 7,
+        "ip": "127.0.0.1",
+        "session": "yy5b19sas1uje9vxt2m36tod8nfxvioo",
+        "created": "2022-08-26T17:29:06.109Z"
+    }
+},
+{
+    "model": "app_item.itemview",
+    "pk": 13,
+    "fields": {
+        "item": 1,
+        "ip": "127.0.0.1",
+        "session": "i4h622bci3glr8n77a82sv6niyc7xql5",
+        "created": "2022-08-27T09:43:22.511Z"
+    }
+},
+{
+    "model": "app_item.itemview",
+    "pk": 14,
+    "fields": {
+        "item": 7,
+        "ip": "127.0.0.1",
+        "session": "i4h622bci3glr8n77a82sv6niyc7xql5",
+        "created": "2022-08-27T13:13:27.301Z"
+    }
+},
+{
+    "model": "app_item.itemview",
+    "pk": 15,
+    "fields": {
+        "item": 6,
+        "ip": "127.0.0.1",
+        "session": "i4h622bci3glr8n77a82sv6niyc7xql5",
+        "created": "2022-08-27T13:15:57.811Z"
+    }
+},
+{
+    "model": "app_item.itemview",
+    "pk": 17,
+    "fields": {
+        "item": 8,
+        "ip": "127.0.0.1",
+        "session": "i4h622bci3glr8n77a82sv6niyc7xql5",
+        "created": "2022-08-27T10:09:09.731Z"
+    }
+},
+{
+    "model": "app_item.itemview",
+    "pk": 18,
+    "fields": {
+        "item": 11,
+        "ip": "127.0.0.1",
+        "session": "i4h622bci3glr8n77a82sv6niyc7xql5",
+        "created": "2022-08-27T10:23:50.690Z"
+    }
+},
+{
+    "model": "app_item.itemview",
+    "pk": 19,
+    "fields": {
+        "item": 6,
+        "ip": "127.0.0.1",
+        "session": "tvxn5ckn8zw14rmg2dq03gu2mdaynhfi",
+        "created": "2022-08-27T10:37:41.178Z"
+    }
+},
+{
+    "model": "app_item.itemview",
+    "pk": 20,
+    "fields": {
+        "item": 6,
+        "ip": "127.0.0.1",
+        "session": "rbhglaubmyr33lkrsv4mm4z3x6zom1yo",
+        "created": "2022-08-27T10:38:23.878Z"
+    }
+},
+{
+    "model": "app_item.itemview",
+    "pk": 21,
+    "fields": {
+        "item": 7,
+        "ip": "127.0.0.1",
+        "session": "rbhglaubmyr33lkrsv4mm4z3x6zom1yo",
+        "created": "2022-08-27T10:39:46.134Z"
+    }
+},
+{
+    "model": "app_item.itemview",
+    "pk": 22,
+    "fields": {
+        "item": 8,
+        "ip": "127.0.0.1",
+        "session": "yt8781u67qm7xomsou4rv5f03q2qg0f4",
+        "created": "2022-08-27T10:45:53.285Z"
+    }
+},
+{
+    "model": "app_item.itemview",
+    "pk": 23,
+    "fields": {
+        "item": 6,
+        "ip": "127.0.0.1",
+        "session": "yt8781u67qm7xomsou4rv5f03q2qg0f4",
+        "created": "2022-08-27T10:46:17.567Z"
+    }
+},
+{
+    "model": "app_item.itemview",
+    "pk": 24,
+    "fields": {
+        "item": 6,
+        "ip": "127.0.0.1",
+        "session": "o1mfofrxjtf1zigge42pht57obndfhqt",
+        "created": "2022-08-27T10:49:11.685Z"
+    }
+},
+{
+    "model": "app_item.itemview",
+    "pk": 25,
+    "fields": {
+        "item": 8,
+        "ip": "127.0.0.1",
+        "session": "o1mfofrxjtf1zigge42pht57obndfhqt",
+        "created": "2022-08-27T10:52:10.914Z"
+    }
+},
+{
+    "model": "app_item.itemview",
+    "pk": 26,
+    "fields": {
+        "item": 7,
+        "ip": "127.0.0.1",
+        "session": "e4ykb4n56qeacfq7i23wd9v7p521oo7t",
+        "created": "2022-08-27T10:54:45.495Z"
+    }
+},
+{
+    "model": "app_item.itemview",
+    "pk": 27,
+    "fields": {
+        "item": 6,
+        "ip": "127.0.0.1",
+        "session": "xe9oexu85qlrmeu31xx4oknfcx9rannb",
+        "created": "2022-08-27T14:34:11.167Z"
+    }
+},
+{
+    "model": "app_item.itemview",
+    "pk": 28,
+    "fields": {
+        "item": 7,
+        "ip": "127.0.0.1",
+        "session": "ifiwy5niseh6eyay79v9ti73voinvxdf",
+        "created": "2022-08-27T14:37:38.261Z"
+    }
+},
+{
+    "model": "app_item.itemview",
+    "pk": 29,
+    "fields": {
+        "item": 7,
+        "ip": "127.0.0.1",
+        "session": "divwkox6bj2947v6l8erwoe34a4uhcyy",
+        "created": "2022-08-27T16:46:38.699Z"
+    }
+},
+{
+    "model": "app_item.itemview",
+    "pk": 32,
+    "fields": {
+        "item": 10,
+        "ip": "127.0.0.1",
+        "session": "divwkox6bj2947v6l8erwoe34a4uhcyy",
+        "created": "2022-08-27T16:47:12.288Z"
+    }
+},
+{
+    "model": "app_item.itemview",
+    "pk": 33,
+    "fields": {
+        "item": 1,
+        "ip": "127.0.0.1",
+        "session": "qk3mzzx0tsbwpqh2ogt94aem9f7igtnf",
+        "created": "2022-08-28T14:34:30.480Z"
+    }
+},
+{
+    "model": "app_item.itemview",
+    "pk": 34,
+    "fields": {
+        "item": 8,
+        "ip": "127.0.0.1",
+        "session": "k0lihjly68a7l8jskdx1okcuc1gdkjqu",
+        "created": "2022-08-28T14:38:50.708Z"
+    }
+},
+{
+    "model": "app_item.itemview",
+    "pk": 35,
+    "fields": {
+        "item": 5,
+        "ip": "127.0.0.1",
+        "session": "",
+        "created": "2022-08-28T15:34:13.908Z"
+    }
+},
+{
+    "model": "app_item.itemview",
+    "pk": 37,
+    "fields": {
+        "item": 7,
+        "ip": "127.0.0.1",
+        "session": "gw1snurk99vdztv2ig9gjukpypw44gka",
+        "created": "2022-08-28T16:46:13.526Z"
+    }
+},
+{
+    "model": "app_item.itemview",
+    "pk": 38,
+    "fields": {
+        "item": 33,
+        "ip": "127.0.0.1",
+        "session": "qoq82v02ivgn0n0zte3cwznrwvvj8s8e",
+        "created": "2022-08-28T18:53:39.238Z"
+    }
+},
+{
+    "model": "app_item.itemview",
+    "pk": 39,
+    "fields": {
+        "item": 5,
+        "ip": "127.0.0.1",
+        "session": "qoq82v02ivgn0n0zte3cwznrwvvj8s8e",
+        "created": "2022-08-28T18:57:59.952Z"
+    }
+},
+{
+    "model": "app_item.itemview",
+    "pk": 41,
+    "fields": {
+        "item": 23,
+        "ip": "127.0.0.1",
+        "session": "gw529xlynobw7esf47bcpj7xdqzi2alj",
+        "created": "2022-08-28T19:15:36.058Z"
+    }
+},
+{
+    "model": "app_item.itemview",
+    "pk": 43,
+    "fields": {
+        "item": 1,
+        "ip": "127.0.0.1",
+        "session": "gw529xlynobw7esf47bcpj7xdqzi2alj",
+        "created": "2022-08-28T19:15:50.276Z"
+    }
+},
+{
+    "model": "app_item.itemview",
+    "pk": 44,
+    "fields": {
+        "item": 11,
+        "ip": "127.0.0.1",
+        "session": "gw529xlynobw7esf47bcpj7xdqzi2alj",
+        "created": "2022-08-29T04:00:51.428Z"
+    }
+},
+{
+    "model": "app_item.itemview",
+    "pk": 45,
+    "fields": {
+        "item": 26,
+        "ip": "127.0.0.1",
+        "session": "gw529xlynobw7esf47bcpj7xdqzi2alj",
+        "created": "2022-08-29T04:03:21.252Z"
+    }
+},
+{
+    "model": "app_item.itemview",
+    "pk": 46,
+    "fields": {
+        "item": 7,
+        "ip": "127.0.0.1",
+        "session": "er6s0kvmwm26umhpz1ozzy57jq9o21mt",
+        "created": "2022-08-31T05:31:01.889Z"
+    }
+},
+{
+    "model": "app_item.itemview",
+    "pk": 47,
+    "fields": {
+        "item": 8,
+        "ip": "127.0.0.1",
+        "session": "jpyyvqmg8ofztsj8fnkad843bd6kz6kc",
+        "created": "2022-09-13T15:25:47.296Z"
+    }
+},
+{
+    "model": "app_item.itemview",
+    "pk": 48,
+    "fields": {
+        "item": 7,
+        "ip": "127.0.0.1",
+        "session": "jpyyvqmg8ofztsj8fnkad843bd6kz6kc",
+        "created": "2022-09-13T15:26:40.252Z"
+    }
+},
+{
+    "model": "app_item.itemview",
+    "pk": 49,
+    "fields": {
+        "item": 7,
+        "ip": "127.0.0.1",
+        "session": "xqluusq43j42zyr6x2rzw78zqkpqc5lj",
+        "created": "2022-09-13T15:49:40.786Z"
+    }
+},
+{
+    "model": "app_item.itemview",
+    "pk": 50,
+    "fields": {
+        "item": 7,
+        "ip": "127.0.0.1",
+        "session": "bbrfqloxwhupzzn5nb5gxdzcaw4t6gs1",
+        "created": "2022-09-13T16:46:19.298Z"
+    }
+},
+{
+    "model": "app_item.itemview",
+    "pk": 51,
+    "fields": {
+        "item": 6,
+        "ip": "127.0.0.1",
+        "session": "bbrfqloxwhupzzn5nb5gxdzcaw4t6gs1",
+        "created": "2022-09-13T16:46:56.911Z"
+    }
+},
+{
+    "model": "app_item.itemview",
+    "pk": 52,
+    "fields": {
+        "item": 8,
+        "ip": "127.0.0.1",
+        "session": "bbrfqloxwhupzzn5nb5gxdzcaw4t6gs1",
+        "created": "2022-09-13T16:48:25.279Z"
+    }
+},
+{
+    "model": "app_item.item",
+    "pk": 1,
+    "fields": {
+        "title": "Cellphone 800",
+        "slug": "cellphone-800",
+        "description": "",
+        "stock": 23,
+        "price": "80",
+        "is_available": true,
+        "limited_edition": false,
+        "reviews": 1,
+        "comments": 0,
+        "created": "2022-08-24T08:04:48.237Z",
+        "updated": "2022-08-24T08:04:48.237Z",
+        "color": "",
+        "image": "item/2022/08/25/telephone1.png",
+        "category": 2,
+        "tag": [
+            2
+        ]
+    }
+},
+{
+    "model": "app_item.item",
+    "pk": 2,
+    "fields": {
+        "title": "Cellphone 1200",
+        "slug": "cellphone-1200",
+        "description": "",
+        "stock": 2,
+        "price": "110",
+        "is_available": true,
+        "limited_edition": true,
+        "reviews": 1,
+        "comments": 0,
+        "created": "2022-08-24T08:05:14.348Z",
+        "updated": "2022-08-24T08:05:14.348Z",
+        "color": "",
+        "image": "item/2022/08/25/telephone2.png",
+        "category": 2,
+        "tag": []
+    }
+},
+{
+    "model": "app_item.item",
+    "pk": 5,
+    "fields": {
+        "title": "Smartphone LUX",
+        "slug": "smartphone-lux",
+        "description": "",
+        "stock": 4,
+        "price": "200",
+        "is_available": true,
+        "limited_edition": false,
+        "reviews": 0,
+        "comments": 0,
+        "created": "2022-08-24T08:07:14.964Z",
+        "updated": "2022-08-24T08:07:14.964Z",
+        "color": "",
+        "image": "item/2022/08/25/smartphone1.png",
+        "category": 3,
+        "tag": []
+    }
+},
+{
+    "model": "app_item.item",
+    "pk": 6,
+    "fields": {
+        "title": "Чайник металлический",
+        "slug": "чайник-металлический",
+        "description": "Чайник металлический. 1,2 литра. Для газовых и  электирических плит.",
+        "stock": 2,
+        "price": "24",
+        "is_available": true,
+        "limited_edition": true,
+        "reviews": 11,
+        "comments": 0,
+        "created": "2022-08-25T16:20:40.754Z",
+        "updated": "2022-08-25T16:20:40.754Z",
+        "color": "",
+        "image": "item/2022/10/05/kettle1.png",
+        "category": 7,
+        "tag": [
+            1,
+            3,
+            7
+        ]
+    }
+},
+{
+    "model": "app_item.item",
+    "pk": 7,
+    "fields": {
+        "title": "Чайник Blue",
+        "slug": "чайник-синий",
+        "description": "Чайник синий. 1 литр. Для всех типов плит.",
+        "stock": 43,
+        "price": "29",
+        "is_available": true,
+        "limited_edition": false,
+        "reviews": 34,
+        "comments": 5,
+        "created": "2022-08-25T16:21:31.423Z",
+        "updated": "2022-08-25T16:21:31.423Z",
+        "color": "",
+        "image": "item/2022/10/05/kettle2.png",
+        "category": 7,
+        "tag": [
+            1,
+            3,
+            6,
+            7
+        ]
+    }
+},
+{
+    "model": "app_item.item",
+    "pk": 8,
+    "fields": {
+        "title": "Чайник оранжевый",
+        "slug": "чайник-оранжевый",
+        "description": "Чайник оранжевый. 2 литра. Для большой семьи.",
+        "stock": 12,
+        "price": "27",
+        "is_available": true,
+        "limited_edition": false,
+        "reviews": 2,
+        "comments": 0,
+        "created": "2022-08-25T16:22:14.609Z",
+        "updated": "2022-08-25T16:22:14.609Z",
+        "color": "",
+        "image": "item/2022/08/25/kettle3.png",
+        "category": 7,
+        "tag": [
+            1,
+            3,
+            7
+        ]
+    }
+},
+{
+    "model": "app_item.item",
+    "pk": 9,
+    "fields": {
+        "title": "Плита 2300",
+        "slug": "плита-2300",
+        "description": "Газовая плита.  4 варочных камфорки. 53х95х178 см",
+        "stock": 6,
+        "price": "234",
+        "is_available": true,
+        "limited_edition": false,
+        "reviews": 0,
+        "comments": 0,
+        "created": "2022-08-25T16:23:19.949Z",
+        "updated": "2022-08-25T16:23:19.949Z",
+        "color": "",
+        "image": "item/2022/08/25/cooker1.png",
+        "category": 9,
+        "tag": [
+            1,
+            4
+        ]
+    }
+},
+{
+    "model": "app_item.item",
+    "pk": 10,
+    "fields": {
+        "title": "Газовая плита",
+        "slug": "газовая-плита",
+        "description": "Газовая плита. 5 варочных камфорок.90х100х120",
+        "stock": 3,
+        "price": "346",
+        "is_available": true,
+        "limited_edition": true,
+        "reviews": 4,
+        "comments": 0,
+        "created": "2022-08-25T16:24:18.208Z",
+        "updated": "2022-08-25T16:24:18.208Z",
+        "color": "",
+        "image": "item/2022/08/25/cooker2.png",
+        "category": 9,
+        "tag": [
+            1,
+            4
+        ]
+    }
+},
+{
+    "model": "app_item.item",
+    "pk": 11,
+    "fields": {
+        "title": "Лампа Lux",
+        "slug": "лампа-lux",
+        "description": "Лампа Lux. 23 Вт. 34см х 12 см. Цоколь 27",
+        "stock": 56,
+        "price": "18",
+        "is_available": true,
+        "limited_edition": false,
+        "reviews": 0,
+        "comments": 0,
+        "created": "2022-08-25T16:25:33.309Z",
+        "updated": "2022-08-25T16:25:33.309Z",
+        "color": "",
+        "image": "item/2022/08/25/lamp1.png",
+        "category": 4,
+        "tag": [
+            8
+        ]
+    }
+},
+{
+    "model": "app_item.item",
+    "pk": 12,
+    "fields": {
+        "title": "Лампа classic",
+        "slug": "лампа-classic",
+        "description": "Лампа настольная. 45см х 20 см. Цоколь 12",
+        "stock": 34,
+        "price": "24",
+        "is_available": true,
+        "limited_edition": false,
+        "reviews": 0,
+        "comments": 0,
+        "created": "2022-08-25T16:26:23.610Z",
+        "updated": "2022-08-25T16:26:23.610Z",
+        "color": "",
+        "image": "item/2022/08/25/lamp2.png",
+        "category": 4,
+        "tag": [
+            8
+        ]
+    }
+},
+{
+    "model": "app_item.item",
+    "pk": 16,
+    "fields": {
+        "title": "Cellphone XCL",
+        "slug": "cellphone-xcl",
+        "description": "",
+        "stock": 21,
+        "price": "119",
+        "is_available": true,
+        "limited_edition": false,
+        "reviews": 0,
+        "comments": 0,
+        "created": "2022-08-24T08:05:14.348Z",
+        "updated": "2022-08-24T08:05:14.348Z",
+        "color": "",
+        "image": "item/2022/08/25/telephone3.png",
+        "category": 2,
+        "tag": []
+    }
+},
+{
+    "model": "app_item.item",
+    "pk": 17,
+    "fields": {
+        "title": "Cellphone J780",
+        "slug": "cellphone-J780",
+        "description": "",
+        "stock": 13,
+        "price": "109",
+        "is_available": true,
+        "limited_edition": false,
+        "reviews": 0,
+        "comments": 0,
+        "created": "2022-08-24T08:05:14.348Z",
+        "updated": "2022-08-24T08:05:14.348Z",
+        "color": "",
+        "image": "item/2022/08/25/telephone4.png",
+        "category": 2,
+        "tag": []
+    }
+},
+{
+    "model": "app_item.item",
+    "pk": 23,
+    "fields": {
+        "title": "Cellphone 700",
+        "slug": "cellphone-700",
+        "description": "",
+        "stock": 23,
+        "price": "110",
+        "is_available": true,
+        "limited_edition": false,
+        "reviews": 0,
+        "comments": 0,
+        "created": "2022-08-24T08:04:48.237Z",
+        "updated": "2022-08-24T08:04:48.237Z",
+        "color": "",
+        "image": "item/2022/08/25/telephone5.png",
+        "category": 2,
+        "tag": []
+    }
+},
+{
+    "model": "app_item.item",
+    "pk": 25,
+    "fields": {
+        "title": "Cellphone X900",
+        "slug": "cellphone-x900",
+        "description": "",
+        "stock": 23,
+        "price": "110",
+        "is_available": true,
+        "limited_edition": false,
+        "reviews": 0,
+        "comments": 0,
+        "created": "2022-08-24T08:04:48.237Z",
+        "updated": "2022-08-24T08:04:48.237Z",
+        "color": "",
+        "image": "item/2022/08/25/telephone7.png",
+        "category": 2,
+        "tag": []
+    }
+},
+{
+    "model": "app_item.item",
+    "pk": 26,
+    "fields": {
+        "title": "Cellphone xc800",
+        "slug": "cellphone-xc800",
+        "description": "",
+        "stock": 23,
+        "price": "110",
+        "is_available": true,
+        "limited_edition": false,
+        "reviews": 0,
+        "comments": 0,
+        "created": "2022-08-24T08:04:48.237Z",
+        "updated": "2022-08-24T08:04:48.237Z",
+        "color": "",
+        "image": "item/2022/08/25/telephone8.png",
+        "category": 2,
+        "tag": []
+    }
+},
+{
+    "model": "app_item.item",
+    "pk": 27,
+    "fields": {
+        "title": "Cellphone 3400",
+        "slug": "cellphone-3400",
+        "description": "",
+        "stock": 23,
+        "price": "80",
+        "is_available": true,
+        "limited_edition": false,
+        "reviews": 3,
+        "comments": 0,
+        "created": "2022-08-24T08:04:48.237Z",
+        "updated": "2022-08-24T08:04:48.237Z",
+        "color": "",
+        "image": "item/2022/08/25/telephone9.png",
+        "category": 2,
+        "tag": []
+    }
+},
+{
+    "model": "app_item.item",
+    "pk": 28,
+    "fields": {
+        "title": "Cellphone 3800",
+        "slug": "cellphone-3800",
+        "description": "",
+        "stock": 23,
+        "price": "110",
+        "is_available": true,
+        "limited_edition": false,
+        "reviews": 0,
+        "comments": 0,
+        "created": "2022-08-24T08:04:48.237Z",
+        "updated": "2022-08-24T08:04:48.237Z",
+        "color": "",
+        "image": "item/2022/08/25/telephone1.png",
+        "category": 2,
+        "tag": []
+    }
+},
+{
+    "model": "app_item.item",
+    "pk": 29,
+    "fields": {
+        "title": "Cellphone 8300",
+        "slug": "cellphone-8300",
+        "description": "",
+        "stock": 23,
+        "price": "80",
+        "is_available": true,
+        "limited_edition": false,
+        "reviews": 0,
+        "comments": 0,
+        "created": "2022-08-24T08:04:48.237Z",
+        "updated": "2022-08-24T08:04:48.237Z",
+        "color": "",
+        "image": "item/2022/08/25/telephone4.png",
+        "category": 2,
+        "tag": []
+    }
+},
+{
+    "model": "app_item.item",
+    "pk": 30,
+    "fields": {
+        "title": "Cellphone 5800",
+        "slug": "cellphone-5800",
+        "description": "",
+        "stock": 23,
+        "price": "110",
+        "is_available": true,
+        "limited_edition": false,
+        "reviews": 0,
+        "comments": 0,
+        "created": "2022-08-24T08:04:48.237Z",
+        "updated": "2022-08-24T08:04:48.237Z",
+        "color": "",
+        "image": "item/2022/08/25/telephone5.png",
+        "category": 2,
+        "tag": [
+            2
+        ]
+    }
+},
+{
+    "model": "app_item.item",
+    "pk": 31,
+    "fields": {
+        "title": "Smartphone LUX 1",
+        "slug": "smartphone-lux-1",
+        "description": "",
+        "stock": 3,
+        "price": "222",
+        "is_available": true,
+        "limited_edition": false,
+        "reviews": 4,
+        "comments": 0,
+        "created": "2022-08-24T08:07:14.964Z",
+        "updated": "2022-08-24T08:07:14.964Z",
+        "color": "",
+        "image": "item/2022/08/25/smartphone2.png",
+        "category": 3,
+        "tag": []
+    }
+},
+{
+    "model": "app_item.item",
+    "pk": 32,
+    "fields": {
+        "title": "Smartphone LUX 2",
+        "slug": "smartphone-lux-2",
+        "description": "",
+        "stock": 4,
+        "price": "232",
+        "is_available": true,
+        "limited_edition": false,
+        "reviews": 0,
+        "comments": 0,
+        "created": "2022-08-24T08:07:14.964Z",
+        "updated": "2022-08-24T08:07:14.964Z",
+        "color": "",
+        "image": "item/2022/08/25/smartphone3.png",
+        "category": 3,
+        "tag": []
+    }
+},
+{
+    "model": "app_item.item",
+    "pk": 33,
+    "fields": {
+        "title": "Smartphone LUX 3",
+        "slug": "smartphone-lux-3",
+        "description": "",
+        "stock": 11,
+        "price": "212",
+        "is_available": true,
+        "limited_edition": false,
+        "reviews": 0,
+        "comments": 0,
+        "created": "2022-08-24T08:07:14.964Z",
+        "updated": "2022-08-24T08:07:14.964Z",
+        "color": "",
+        "image": "item/2022/08/25/smartphone4.png",
+        "category": 3,
+        "tag": []
+    }
+},
+{
+    "model": "app_item.item",
+    "pk": 34,
+    "fields": {
+        "title": "Smartphone LUX 4",
+        "slug": "smartphone-lux-4",
+        "description": "",
+        "stock": 11,
+        "price": "234",
+        "is_available": true,
+        "limited_edition": false,
+        "reviews": 12,
+        "comments": 3,
+        "created": "2022-08-24T08:07:14.964Z",
+        "updated": "2022-08-24T08:07:14.964Z",
+        "color": "",
+        "image": "item/2022/08/25/smartphone5.png",
+        "category": 3,
+        "tag": []
+    }
+},
+{
+    "model": "app_item.item",
+    "pk": 35,
+    "fields": {
+        "title": "Лампа yellow",
+        "slug": "лампа-yellow",
+        "description": "",
+        "stock": 21,
+        "price": "12",
+        "is_available": true,
+        "limited_edition": false,
+        "reviews": 0,
+        "comments": 0,
+        "created": "2022-08-25T16:26:23.610Z",
+        "updated": "2022-08-25T16:26:23.610Z",
+        "color": "",
+        "image": "item/2022/08/25/lamp3.png",
+        "category": 4,
+        "tag": [
+            8,
+            12
+        ]
+    }
+},
+{
+    "model": "app_item.item",
+    "pk": 36,
+    "fields": {
+        "title": "Лампа orange",
+        "slug": "лампа-orange",
+        "description": "",
+        "stock": 22,
+        "price": "21",
+        "is_available": true,
+        "limited_edition": false,
+        "reviews": 22,
+        "comments": 1,
+        "created": "2022-08-25T16:26:23.610Z",
+        "updated": "2022-08-25T16:26:23.610Z",
+        "color": "",
+        "image": "item/2022/08/25/lamp4.png",
+        "category": 4,
+        "tag": [
+            8
+        ]
+    }
+},
+{
+    "model": "app_item.item",
+    "pk": 37,
+    "fields": {
+        "title": "Лампа green",
+        "slug": "лампа-green",
+        "description": "",
+        "stock": 3,
+        "price": "23",
+        "is_available": true,
+        "limited_edition": true,
+        "reviews": 0,
+        "comments": 0,
+        "created": "2022-08-25T16:26:23.610Z",
+        "updated": "2022-08-25T16:26:23.610Z",
+        "color": "",
+        "image": "item/2022/08/25/lamp5.png",
+        "category": 4,
+        "tag": [
+            8,
+            9
+        ]
+    }
+},
+{
+    "model": "app_item.item",
+    "pk": 38,
+    "fields": {
+        "title": "Лампа red",
+        "slug": "лампа-red",
+        "description": "",
+        "stock": 21,
+        "price": "33",
+        "is_available": true,
+        "limited_edition": false,
+        "reviews": 11,
+        "comments": 0,
+        "created": "2022-08-25T16:26:23.610Z",
+        "updated": "2022-08-25T16:26:23.610Z",
+        "color": "",
+        "image": "item/2022/08/25/lamp6.png",
+        "category": 4,
+        "tag": [
+            8,
+            10
+        ]
+    }
+},
+{
+    "model": "app_item.item",
+    "pk": 39,
+    "fields": {
+        "title": "Лампа black",
+        "slug": "лампа-black",
+        "description": "",
+        "stock": 21,
+        "price": "21",
+        "is_available": true,
+        "limited_edition": false,
+        "reviews": 0,
+        "comments": 0,
+        "created": "2022-08-25T16:26:23.610Z",
+        "updated": "2022-08-25T16:26:23.610Z",
+        "color": "",
+        "image": "item/2022/10/05/lamp7.png",
+        "category": 4,
+        "tag": [
+            8,
+            13
+        ]
+    }
+},
+{
+    "model": "app_item.item",
+    "pk": 40,
+    "fields": {
+        "title": "Лампа white",
+        "slug": "лампа-white",
+        "description": "",
+        "stock": 23,
+        "price": "14",
+        "is_available": true,
+        "limited_edition": false,
+        "reviews": 5,
+        "comments": 0,
+        "created": "2022-08-25T16:26:23.610Z",
+        "updated": "2022-08-25T16:26:23.610Z",
+        "color": "",
+        "image": "item/2022/10/05/lamp8.png",
+        "category": 4,
+        "tag": [
+            8
+        ]
+    }
+},
+{
+    "model": "app_item.item",
+    "pk": 41,
+    "fields": {
+        "title": "Чайник заворной",
+        "slug": "чайник-заворной",
+        "description": "Чайник металлический. 1,2 литра. Для газовых и  электирических плит.",
+        "stock": 12,
+        "price": "27",
+        "is_available": true,
+        "limited_edition": false,
+        "reviews": 12,
+        "comments": 0,
+        "created": "2022-08-25T16:22:14.609Z",
+        "updated": "2022-08-25T16:22:14.609Z",
+        "color": "",
+        "image": "item/2022/08/25/kettle4.png",
+        "category": 7,
+        "tag": []
+    }
+},
+{
+    "model": "app_item.item",
+    "pk": 42,
+    "fields": {
+        "title": "Чайник черный",
+        "slug": "чайник-черный",
+        "description": "Чайник металлический. 1,2 литра. Для газовых и  электирических плит.",
+        "stock": 12,
+        "price": "27",
+        "is_available": true,
+        "limited_edition": false,
+        "reviews": 11,
+        "comments": 0,
+        "created": "2022-08-25T16:22:14.609Z",
+        "updated": "2022-08-25T16:22:14.609Z",
+        "color": "",
+        "image": "item/2022/08/25/kettle5.png",
+        "category": 7,
+        "tag": []
+    }
+},
+{
+    "model": "app_item.item",
+    "pk": 43,
+    "fields": {
+        "title": "Чайник красный",
+        "slug": "чайник-красный",
+        "description": "Чайник металлический. 1,2 литра. Для газовых и  электирических плит.",
+        "stock": 12,
+        "price": "27",
+        "is_available": true,
+        "limited_edition": false,
+        "reviews": 12,
+        "comments": 0,
+        "created": "2022-08-25T16:22:14.609Z",
+        "updated": "2022-08-25T16:22:14.609Z",
+        "color": "",
+        "image": "item/2022/08/25/kettle6.png",
+        "category": 7,
+        "tag": [
+            3,
+            10
+        ]
+    }
+},
+{
+    "model": "app_item.item",
+    "pk": 44,
+    "fields": {
+        "title": "Стиральная машина C-900",
+        "slug": "стиральная-машина-c-900",
+        "description": null,
+        "stock": 21,
+        "price": "233",
+        "is_available": true,
+        "limited_edition": false,
+        "reviews": 3,
+        "comments": 0,
+        "created": "2022-09-17T19:02:12.177Z",
+        "updated": "2022-09-17T19:02:12.177Z",
+        "color": "",
+        "image": "item/2022/09/18/washmachine_1.png",
+        "category": 5,
+        "tag": [
+            11
+        ]
+    }
+},
+{
+    "model": "app_item.item",
+    "pk": 45,
+    "fields": {
+        "title": "Стиральная машина C-2000",
+        "slug": "стиральная-машина-c-2000",
+        "description": null,
+        "stock": 21,
+        "price": "245",
+        "is_available": true,
+        "limited_edition": false,
+        "reviews": 0,
+        "comments": 0,
+        "created": "2022-09-17T19:02:51.178Z",
+        "updated": "2022-09-17T19:02:51.178Z",
+        "color": "",
+        "image": "item/2022/09/18/washmachine_2.png",
+        "category": 5,
+        "tag": [
+            11
+        ]
+    }
+},
+{
+    "model": "app_item.item",
+    "pk": 46,
+    "fields": {
+        "title": "Стиральная машина V-09gy",
+        "slug": "стиральная-машина-v-09gy",
+        "description": null,
+        "stock": 2,
+        "price": "345",
+        "is_available": true,
+        "limited_edition": true,
+        "reviews": 9,
+        "comments": 0,
+        "created": "2022-09-17T19:04:00.163Z",
+        "updated": "2022-09-17T19:04:00.163Z",
+        "color": "",
+        "image": "item/2022/09/18/washmachine_4.png",
+        "category": 5,
+        "tag": [
+            10,
+            11
+        ]
+    }
+},
+{
+    "model": "app_item.item",
+    "pk": 47,
+    "fields": {
+        "title": "Стиральная машина Yllw-100",
+        "slug": "стиральная-машина-yllw-100",
+        "description": null,
+        "stock": 3,
+        "price": "134",
+        "is_available": true,
+        "limited_edition": true,
+        "reviews": 0,
+        "comments": 0,
+        "created": "2022-09-17T19:05:19.776Z",
+        "updated": "2022-09-17T19:05:19.776Z",
+        "color": "",
+        "image": "item/2022/09/18/washmachone_4.png",
+        "category": 5,
+        "tag": [
+            11,
+            12
+        ]
+    }
+},
+{
+    "model": "app_item.item",
+    "pk": 48,
+    "fields": {
+        "title": "Стиральная машина Blue-900",
+        "slug": "стиральная-машина-blue-900",
+        "description": null,
+        "stock": 22,
+        "price": "200",
+        "is_available": true,
+        "limited_edition": false,
+        "reviews": 0,
+        "comments": 1,
+        "created": "2022-09-17T19:06:03.074Z",
+        "updated": "2022-09-17T19:06:03.074Z",
+        "color": "",
+        "image": "item/2022/09/18/washmachone_5.png",
+        "category": 5,
+        "tag": [
+            6,
+            11
+        ]
+    }
+},
+{
+    "model": "app_item.item",
+    "pk": 49,
+    "fields": {
+        "title": "Стиральная машина GreenHouse",
+        "slug": "стиральная-машина-greenhouse",
+        "description": null,
+        "stock": 19,
+        "price": "246",
+        "is_available": true,
+        "limited_edition": false,
+        "reviews": 6,
+        "comments": 2,
+        "created": "2022-09-17T19:06:55.072Z",
+        "updated": "2022-09-17T19:06:55.072Z",
+        "color": "",
+        "image": "item/2022/09/18/washmachone_6.png",
+        "category": 5,
+        "tag": [
+            9,
+            11
+        ]
+    }
+},
+{
+    "model": "app_item.item",
+    "pk": 52,
+    "fields": {
+        "title": "Чайник Yellow",
+        "slug": "чайник-yellow",
+        "description": null,
+        "stock": 23,
+        "price": "45",
+        "is_available": true,
+        "limited_edition": false,
+        "reviews": 0,
+        "comments": 0,
+        "created": "2022-10-05T10:06:57.125Z",
+        "updated": "2022-10-05T10:06:57.125Z",
+        "color": "",
+        "image": "item/2022/10/05/kettle_yellow.png",
+        "category": 7,
+        "tag": [
+            1,
+            3,
+            12
+        ]
+    }
+},
+{
+    "model": "app_item.item",
+    "pk": 53,
+    "fields": {
+        "title": "Чайник White",
+        "slug": "чайник-white",
+        "description": null,
+        "stock": 23,
+        "price": "34",
+        "is_available": true,
+        "limited_edition": false,
+        "reviews": 0,
+        "comments": 0,
+        "created": "2022-10-05T10:07:47.224Z",
+        "updated": "2022-10-05T10:07:47.224Z",
+        "color": "",
+        "image": "item/2022/10/05/kettle_black.png",
+        "category": 7,
+        "tag": [
+            1,
+            2,
+            14
+        ]
+    }
+},
+{
+    "model": "app_item.item",
+    "pk": 54,
+    "fields": {
+        "title": "Чайник Green",
+        "slug": "чайник-green",
+        "description": null,
+        "stock": 43,
+        "price": "56",
+        "is_available": true,
+        "limited_edition": false,
+        "reviews": 0,
+        "comments": 0,
+        "created": "2022-10-05T10:08:19.289Z",
+        "updated": "2022-10-05T10:08:19.290Z",
+        "color": "",
+        "image": "item/2022/10/05/kettle_green.png",
+        "category": 7,
+        "tag": [
+            1,
+            3,
+            9
+        ]
+    }
+},
+{
+    "model": "app_item.item",
+    "pk": 56,
+    "fields": {
+        "title": "Микроволновая печь ORANGE",
+        "slug": "микроволновая-печь-orange",
+        "description": null,
+        "stock": 22,
+        "price": "221",
+        "is_available": true,
+        "limited_edition": false,
+        "reviews": 0,
+        "comments": 0,
+        "created": "2022-10-05T10:36:56.375Z",
+        "updated": "2022-10-05T10:36:56.375Z",
+        "color": "",
+        "image": "item/2022/10/05/microwave_orange.png",
+        "category": 8,
+        "tag": [
+            1,
+            5,
+            15
+        ]
+    }
+},
+{
+    "model": "app_item.item",
+    "pk": 57,
+    "fields": {
+        "title": "Микроволновая печь BLUE",
+        "slug": "микроволновая-печь-blue",
+        "description": null,
+        "stock": 11,
+        "price": "233",
+        "is_available": true,
+        "limited_edition": false,
+        "reviews": 0,
+        "comments": 0,
+        "created": "2022-10-05T10:37:34.431Z",
+        "updated": "2022-10-05T10:37:34.431Z",
+        "color": "",
+        "image": "item/2022/10/05/microwave_blue_vKLyxsz.png",
+        "category": 8,
+        "tag": [
+            1,
+            5,
+            6
+        ]
+    }
+},
+{
+    "model": "app_item.item",
+    "pk": 58,
+    "fields": {
+        "title": "Микроволновая печь Green",
+        "slug": "микроволновая-печь-green",
+        "description": null,
+        "stock": 3,
+        "price": "190",
+        "is_available": true,
+        "limited_edition": true,
+        "reviews": 0,
+        "comments": 0,
+        "created": "2022-10-05T10:38:21.909Z",
+        "updated": "2022-10-05T10:38:21.909Z",
+        "color": "",
+        "image": "item/2022/10/05/microwave_green.png",
+        "category": 8,
+        "tag": [
+            1,
+            5,
+            9
+        ]
+    }
+},
+{
+    "model": "app_item.item",
+    "pk": 59,
+    "fields": {
+        "title": "Микроволновая печь",
+        "slug": "микроволновая-печь",
+        "description": null,
+        "stock": 12,
+        "price": "188",
+        "is_available": true,
+        "limited_edition": false,
+        "reviews": 0,
+        "comments": 0,
+        "created": "2022-10-05T10:39:07.438Z",
+        "updated": "2022-10-05T10:39:07.438Z",
+        "color": "",
+        "image": "item/2022/10/05/microwave2.png",
+        "category": 8,
+        "tag": [
+            1,
+            5,
+            7
+        ]
+    }
+},
+{
+    "model": "app_item.item",
+    "pk": 60,
+    "fields": {
+        "title": "Микроволноавая печь Black",
+        "slug": "микроволноавая-печь-black",
+        "description": null,
+        "stock": 3,
+        "price": "233",
+        "is_available": true,
+        "limited_edition": true,
+        "reviews": 0,
+        "comments": 0,
+        "created": "2022-10-05T10:53:20.311Z",
+        "updated": "2022-10-05T10:53:20.311Z",
+        "color": "",
+        "image": "item/2022/10/05/microwave_black.png",
+        "category": 8,
+        "tag": [
+            1,
+            5,
+            13
+        ]
+    }
+},
+{
+    "model": "app_item.item",
+    "pk": 61,
+    "fields": {
+        "title": "Микроволновая печь RED",
+        "slug": "микроволновая-печь-red",
+        "description": null,
+        "stock": 12,
+        "price": "199",
+        "is_available": true,
+        "limited_edition": false,
+        "reviews": 0,
+        "comments": 0,
+        "created": "2022-10-05T10:54:00.510Z",
+        "updated": "2022-10-05T10:54:00.510Z",
+        "color": "",
+        "image": "item/2022/10/05/microwave_red.png",
+        "category": 8,
+        "tag": [
+            1,
+            5,
+            10
+        ]
+    }
+},
+{
+    "model": "app_item.item",
+    "pk": 62,
+    "fields": {
+        "title": "Фотокамера 100",
+        "slug": "фотокамера-100",
+        "description": null,
+        "stock": 21,
+        "price": "345",
+        "is_available": true,
+        "limited_edition": false,
+        "reviews": 0,
+        "comments": 0,
+        "created": "2022-10-05T11:26:05.348Z",
+        "updated": "2022-10-05T11:26:05.348Z",
+        "color": "",
+        "image": "item/2022/10/05/camera_2_7EOULCC.png",
+        "category": 10,
+        "tag": [
+            16
+        ]
+    }
+},
+{
+    "model": "app_item.item",
+    "pk": 63,
+    "fields": {
+        "title": "Фотокамера 200",
+        "slug": "фотокамера-200",
+        "description": null,
+        "stock": 22,
+        "price": "322",
+        "is_available": true,
+        "limited_edition": false,
+        "reviews": 0,
+        "comments": 0,
+        "created": "2022-10-05T11:26:27.880Z",
+        "updated": "2022-10-05T11:26:27.880Z",
+        "color": "",
+        "image": "item/2022/10/05/camera_4_WunMG27.png",
+        "category": 10,
+        "tag": [
+            16
+        ]
+    }
+},
+{
+    "model": "app_item.item",
+    "pk": 64,
+    "fields": {
+        "title": "Фотокамера 300",
+        "slug": "фотокамера-300",
+        "description": null,
+        "stock": 22,
+        "price": "289",
+        "is_available": true,
+        "limited_edition": false,
+        "reviews": 0,
+        "comments": 0,
+        "created": "2022-10-05T11:26:55.058Z",
+        "updated": "2022-10-05T11:26:55.058Z",
+        "color": "",
+        "image": "item/2022/10/05/camera_5_EoHBaZs.png",
+        "category": 10,
+        "tag": [
+            16
+        ]
+    }
+},
+{
+    "model": "app_item.item",
+    "pk": 65,
+    "fields": {
+        "title": "Фотокамера 400",
+        "slug": "фотокамера-400",
+        "description": null,
+        "stock": 12,
+        "price": "332",
+        "is_available": true,
+        "limited_edition": false,
+        "reviews": 0,
+        "comments": 0,
+        "created": "2022-10-05T11:27:15.498Z",
+        "updated": "2022-10-05T11:27:15.498Z",
+        "color": "",
+        "image": "item/2022/10/05/camera_6_0x3BoWH.png",
+        "category": 10,
+        "tag": [
+            16
+        ]
+    }
+},
+{
+    "model": "app_item.item",
+    "pk": 66,
+    "fields": {
+        "title": "Фотокамера 500",
+        "slug": "фотокамера-500",
+        "description": null,
+        "stock": 14,
+        "price": "343",
+        "is_available": true,
+        "limited_edition": false,
+        "reviews": 0,
+        "comments": 0,
+        "created": "2022-10-05T11:27:37.438Z",
+        "updated": "2022-10-05T11:27:37.438Z",
+        "color": "",
+        "image": "item/2022/10/05/camera_7_8Za3xRP.png",
+        "category": 10,
+        "tag": [
+            16
+        ]
+    }
+},
+{
+    "model": "app_item.item",
+    "pk": 67,
+    "fields": {
+        "title": "Плита  i900",
+        "slug": "плита-i900",
+        "description": null,
+        "stock": 32,
+        "price": "345",
+        "is_available": true,
+        "limited_edition": false,
+        "reviews": 0,
+        "comments": 0,
+        "created": "2022-10-05T12:49:05.969Z",
+        "updated": "2022-10-05T12:49:05.969Z",
+        "color": "",
+        "image": "item/2022/10/05/cooker3.png",
+        "category": 9,
+        "tag": [
+            1,
+            4
+        ]
+    }
+},
+{
+    "model": "app_item.item",
+    "pk": 68,
+    "fields": {
+        "title": "Плита E-1200",
+        "slug": "плита-e-1200",
+        "description": null,
+        "stock": 19,
+        "price": "390",
+        "is_available": true,
+        "limited_edition": false,
+        "reviews": 0,
+        "comments": 0,
+        "created": "2022-10-05T12:49:53.726Z",
+        "updated": "2022-10-05T12:49:53.729Z",
+        "color": "",
+        "image": "item/2022/10/05/cooker9.png",
+        "category": 9,
+        "tag": [
+            1,
+            4
+        ]
+    }
+},
+{
+    "model": "app_item.item",
+    "pk": 69,
+    "fields": {
+        "title": "Плита Yellow",
+        "slug": "плита-yellow",
+        "description": null,
+        "stock": 28,
+        "price": "399",
+        "is_available": true,
+        "limited_edition": false,
+        "reviews": 0,
+        "comments": 0,
+        "created": "2022-10-05T12:50:45.399Z",
+        "updated": "2022-10-05T12:50:45.399Z",
+        "color": "",
+        "image": "item/2022/10/05/cooker10.png",
+        "category": 9,
+        "tag": [
+            1,
+            4,
+            12
+        ]
+    }
+},
+{
+    "model": "app_item.item",
+    "pk": 70,
+    "fields": {
+        "title": "Варочная панел",
+        "slug": "варочная-панел",
+        "description": null,
+        "stock": 14,
+        "price": "189",
+        "is_available": true,
+        "limited_edition": false,
+        "reviews": 0,
+        "comments": 0,
+        "created": "2022-10-05T12:51:28.404Z",
+        "updated": "2022-10-05T12:51:28.404Z",
+        "color": "",
+        "image": "item/2022/10/05/cooker4.png",
+        "category": 9,
+        "tag": [
+            1,
+            4
+        ]
+    }
+},
+{
+    "model": "app_item.item",
+    "pk": 71,
+    "fields": {
+        "title": "Варочная панель LMN-90",
+        "slug": "варочная-панель-lmn-90",
+        "description": null,
+        "stock": 21,
+        "price": "210",
+        "is_available": true,
+        "limited_edition": false,
+        "reviews": 0,
+        "comments": 0,
+        "created": "2022-10-05T12:52:26.317Z",
+        "updated": "2022-10-05T12:52:26.317Z",
+        "color": "",
+        "image": "item/2022/10/05/cooker5.png",
+        "category": 9,
+        "tag": [
+            1,
+            4
+        ]
+    }
+},
+{
+    "model": "app_item.item",
+    "pk": 72,
+    "fields": {
+        "title": "Варочная панель Big-100",
+        "slug": "варочная-панель-big-100",
+        "description": null,
+        "stock": 14,
+        "price": "222",
+        "is_available": true,
+        "limited_edition": false,
+        "reviews": 0,
+        "comments": 0,
+        "created": "2022-10-05T12:53:42.887Z",
+        "updated": "2022-10-05T12:53:42.887Z",
+        "color": "",
+        "image": "item/2022/10/05/cooker7.png",
+        "category": 9,
+        "tag": [
+            1,
+            4
+        ]
+    }
+},
+{
+    "model": "app_item.item",
+    "pk": 73,
+    "fields": {
+        "title": "Наушники VB-987",
+        "slug": "наушники-vb-987",
+        "description": null,
+        "stock": 12,
+        "price": "100",
+        "is_available": true,
+        "limited_edition": false,
+        "reviews": 0,
+        "comments": 0,
+        "created": "2022-10-05T13:30:40.095Z",
+        "updated": "2022-10-05T13:30:40.095Z",
+        "color": "",
+        "image": "item/2022/10/05/headphone_1_I5oO1dy.png",
+        "category": 13,
+        "tag": [
+            17,
+            18,
+            19
+        ]
+    }
+},
+{
+    "model": "app_item.item",
+    "pk": 74,
+    "fields": {
+        "title": "Наушники вакуумные",
+        "slug": "наушники-вакуумные",
+        "description": null,
+        "stock": 67,
+        "price": "99",
+        "is_available": true,
+        "limited_edition": false,
+        "reviews": 0,
+        "comments": 0,
+        "created": "2022-10-05T13:31:33.136Z",
+        "updated": "2022-10-05T13:31:33.136Z",
+        "color": "",
+        "image": "item/2022/10/05/headphone_2_DLjkpiY.png",
+        "category": 13,
+        "tag": [
+            17,
+            18,
+            19
+        ]
+    }
+},
+{
+    "model": "app_item.item",
+    "pk": 75,
+    "fields": {
+        "title": "Наушники SPACE",
+        "slug": "наушники",
+        "description": null,
+        "stock": 56,
+        "price": "89",
+        "is_available": true,
+        "limited_edition": false,
+        "reviews": 0,
+        "comments": 0,
+        "created": "2022-10-05T13:32:22.082Z",
+        "updated": "2022-10-05T13:32:22.082Z",
+        "color": "",
+        "image": "item/2022/10/05/headphone_3_FSccUos.png",
+        "category": 13,
+        "tag": [
+            17,
+            18,
+            19
+        ]
+    }
+},
+{
+    "model": "app_item.item",
+    "pk": 76,
+    "fields": {
+        "title": "Наушники вакуумные BX-89",
+        "slug": "наушники-вакуумные-bx-89",
+        "description": null,
+        "stock": 12,
+        "price": "190",
+        "is_available": true,
+        "limited_edition": false,
+        "reviews": 0,
+        "comments": 0,
+        "created": "2022-10-05T13:33:35.288Z",
+        "updated": "2022-10-05T13:33:35.288Z",
+        "color": "",
+        "image": "item/2022/10/05/headphone_4_EBHRbj8.png",
+        "category": 13,
+        "tag": [
+            17,
+            18,
+            19
+        ]
+    }
+},
+{
+    "model": "app_item.item",
+    "pk": 77,
+    "fields": {
+        "title": "Наушники",
+        "slug": "наушники",
+        "description": null,
+        "stock": 12,
+        "price": "178",
+        "is_available": true,
+        "limited_edition": false,
+        "reviews": 0,
+        "comments": 0,
+        "created": "2022-10-05T13:35:35.183Z",
+        "updated": "2022-10-05T13:35:35.183Z",
+        "color": "",
+        "image": "item/2022/10/05/headphone_5_k08ITYu.png",
+        "category": 13,
+        "tag": [
+            17
+        ]
+    }
+},
+{
+    "model": "app_item.item",
+    "pk": 78,
+    "fields": {
+        "title": "Наушники PINK",
+        "slug": "наушники-pink",
+        "description": null,
+        "stock": 3,
+        "price": "78",
+        "is_available": true,
+        "limited_edition": true,
+        "reviews": 0,
+        "comments": 0,
+        "created": "2022-10-05T13:36:23.443Z",
+        "updated": "2022-10-05T13:36:23.443Z",
+        "color": "",
+        "image": "item/2022/10/05/headphone_6_91eOmcT.png",
+        "category": 13,
+        "tag": [
+            17,
+            19
+        ]
+    }
+},
+{
+    "model": "app_item.item",
+    "pk": 79,
+    "fields": {
+        "title": "Наушники вакуумные RED",
+        "slug": "наушники-вакуумные-red",
+        "description": null,
+        "stock": 12,
+        "price": "132",
+        "is_available": true,
+        "limited_edition": false,
+        "reviews": 0,
+        "comments": 0,
+        "created": "2022-10-05T13:37:10.611Z",
+        "updated": "2022-10-05T13:37:10.611Z",
+        "color": "",
+        "image": "item/2022/10/05/headphone_7_LOKOSiK.png",
+        "category": 13,
+        "tag": [
+            17,
+            18,
+            19
+        ]
+    }
+},
+{
+    "model": "app_item.item",
+    "pk": 80,
+    "fields": {
+        "title": "Наушники  GALAXY",
+        "slug": "наушники-galaxy",
+        "description": null,
+        "stock": 2,
+        "price": "211",
+        "is_available": true,
+        "limited_edition": true,
+        "reviews": 0,
+        "comments": 0,
+        "created": "2022-10-05T13:38:31.788Z",
+        "updated": "2022-10-05T13:38:31.788Z",
+        "color": "",
+        "image": "item/2022/10/05/headphone_8_tY8Zg3e.png",
+        "category": 13,
+        "tag": [
+            17
+        ]
+    }
+},
+{
+    "model": "app_item.item",
+    "pk": 81,
+    "fields": {
+        "title": "НАушники вакуумные ABC-100",
+        "slug": "наушники-вакуумные-abc-100",
+        "description": null,
+        "stock": 12,
+        "price": "99",
+        "is_available": true,
+        "limited_edition": false,
+        "reviews": 0,
+        "comments": 0,
+        "created": "2022-10-05T13:39:31.013Z",
+        "updated": "2022-10-05T13:39:31.013Z",
+        "color": "",
+        "image": "item/2022/10/05/headphone_9_knJJrkx.png",
+        "category": 13,
+        "tag": [
+            17,
+            18,
+            19
+        ]
+    }
+},
+{
+    "model": "app_item.item",
+    "pk": 82,
+    "fields": {
+        "title": "Наушники ORANGE",
+        "slug": "наушники-orange",
+        "description": null,
+        "stock": 22,
+        "price": "102",
+        "is_available": true,
+        "limited_edition": false,
+        "reviews": 0,
+        "comments": 0,
+        "created": "2022-10-05T13:40:56.761Z",
+        "updated": "2022-10-05T13:40:56.761Z",
+        "color": "",
+        "image": "item/2022/10/05/headphone_10_MmwtxsB.png",
+        "category": 13,
+        "tag": [
+            17,
+            18,
+            19,
+            20
+        ]
+    }
+},
+{
+    "model": "app_item.item",
+    "pk": 83,
+    "fields": {
+        "title": "Наушники CITRUSE",
+        "slug": "наушники-citruse",
+        "description": null,
+        "stock": 17,
+        "price": "202",
+        "is_available": true,
+        "limited_edition": false,
+        "reviews": 0,
+        "comments": 0,
+        "created": "2022-10-05T13:41:43.843Z",
+        "updated": "2022-10-05T13:41:43.843Z",
+        "color": "",
+        "image": "item/2022/10/05/headphone_11_eEkT3A4.png",
+        "category": 13,
+        "tag": [
+            15,
+            17
+        ]
+    }
+},
+{
+    "model": "app_item.item",
+    "pk": 84,
+    "fields": {
+        "title": "Наушники Yellow",
+        "slug": "наушники-yellow",
+        "description": null,
+        "stock": 18,
+        "price": "186",
+        "is_available": true,
+        "limited_edition": false,
+        "reviews": 0,
+        "comments": 0,
+        "created": "2022-10-05T13:42:22.328Z",
+        "updated": "2022-10-05T13:42:22.328Z",
+        "color": "",
+        "image": "item/2022/10/05/headphone_12_4MobHeY.png",
+        "category": 13,
+        "tag": [
+            12,
+            17
+        ]
+    }
+},
+{
+    "model": "app_item.item",
+    "pk": 85,
+    "fields": {
+        "title": "Беспроводная колонка B-987",
+        "slug": "беспроводная-колонка-b-987",
+        "description": null,
+        "stock": 19,
+        "price": "98",
+        "is_available": true,
+        "limited_edition": false,
+        "reviews": 0,
+        "comments": 0,
+        "created": "2022-10-05T13:45:35.801Z",
+        "updated": "2022-10-05T13:45:35.801Z",
+        "color": "",
+        "image": "item/2022/10/05/speeker_1_HejiBv5.png",
+        "category": 12,
+        "tag": [
+            19,
+            21,
+            22
+        ]
+    }
+},
+{
+    "model": "app_item.item",
+    "pk": 86,
+    "fields": {
+        "title": "Колонки 2х2",
+        "slug": "колонки-2х2",
+        "description": null,
+        "stock": 11,
+        "price": "134",
+        "is_available": true,
+        "limited_edition": false,
+        "reviews": 0,
+        "comments": 0,
+        "created": "2022-10-05T13:50:31.149Z",
+        "updated": "2022-10-05T13:50:31.149Z",
+        "color": "",
+        "image": "item/2022/10/05/speeker_2_4MhKtbP.png",
+        "category": 12,
+        "tag": [
+            13,
+            21,
+            23
+        ]
+    }
+},
+{
+    "model": "app_item.item",
+    "pk": 87,
+    "fields": {
+        "title": "Беспроводная колонка BLCK",
+        "slug": "беспроводная-колонка-blck",
+        "description": null,
+        "stock": 34,
+        "price": "123",
+        "is_available": true,
+        "limited_edition": false,
+        "reviews": 0,
+        "comments": 0,
+        "created": "2022-10-05T13:51:58.625Z",
+        "updated": "2022-10-05T13:51:58.625Z",
+        "color": "",
+        "image": "item/2022/10/05/speeker_3_1Ai9UGr.png",
+        "category": 12,
+        "tag": [
+            19,
+            21,
+            22
+        ]
+    }
+},
+{
+    "model": "app_item.item",
+    "pk": 88,
+    "fields": {
+        "title": "Колонка POCKET SPEAKER",
+        "slug": "колонка-pocket-speaker",
+        "description": null,
+        "stock": 45,
+        "price": "178",
+        "is_available": false,
+        "limited_edition": false,
+        "reviews": 0,
+        "comments": 0,
+        "created": "2022-10-05T13:53:13.916Z",
+        "updated": "2022-10-05T13:53:13.916Z",
+        "color": "",
+        "image": "item/2022/10/05/speeker_4_ytzRPUs.png",
+        "category": 12,
+        "tag": [
+            19,
+            21,
+            22
+        ]
+    }
+},
+{
+    "model": "app_item.item",
+    "pk": 89,
+    "fields": {
+        "title": "Колонка POCKET BLCK",
+        "slug": "колонка-pocket-blck",
+        "description": null,
+        "stock": 12,
+        "price": "222",
+        "is_available": true,
+        "limited_edition": false,
+        "reviews": 0,
+        "comments": 0,
+        "created": "2022-10-05T13:54:05.888Z",
+        "updated": "2022-10-05T13:54:05.888Z",
+        "color": "",
+        "image": "item/2022/10/05/speeker_5_nqm7gR6.png",
+        "category": 12,
+        "tag": [
+            19,
+            21,
+            22
+        ]
+    }
+},
+{
+    "model": "app_item.item",
+    "pk": 90,
+    "fields": {
+        "title": "Колонка напольная W1000",
+        "slug": "колонка-напольная-w1000",
+        "description": null,
+        "stock": 23,
+        "price": "289",
+        "is_available": true,
+        "limited_edition": false,
+        "reviews": 0,
+        "comments": 0,
+        "created": "2022-10-05T13:55:00.314Z",
+        "updated": "2022-10-05T13:55:00.314Z",
+        "color": "",
+        "image": "item/2022/10/05/speeker_6_n8ezW7F.png",
+        "category": 12,
+        "tag": [
+            21
+        ]
+    }
+},
+{
+    "model": "app_item.item",
+    "pk": 91,
+    "fields": {
+        "title": "Колонка WHITE",
+        "slug": "колонка-white",
+        "description": null,
+        "stock": 43,
+        "price": "145",
+        "is_available": true,
+        "limited_edition": false,
+        "reviews": 0,
+        "comments": 0,
+        "created": "2022-10-05T13:55:59.193Z",
+        "updated": "2022-10-05T13:55:59.193Z",
+        "color": "",
+        "image": "item/2022/10/05/speeker_7_OXhayK8.png",
+        "category": 12,
+        "tag": [
+            19,
+            21,
+            22
+        ]
+    }
+},
+{
+    "model": "app_item.item",
+    "pk": 92,
+    "fields": {
+        "title": "Колонка HG-876",
+        "slug": "колонка-hg-876",
+        "description": null,
+        "stock": 4,
+        "price": "267",
+        "is_available": true,
+        "limited_edition": true,
+        "reviews": 0,
+        "comments": 0,
+        "created": "2022-10-05T13:57:10.943Z",
+        "updated": "2022-10-05T13:57:10.943Z",
+        "color": "",
+        "image": "item/2022/10/05/speeker_8_ILXK9Ba.png",
+        "category": 12,
+        "tag": [
+            13,
+            19,
+            21,
+            22
+        ]
+    }
+},
+{
+    "model": "app_item.item",
+    "pk": 93,
+    "fields": {
+        "title": "RED SPEAKER",
+        "slug": "red-speaker",
+        "description": null,
+        "stock": 54,
+        "price": "266",
+        "is_available": true,
+        "limited_edition": false,
+        "reviews": 0,
+        "comments": 0,
+        "created": "2022-10-05T13:57:54.863Z",
+        "updated": "2022-10-05T13:57:54.863Z",
+        "color": "",
+        "image": "item/2022/10/05/speeker_9_NfIUZAF.png",
+        "category": 12,
+        "tag": [
+            10,
+            21,
+            22
+        ]
+    }
+},
+{
+    "model": "app_item.item",
+    "pk": 94,
+    "fields": {
+        "title": "Музыкальные колонки RED EDITION",
+        "slug": "музыкальные-колонки-red-edition",
+        "description": null,
+        "stock": 8,
+        "price": "176",
+        "is_available": true,
+        "limited_edition": true,
+        "reviews": 0,
+        "comments": 0,
+        "created": "2022-10-05T13:58:45.879Z",
+        "updated": "2022-10-05T13:58:45.879Z",
+        "color": "",
+        "image": "item/2022/10/05/speeker_10_Zf3H8NM.png",
+        "category": 12,
+        "tag": [
+            10,
+            21,
+            23
+        ]
+    }
+},
+{
+    "model": "app_item.item",
+    "pk": 95,
+    "fields": {
+        "title": "Колонка \"ЛАРИСА\"",
+        "slug": "колонка-лариса",
+        "description": null,
+        "stock": 21,
+        "price": "111",
+        "is_available": true,
+        "limited_edition": false,
+        "reviews": 0,
+        "comments": 0,
+        "created": "2022-10-05T13:59:51.002Z",
+        "updated": "2022-10-05T13:59:51.002Z",
+        "color": "",
+        "image": "item/2022/10/05/speeker_11_0TWVE4c.png",
+        "category": 12,
+        "tag": [
+            6,
+            19,
+            21,
+            22
+        ]
+    }
+},
+{
+    "model": "app_item.category",
+    "pk": 1,
+    "fields": {
+        "title": "Телефоны",
+        "slug": "telefony",
+        "description": "Телефоны",
+        "image": "category/8_mlflBW9.png",
+        "parent_category": null,
+        "item": 1
+    }
+},
+{
+    "model": "app_item.category",
+    "pk": 2,
+    "fields": {
+        "title": "Бюджетные телефоны",
+        "slug": "byudzhetnye-telefony",
+        "description": "вымавитрьпорлодл",
+        "image": "category/4_59sg7BL.png",
+        "parent_category": 1,
+        "item": 1
+    }
+},
+{
+    "model": "app_item.category",
+    "pk": 3,
+    "fields": {
+        "title": "Смартфоны",
+        "slug": "smartfony",
+        "description": "Смартфоны",
+        "image": "category/8_MzWXIwy.png",
+        "parent_category": 1,
+        "item": 1
+    }
+},
+{
+    "model": "app_item.category",
+    "pk": 4,
+    "fields": {
+        "title": "Лампы",
+        "slug": "lampy",
+        "description": "Лампы",
+        "image": "category/11_WqHx1Lx.png",
+        "parent_category": null,
+        "item": 1
+    }
+},
+{
+    "model": "app_item.category",
+    "pk": 5,
+    "fields": {
+        "title": "Стиральные машины",
+        "slug": "stiralnye-mashiny",
+        "description": "вапролд",
+        "image": "category/3_fpk1Abc.png",
+        "parent_category": null,
+        "item": 1
+    }
+},
+{
+    "model": "app_item.category",
+    "pk": 6,
+    "fields": {
+        "title": "Кухонные",
+        "slug": "kuhonnye",
+        "description": "свапролджэ",
+        "image": "category/9.png",
+        "parent_category": null,
+        "item": 1
+    }
+},
+{
+    "model": "app_item.category",
+    "pk": 7,
+    "fields": {
+        "title": "Чайники",
+        "slug": "chajniki",
+        "description": "сапролджэ",
+        "image": "category/10_D5j5f59.png",
+        "parent_category": 6,
+        "item": 1
+    }
+},
+{
+    "model": "app_item.category",
+    "pk": 8,
+    "fields": {
+        "title": "Микроволновки",
+        "slug": "mikrovolnovki",
+        "description": "пролджэ",
+        "image": "category/9_rkxkNcJ.png",
+        "parent_category": 6,
+        "item": 1
+    }
+},
+{
+    "model": "app_item.category",
+    "pk": 9,
+    "fields": {
+        "title": "Плиты",
+        "slug": "plity",
+        "description": "псморлидтьдб",
+        "image": "category/7_Lgdhk0b.png",
+        "parent_category": 6,
+        "item": 1
+    }
+},
+{
+    "model": "app_item.category",
+    "pk": 10,
+    "fields": {
+        "title": "Камеры",
+        "slug": "camery",
+        "description": "",
+        "image": "category/6_W2IaXbd.png",
+        "parent_category": null,
+        "item": 23
+    }
+},
+{
+    "model": "app_item.category",
+    "pk": 11,
+    "fields": {
+        "title": "Звук",
+        "slug": "zvuk",
+        "description": "колонки,  наушники",
+        "image": "category/6_wT39Pv6.png",
+        "parent_category": null,
+        "item": 42
+    }
+},
+{
+    "model": "app_item.category",
+    "pk": 12,
+    "fields": {
+        "title": "Колонки",
+        "slug": "kolonki",
+        "description": "",
+        "image": "category/5_28wPnV8.png",
+        "parent_category": 11,
+        "item": 32
+    }
+},
+{
+    "model": "app_item.category",
+    "pk": 13,
+    "fields": {
+        "title": "Наушники",
+        "slug": "naushniki",
+        "description": "",
+        "image": "category/2_AVMQCWh.png",
+        "parent_category": 11,
+        "item": 7
+    }
+},
+{
+    "model": "app_item.tag",
+    "pk": 1,
+    "fields": {
+        "title": "для кухни",
+        "slug": "dlya-kuhni",
+        "is_active": true
+    }
+},
+{
+    "model": "app_item.tag",
+    "pk": 2,
+    "fields": {
+        "title": "телефоны",
+        "slug": "telefony",
+        "is_active": true
+    }
+},
+{
+    "model": "app_item.tag",
+    "pk": 3,
+    "fields": {
+        "title": "чайники",
+        "slug": "chajniki",
+        "is_active": true
+    }
+},
+{
+    "model": "app_item.tag",
+    "pk": 4,
+    "fields": {
+        "title": "плиты",
+        "slug": "plity",
+        "is_active": true
+    }
+},
+{
+    "model": "app_item.tag",
+    "pk": 5,
+    "fields": {
+        "title": "микроволновки",
+        "slug": "mikrovolnovki",
+        "is_active": true
+    }
+},
+{
+    "model": "app_item.tag",
+    "pk": 6,
+    "fields": {
+        "title": "синий",
+        "slug": "sinij",
+        "is_active": true
+    }
+},
+{
+    "model": "app_item.tag",
+    "pk": 7,
+    "fields": {
+        "title": "металлический",
+        "slug": "metallicheskij",
+        "is_active": true
+    }
+},
+{
+    "model": "app_item.tag",
+    "pk": 8,
+    "fields": {
+        "title": "Лампы",
+        "slug": "lampy",
+        "is_active": true
+    }
+},
+{
+    "model": "app_item.tag",
+    "pk": 9,
+    "fields": {
+        "title": "зеленый",
+        "slug": "zelenyj",
+        "is_active": true
+    }
+},
+{
+    "model": "app_item.tag",
+    "pk": 10,
+    "fields": {
+        "title": "красный",
+        "slug": "krasnyj",
+        "is_active": true
+    }
+},
+{
+    "model": "app_item.tag",
+    "pk": 11,
+    "fields": {
+        "title": "Стиральные машины",
+        "slug": "stiralnye-mashiny",
+        "is_active": true
+    }
+},
+{
+    "model": "app_item.tag",
+    "pk": 12,
+    "fields": {
+        "title": "желтый",
+        "slug": "zheltyj",
+        "is_active": true
+    }
+},
+{
+    "model": "app_item.tag",
+    "pk": 13,
+    "fields": {
+        "title": "черный",
+        "slug": "chernyj",
+        "is_active": true
+    }
+},
+{
+    "model": "app_item.tag",
+    "pk": 14,
+    "fields": {
+        "title": "белый",
+        "slug": "belyj",
+        "is_active": true
+    }
+},
+{
+    "model": "app_item.tag",
+    "pk": 15,
+    "fields": {
+        "title": "Оранжевый",
+        "slug": "oranzhevyj",
+        "is_active": true
+    }
+},
+{
+    "model": "app_item.tag",
+    "pk": 16,
+    "fields": {
+        "title": "камеры",
+        "slug": "kamery",
+        "is_active": true
+    }
+},
+{
+    "model": "app_item.tag",
+    "pk": 17,
+    "fields": {
+        "title": "Наушники",
+        "slug": "naushniki",
+        "is_active": true
+    }
+},
+{
+    "model": "app_item.tag",
+    "pk": 18,
+    "fields": {
+        "title": "Вакуумные нааушники",
+        "slug": "vakuumnye-naaushniki",
+        "is_active": true
+    }
+},
+{
+    "model": "app_item.tag",
+    "pk": 19,
+    "fields": {
+        "title": "беспроводные",
+        "slug": "besprovodnye",
+        "is_active": true
+    }
+},
+{
+    "model": "app_item.tag",
+    "pk": 20,
+    "fields": {
+        "title": "+ с кейсом",
+        "slug": "s-kejsom",
+        "is_active": true
+    }
+},
+{
+    "model": "app_item.tag",
+    "pk": 21,
+    "fields": {
+        "title": "колонка",
+        "slug": "kolonka",
+        "is_active": true
+    }
+},
+{
+    "model": "app_item.tag",
+    "pk": 22,
+    "fields": {
+        "title": "bluetoothe",
+        "slug": "bluetoothe",
+        "is_active": true
+    }
+},
+{
+    "model": "app_item.tag",
+    "pk": 23,
+    "fields": {
+        "title": "парные колонки",
+        "slug": "parnye-kolonki",
+        "is_active": true
+    }
+},
+{
+    "model": "app_item.comment",
+    "pk": 3,
+    "fields": {
+        "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "is_published": true,
+        "item": 7,
+        "user": 3,
+        "created_at": "2022-08-27T10:05:46.117Z",
+        "updated_at": "2022-08-27T10:05:46.117Z"
+    }
+},
+{
+    "model": "app_item.comment",
+    "pk": 4,
+    "fields": {
+        "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "is_published": false,
+        "item": 8,
+        "user": 4,
+        "created_at": "2022-08-27T10:09:18.526Z",
+        "updated_at": "2022-08-27T10:09:18.527Z"
+    }
+},
+{
+    "model": "app_item.comment",
+    "pk": 7,
+    "fields": {
+        "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "is_published": false,
+        "item": 11,
+        "user": 6,
+        "created_at": "2022-08-27T10:25:43.301Z",
+        "updated_at": "2022-08-27T10:25:43.301Z"
+    }
+},
+{
+    "model": "app_item.comment",
+    "pk": 8,
+    "fields": {
+        "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "is_published": false,
+        "item": 6,
+        "user": 7,
+        "created_at": "2022-08-27T10:37:49.377Z",
+        "updated_at": "2022-08-27T10:37:49.377Z"
+    }
+},
+{
+    "model": "app_item.comment",
+    "pk": 14,
+    "fields": {
+        "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "is_published": false,
+        "item": 7,
+        "user": 6,
+        "created_at": "2022-09-20T19:46:19.844Z",
+        "updated_at": "2022-09-20T19:46:19.844Z"
+    }
+},
+{
+    "model": "app_item.comment",
+    "pk": 16,
+    "fields": {
+        "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "is_published": false,
+        "item": 7,
+        "user": 3,
+        "created_at": "2022-10-01T20:10:09.755Z",
+        "updated_at": "2022-10-01T20:10:09.755Z"
+    }
+},
+{
+    "model": "app_item.comment",
+    "pk": 19,
+    "fields": {
+        "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "is_published": false,
+        "item": 36,
+        "user": 3,
+        "created_at": "2022-10-01T20:17:14.397Z",
+        "updated_at": "2022-10-01T20:17:14.397Z"
+    }
+},
+{
+    "model": "app_item.comment",
+    "pk": 20,
+    "fields": {
+        "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "is_published": false,
+        "item": 49,
+        "user": 3,
+        "created_at": "2022-10-01T20:17:38.610Z",
+        "updated_at": "2022-10-01T20:17:38.610Z"
+    }
+},
+{
+    "model": "app_item.comment",
+    "pk": 21,
+    "fields": {
+        "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "is_published": false,
+        "item": 49,
+        "user": 3,
+        "created_at": "2022-10-01T20:17:51.811Z",
+        "updated_at": "2022-10-01T20:17:51.811Z"
+    }
+},
+{
+    "model": "app_item.comment",
+    "pk": 23,
+    "fields": {
+        "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "is_published": false,
+        "item": 48,
+        "user": 3,
+        "created_at": "2022-10-01T20:19:17.275Z",
+        "updated_at": "2022-10-01T20:19:17.275Z"
+    }
+},
+{
+    "model": "app_item.comment",
+    "pk": 24,
+    "fields": {
+        "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "is_published": false,
+        "item": 7,
+        "user": 6,
+        "created_at": "2022-10-05T14:30:08.238Z",
+        "updated_at": "2022-10-05T14:30:08.238Z"
+    }
+},
+{
+    "model": "app_item.comment",
+    "pk": 25,
+    "fields": {
+        "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "is_published": false,
+        "item": 7,
+        "user": 6,
+        "created_at": "2022-10-05T14:30:14.718Z",
+        "updated_at": "2022-10-05T14:30:14.718Z"
+    }
+},
+{
+    "model": "app_item.comment",
+    "pk": 26,
+    "fields": {
+        "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "is_published": false,
+        "item": 34,
+        "user": 6,
+        "created_at": "2022-10-05T14:38:47.733Z",
+        "updated_at": "2022-10-05T14:38:47.738Z"
+    }
+},
+{
+    "model": "app_item.comment",
+    "pk": 27,
+    "fields": {
+        "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "is_published": false,
+        "item": 34,
+        "user": 6,
+        "created_at": "2022-10-05T14:38:56.433Z",
+        "updated_at": "2022-10-05T14:38:56.433Z"
+    }
+},
+{
+    "model": "app_item.comment",
+    "pk": 28,
+    "fields": {
+        "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "is_published": false,
+        "item": 34,
+        "user": 6,
+        "created_at": "2022-10-05T14:39:02.288Z",
+        "updated_at": "2022-10-05T14:39:02.288Z"
+    }
+},
+{
+    "model": "app_order.order",
+    "pk": 1,
+    "fields": {
+        "cart": 5,
+        "user": 3,
+        "name": "gh",
+        "email": "john_summers@mail.com",
+        "telephone": "+789009889",
+        "delivery": "express",
+        "pay_type": "my_card",
+        "city": "er",
+        "address": "er",
+        "created": "2022-10-06T19:11:17.886Z",
+        "updated": "2022-10-06T19:11:17.886Z",
+        "status": "new",
+        "error": ""
+    }
+},
+{
+    "model": "app_cart.cartitem",
+    "pk": 38,
+    "fields": {
+        "item": 46,
+        "quantity": 1,
+        "user": 22,
+        "ordered": false
+    }
+},
+{
+    "model": "app_cart.cartitem",
+    "pk": 39,
+    "fields": {
+        "item": 1,
+        "quantity": 1,
+        "user": 6,
+        "ordered": false
+    }
+},
+{
+    "model": "app_cart.cartitem",
+    "pk": 43,
+    "fields": {
+        "item": 7,
+        "quantity": 1,
+        "user": 6,
+        "ordered": false
+    }
+},
+{
+    "model": "app_cart.cartitem",
+    "pk": 46,
+    "fields": {
+        "item": 37,
+        "quantity": 1,
+        "user": 3,
+        "ordered": false
+    }
+},
+{
+    "model": "app_cart.cartitem",
+    "pk": 47,
+    "fields": {
+        "item": 36,
+        "quantity": 1,
+        "user": 4,
+        "ordered": false
+    }
+},
+{
+    "model": "app_cart.cartitem",
+    "pk": 48,
+    "fields": {
+        "item": 6,
+        "quantity": 1,
+        "user": 4,
+        "ordered": false
+    }
+},
+{
+    "model": "app_cart.cartitem",
+    "pk": 49,
+    "fields": {
+        "item": 36,
+        "quantity": 1,
+        "user": 3,
+        "ordered": false
+    }
+},
+{
+    "model": "app_cart.cartitem",
+    "pk": 50,
+    "fields": {
+        "item": 75,
+        "quantity": 2,
+        "user": 5,
+        "ordered": false
+    }
+},
+{
+    "model": "app_cart.cartitem",
+    "pk": 51,
+    "fields": {
+        "item": 54,
+        "quantity": 3,
+        "user": 5,
+        "ordered": false
+    }
+},
+{
+    "model": "app_cart.cartitem",
+    "pk": 52,
+    "fields": {
+        "item": 31,
+        "quantity": 4,
+        "user": 5,
+        "ordered": false
+    }
+},
+{
+    "model": "app_cart.cart",
+    "pk": 5,
+    "fields": {
+        "created": "2022-09-19T12:45:14.862Z",
+        "user": 3,
+        "ordered": false,
+        "items": [
+            46,
+            49
+        ]
+    }
+},
+{
+    "model": "app_cart.cart",
+    "pk": 6,
+    "fields": {
+        "created": "2022-09-19T12:50:33.390Z",
+        "user": 4,
+        "ordered": false,
+        "items": [
+            48,
+            47
+        ]
+    }
+},
+{
+    "model": "app_cart.cart",
+    "pk": 7,
+    "fields": {
+        "created": "2022-09-19T12:53:57.301Z",
+        "user": 5,
+        "ordered": false,
+        "items": [
+            52,
+            51,
+            50
+        ]
+    }
+},
+{
+    "model": "app_cart.cart",
+    "pk": 8,
+    "fields": {
+        "created": "2022-09-19T12:55:31.628Z",
+        "user": 22,
+        "ordered": false,
+        "items": [
+            38
+        ]
+    }
+},
+{
+    "model": "app_cart.cart",
+    "pk": 9,
+    "fields": {
+        "created": "2022-09-19T13:25:15.136Z",
+        "user": 6,
+        "ordered": false,
+        "items": [
+            39,
+            43
+        ]
+    }
+}
+]

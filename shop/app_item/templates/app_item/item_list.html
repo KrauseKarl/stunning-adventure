@@ -3,6 +3,7 @@
 {% block title %}ITEMS{% endblock %}
 
 {% block content %}
+
 <div class="Middle Middle_top">
     <div class="Middle-top">
         <div class="wrap">
@@ -68,25 +69,43 @@
                 </div>
                 <div class="Section-columnSection">
                     <header class="Section-header">
+                        <strong class="Section-title">Popular color
+                        </strong>
+                    </header>
+
+                    <!--     TAGS        -->
+                    <div class="Section-columnContent">
+                        <div class="buttons">
+                            {% for color in colors %}
+                            <a class="btn btn_default btn_sm"
+                               style="background-color:{{color}}; box-shadow: 0 0 2px; padding: 20px"
+                               href="{% url 'app_item:item_color' color=color %}"></a>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <!--     TAGS   END     -->
+                </div>
+                 <div class="Section-columnSection">
+                    <header class="Section-header">
                         <strong class="Section-title">Popular tags
                         </strong>
                     </header>
 
-<!--     TAGS        -->
+                    <!--     TAGS        -->
                     <div class="Section-columnContent">
                         <div class="buttons">
 
                             {% for tag in tags %}
                             <a class="btn btn_default btn_sm"
-                               href="{% url 'app_item:item_tag' tag=tag.slug %}">{{tag.title}}</a>
+                                href="{% url 'app_item:item_tag' tag=tag.slug %}">{{tag.title}}</a>
                             {% endfor %}
                         </div>
                     </div>
-<!--     TAGS   END     -->
+                    <!--     TAGS   END     -->
                 </div>
             </div>
 
-<!--    SORT BY     -->
+            <!--    SORT BY     -->
             <div class="Section-content">
                 <div class="Sort">
                     <div class="Sort-title">Сортировать по:
@@ -96,10 +115,11 @@
                            href="{% url 'app_item:item_sort' order_by='-reviews' %}">Популярности</a>
                         <a class="Sort-sortBy Sort-sortBy_dec" href="{% url 'app_item:item_sort' order_by='-price' %}">Цене</a>
                         <a class="Sort-sortBy" href="{% url 'app_item:item_sort' order_by='-comments' %}">Отзывам</a>
-                        <a class="Sort-sortBy Sort-sortBy_inc" href="{% url 'app_item:item_sort' order_by='-created' %}">Новизне</a>
+                        <a class="Sort-sortBy Sort-sortBy_inc"
+                           href="{% url 'app_item:item_sort' order_by='-created' %}">Новизне</a>
                     </div>
                 </div>
-<!--    SORT BY END    -->
+                <!--    SORT BY END    -->
 
                 <!--    CARD    -->
 
