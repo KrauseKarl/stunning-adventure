@@ -12,13 +12,10 @@
     <div class="Middle-top">
         <div class="wrap">
             <div class="Middle-header">
-                <h1 class="Middle-title">Оформление заказа
-                </h1>
+                <h1 class="Middle-title">Оформление заказа</h1>
                 <ul class="breadcrumbs Middle-breadcrumbs">
-                    <li class="breadcrumbs-item"><a href="index.html">home</a>
-                    </li>
-                    <li class="breadcrumbs-item breadcrumbs-item_current"><span>Оформление заказа</span>
-                    </li>
+                    <li class="breadcrumbs-item"><a href="index.html">home</a></li>
+                    <li class="breadcrumbs-item breadcrumbs-item_current"><span>Оформление заказа</span></li>
                 </ul>
             </div>
         </div>
@@ -33,23 +30,18 @@
 
                 <div class="Section-columnSection">
                     <header class="Section-header">
-                        <strong class="Section-title">Прогресс заполнения
-                        </strong>
+                        <strong class="Section-title">Прогресс заполнения</strong>
                     </header>
                     <div class="Section-columnContent">
                         <ul class="menu menu_vt Order-navigate">
                             <li class="menu-item_ACTIVE menu-item">
-                                <a class="menu-link" href="#step1">Шаг 1. Параметры пользователя</a>
-                            </li>
+                                <a class="menu-link" href="#step1">Шаг 1. Параметры пользователя</a></li>
                             <li class="menu-item">
-                                <a class="menu-link" href="#step2">Шаг 2. Способ доставки</a>
-                            </li>
+                                <a class="menu-link" href="#step2">Шаг 2. Способ доставки</a></li>
                             <li class="menu-item">
-                                <a class="menu-link" href="#step3">Шаг 3. Способ оплаты</a>
-                            </li>
+                                <a class="menu-link" href="#step3">Шаг 3. Способ оплаты</a></li>
                             <li class="menu-item">
-                                <a class="menu-link" href="#step4">Шаг 4. Подтверждение заказа</a>
-                            </li>
+                                <a class="menu-link" href="#step4">Шаг 4. Подтверждение заказа</a></li>
                         </ul>
                     </div>
                 </div>
@@ -58,59 +50,43 @@
 
 
             <div class="Section-content">
-                <form class="form" action="" method="post">{% csrf_token %}
+                <form class="form" action="" method="post">
+                    {% csrf_token %}
                     <!--   Шаг 1. Параметры пользователя-->
                     <div class="Order-block Order-block_OPEN" id="step1">
                         <header class="Section-header Section-header_sm">
-                            <h2 class="Section-title">Шаг 1. Параметры пользователя
-                            </h2>
+                            <h2 class="Section-title">Шаг 1. Параметры пользователя</h2>
                         </header>
 
                         <div class="row">
                             <div class="row-block">
                                 <div class="form-group">
-                                    <label class="form-label" for="name">ФИО
-                                    </label>
+                                    <label class="form-label" for="name">ФИО</label>
                                     <input class="form-input" id="name" name="name" type="text"
                                            value="{{request.user.first_name}}"/>
                                 </div>
                                 <div class="form-group">
-                                    <label class="form-label" for="phone">Телефон
-                                    </label>
-                                    <input class="form-input" id="phone" name="phone" type="text" value="{{request.user.profile.telephone}}"/>
+                                    <label class="form-label" for="telephone">Телефон</label>
+                                    <input class="form-input" id="telephone" name="telephone" type="text"
+                                           value="{{request.user.profile.telephone}}"/>
                                 </div>
                                 <div class="form-group">
-                                    <label class="form-label" for="mail">E-mail
-                                    </label>
-                                    <input class="form-input" id="mail" name="mail" type="text" value="{{request.user.email}}"
+                                    <label class="form-label" for="email">E-mail</label>
+                                    <input class="form-input" id="email" name="email" type="text"
+                                           value="{{request.user.email}}"
                                            data-validate="require"/>
                                 </div>
                             </div>
                             <!--                  БЛОК ВВОДА ПАРОЛЯ-->
 
                             <div class="row-block">
-                                {% if not request.user.is_authenticated %}
-                                <div class="form-group">
-                                    <label class="form-label" for="password">Пароль
-                                    </label>
-                                    <input class="form-input" id="password" name="password" type="password"
-                                           placeholder="Тут можно изменить пароль"/>
-                                </div>
-                                <div class="form-group">
-                                    <label class="form-label" for="passwordReply">Подтверждение пароля
-                                    </label>
-                                    <input class="form-input" id="passwordReply" name="passwordReply" type="password"
-                                           placeholder="Введите пароль повторно"/>
-                                </div>
-                                <div class="form-group"><a class="btn btn_muted Order-btnReg" href="#">Я уже
-                                    зарегистрирован</a>
-                                </div>
-                                {% endif %}
+
                             </div>
                         </div>
 
                         <!--                  БЛОК ВВОДА ПАРОЛЯ-->
-                        <div class="Order-footer"><a class="btn btn_success Order-next" href="#step2">Дальше</a>
+                        <div class="Order-footer">
+                            <a class="btn btn_success Order-next" href="#step2">Дальше</a>
                         </div>
                     </div>
 
@@ -123,7 +99,7 @@
                         <div class="form-group">
                             <div>
                                 <label class="toggle">
-                                    <input type="radio" name="delivery" value="ordinary" checked="checked"/>
+                                    <input type="radio" name="delivery" value="standard" checked="checked"/>
                                     <span class="toggle-box"></span><span class="toggle-text">Обычная доставка</span>
                                 </label>
                             </div>
@@ -137,14 +113,17 @@
                         <div class="form-group">
                             <label class="form-label" for="city">Город
                             </label>
-                            <input class="form-input" id="city" name="city" type="text"/>
+                            <input class="form-input" id="city" name="city" type="text" data-validate="require"/>
                         </div>
                         <div class="form-group">
                             <label class="form-label" for="address">Адрес
                             </label>
-                            <textarea class="form-textarea" name="address" id="address"></textarea>
+                            <textarea class="form-textarea" name="address" id="address" data-validate="require">
+
+                            </textarea>
                         </div>
-                        <div class="Order-footer"><a class="btn btn_success Order-next" href="#step3">Дальше</a>
+                        <div class="Order-footer">
+                            <a class="btn btn_success Order-next" href="#step3">Дальше</a>
                         </div>
                     </div>
                     <div class="Order-block" id="step3">
@@ -155,20 +134,27 @@
                         <div class="form-group">
                             <div>
                                 <label class="toggle">
-                                    <input type="radio" name="pay" value="online" checked="checked"/><span
-                                        class="toggle-box"></span><span class="toggle-text">Онлайн картой</span>
+                                    <input type="radio" name="pay" value="online" checked="checked"/>
+                                    <span class="toggle-box"></span>
+                                    <span class="toggle-text">Онлайн картой</span>
                                 </label>
                             </div>
                             <div>
                                 <label class="toggle">
-                                    <input type="radio" name="pay" value="someone"/><span
-                                        class="toggle-box"></span><span class="toggle-text">Онлайн со случайного чужого счета</span>
+                                    <input type="radio" name="pay" value="someone"/>
+                                    <span class="toggle-box"></span>
+                                    <span class="toggle-text">Онлайн со случайного чужого счета</span>
                                 </label>
                             </div>
                         </div>
-                        <div class="Order-footer"><a class="btn btn_success Order-next" href="#step4">Дальше</a>
+                        <div class="Order-footer">
+                            <a class="btn btn_success Order-next" href="#step4">Дальше</a>
                         </div>
                     </div>
+
+
+                    <!--                -->
+
                     <div class="Order-block" id="step4">
                         <header class="Section-header Section-header_sm">
                             <h2 class="Section-title">Шаг 4. Подтверждение заказа
@@ -228,11 +214,13 @@
                             </div>
                             <div class="Cart Cart_order">
                                 {% for item in request.user.user_cart.first.items.all %}
+                                {% if not item.ordered %}
                                 <div class="Cart-product">
                                     <div class="Cart-block Cart-block_row">
                                         <div class="Cart-block Cart-block_pict">
                                             <a class="Cart-pict" href="#">
-                                                <img class="Cart-img" src="{{ item.item.image.url}}" alt="card.jpg"/></a>
+                                                <img class="Cart-img" src="{{ item.item.image.url}}"
+                                                     alt="card.jpg"/></a>
                                         </div>
                                         <div class="Cart-block Cart-block_info">
                                             <a class="Cart-title" href="#">{{ item.item.title }}</a>
@@ -249,12 +237,15 @@
                                         </div>
                                     </div>
                                 </div>
+                                {% endif %}
                                 {% endfor %}
 
                                 <div class="Cart-total">
                                     <div class="Cart-block Cart-block_total">
-                                        <strong class="Cart-title">Итого:
-                                        </strong><span class="Cart-price">{{request.user.user_cart.first.get_total_price}}$</span>
+                                        <strong class="Cart-title">Итого:</strong>
+                                        <span class="Cart-price">{{request.user.user_cart.first.get_total_price}}$</span>
+                                        <input class="form-input" type="hidden" id="total_sum" name="total_sum"
+                                               value="{{ request.user.user_cart.first.get_total_price }}" readonly/>
                                     </div>
                                     <div class="Cart-block">
                                         <button class="btn btn_primary btn_lg" type="submit">Оплатить

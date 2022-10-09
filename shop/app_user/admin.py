@@ -4,6 +4,6 @@ from app_user.models import Profile
 
 
 class ProfileAdmin(admin.ModelAdmin):
-    list_display = ['user', 'group', 'avatar', 'telephone']
+    list_display = ['user',  'avatar', 'telephone']
 
 admin.site.register(Profile, ProfileAdmin)

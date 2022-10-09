@@ -210,9 +210,11 @@
                                         <div class="Comment-content">{{comment.review}}</div>
                                         {% if request.user == comment.user %}
                                         <a class="CommentHandleButton"
-                                           href="{% url 'app_item:comment_delete' pk=item.pk comment_id=comment.id %}">удалить</a>&#160;&#160;
+                                           href="{% url 'app_item:comment_delete' pk=item.pk comment_id=comment.id %}">
+                                            удалить</a>&#160;&#160;
                                         <a class="CommentHandleButton"
-                                           href="{% url 'app_item:comment_edit' pk=item.pk comment_id=comment.id %}">редактировать</a>
+                                           href="{% url 'app_item:comment_edit' pk=item.pk comment_id=comment.id %}">
+                                            редактировать</a>
 
                                         {% endif %}
                                     </div>

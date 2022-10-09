@@ -58,10 +58,9 @@ class Item(models.Model):
     color = models.CharField(max_length=10, choices=COLOURS, null=True, verbose_name='цвет товара')
 
     image = models.ImageField(upload_to='item/%Y/%m/%d', null=True, blank=True, verbose_name='изображение')
-
-    category = models.ForeignKey('Category', on_delete=models.CASCADE, null=True, related_name='items',
-                                 verbose_name='категория')
     tag = models.ManyToManyField('Tag', max_length=20, blank=True, related_name='item_tags', verbose_name='тег')
+    category = models.ForeignKey('Category', on_delete=models.CASCADE, null=True, related_name='items',
+                              verbose_name='категория')
 
     objects = models.Manager()
     available_items = AvailableManager()

@@ -101,8 +101,13 @@
                 </div>
                 {% endif %}
             </form>
-               <a href="{% url 'app_order:order_create' pk=cart.user.pk %}" class="btn btn_success btn_lg js-button-campaign">
+            {% if cart.items.all %}
+               <a href="{% url 'app_order:order_create'  %}" class="btn btn_success btn_lg js-button-campaign">
                    <span>Оформить заказ</span></a>
+            {% else %}
+             <a href="{% url 'main_page'  %}" class="btn btn_success btn_lg js-button-campaign">
+                   <span>Вернуться к покупкам</span></a>
+            {% endif %}
         </div>
     </div>
 

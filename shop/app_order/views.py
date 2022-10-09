@@ -14,21 +14,37 @@ class OrderCreate(CreateView):
     form_class = OrderForm
 
     def form_valid(self, form):
-        obj = form.save()
+        name = form.cleaned_data.get('name')
+        email = form.cleaned_data.get('email')
+        telephone = form.cleaned_data.get('telephone')
+        delivery = form.cleaned_data.get('delivery')
+        pay = form.cleaned_data.get('pay')
+        city = form.cleaned_data.get('city')
+        address = form.cleaned_data.get('address')
+        total_sum = form.cleaned_data.get('total_sum')
         user = self.request.user
-        cart = Cart.objects.filter(user=user).first()
-        order, created = Order.objects.create(
+        cart = Cart.objects.filter(user=user, ordered=False).order_by('-created').first()
+        Order.objects.create(
             cart=cart,
             user=user,
-            email=obj.cleaned_data.get('mail'),
-            telephone=obj.cleaned_data.get('phone'),
-            delivery=obj.cleaned_data.get('delivery'),
-            pay_type=obj.cleaned_data.get('pay'),
-            city=obj.cleaned_data.get('city'),
-            address=obj.cleaned_data.get('address')
+            name=name,
+            email=email,
+            telephone=telephone,
+            delivery=delivery,
+            pay=pay,
+            city=city,
+            address=address,
+            status='new',
+            total_sum=total_sum,
         )
-        order.status = 'new'
-        order.save()
+
+        items = cart.items.all()
+        for item in items:
+            item.ordered = True
+            item.save()
+
+        cart.delete()
+
         return render(self.request, 'app_order/successful_order.html')
 
     def form_invalid(self, form):
@@ -64,16 +80,15 @@ class OrderList(ListView):
         return False
 
 
-class OrderDetail(UserPassesTestMixin, PermissionsMixin, DetailView):
+class OrderDetail(DetailView):  #   UserPassesTestMixin PermissionsMixin
     model = Order
     template_name = 'app_order/order_detail.html'
     context_object_name = 'order'
 
-    def test_func(self):
-        user = self.request.user
-        order = self.get_object()
-        print(order)
-        if user == order.user:
-            return True
-        return False
-
+    # def test_func(self):
+    #     user = self.request.user
+    #     order = self.get_object()
+    #     print(order)
+    #     if user == order.user:
+    #         return True
+    #     return False

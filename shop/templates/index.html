@@ -28,25 +28,36 @@
             <div class="row ControlPanel-row">
                 <div class="row-block">
                     <div class="row ControlPanel-rowSplit">
-                        <div class="row-block"><a class="ControlPanel-title" href="#">Free Delivery</a>
+                        <div class="row-block">
+                            <a class="ControlPanel-title" href="#">Free Delivery</a>
                         </div>
-                        <div class="row-block hide_700"><span class="ControlPanel-title">Follow Us</span>
+                        <div class="row-block hide_700">
+                            <span class="ControlPanel-title">Follow Us</span>
                             <ul class="menu menu_img menu_smallImg ControlPanel-menu">
-                                <li class="menu-item"><a class="menu-link" href="#">
-                                    <img src="/assets/img/icons/socialHeader/fb.svg" alt="fb.svg"/>
-                                </a>
+                                <li class="menu-item">
+                                    <a class="menu-link" href="#">
+                                        <img src="/assets/img/icons/socialHeader/fb.svg" alt="fb.svg"/>
+                                    </a>
                                 </li>
-                                <li class="menu-item"><a class="menu-link" href="#"><img
-                                        src="/assets/img/icons/socialHeader/tw.svg" alt="tw.svg"/></a>
+                                <li class="menu-item">
+                                    <a class="menu-link" href="#">
+                                        <img src="/assets/img/icons/socialHeader/tw.svg" alt="tw.svg"/>
+                                    </a>
                                 </li>
-                                <li class="menu-item"><a class="menu-link" href="#"><img
-                                        src="/assets/img/icons/socialHeader/in.svg" alt="in.svg"/></a>
+                                <li class="menu-item">
+                                    <a class="menu-link" href="#">
+                                        <img src="/assets/img/icons/socialHeader/in.svg" alt="in.svg"/>
+                                    </a>
                                 </li>
-                                <li class="menu-item"><a class="menu-link" href="#"><img
-                                        src="/assets/img/icons/socialHeader/pt.svg" alt="pt.svg"/></a>
+                                <li class="menu-item">
+                                    <a class="menu-link" href="#">
+                                        <img src="/assets/img/icons/socialHeader/pt.svg" alt="pt.svg"/>
+                                    </a>
                                 </li>
-                                <li class="menu-item"><a class="menu-link" href="#"><img
-                                        src="/assets/img/icons/socialHeader/mail.svg" alt="mail.svg"/></a>
+                                <li class="menu-item">
+                                    <a class="menu-link" href="#">
+                                        <img src="/assets/img/icons/socialHeader/mail.svg" alt="mail.svg"/>
+                                    </a>
                                 </li>
                             </ul>
                         </div>
@@ -84,11 +95,13 @@
     </div>
     <div class="wrap">
         <div class="row Header-rowMain">
-            <div class="row-block Header-logo"><a class="logo" href="{% url 'main_page' %}">
-                <img class="logo-image" src="/assets/img/logo.png" alt="logo.png"/></a>
+            <div class="row-block Header-logo">
+                <a class="logo" href="{% url 'main_page' %}">
+                    <img class="logo-image" src="/assets/img/logo.png" alt="logo.png"/>
+                </a>
             </div>
 
-<!--    NAVBAR  -->
+            <!--    NAVBAR  -->
             <nav class="row-block row-block_right Header-menu">
                 <div class="menuModal" id="navigate">
                     <ul class="menu menu_main">
@@ -109,37 +122,37 @@
                     </ul>
                 </div>
             </nav>
-<!--    NAVBAR END -->
+            <!--    NAVBAR END -->
 
-<!--    CART  -->
+            <!--    CART  -->
             <div class="row-block">
                 <div class="CartBlock">
                     <a class="CartBlock-block" href="{% url 'app_cart:cart' %}">
                         <img class="CartBlock-img" src="/assets/img/icons/cart.svg" alt="cart.svg"/>
 
-<!--  ITEM'S COUNTER OF THE CART   -->
-                        <span class="CartBlock-amount">
-                            {% with total_items=request.user.user_add_items.count  %}
+                        <!--  ITEM'S COUNTER OF THE CART   -->
+
+                            {% with total_items=request.user.user_cart.first.items.count %}
                                 {% if total_items > 0 %}
+                            <span class="CartBlock-amount">
                                     {{ total_items }}
-                                {% else %}
-                                    0
+                            </span>
                                 {% endif %}
                             {% endwith %}
-                        </span>
-<!--  ITEM'S COUNTER OF THE CART   -->
+
+                        <!--  ITEM'S COUNTER OF THE CART   -->
 
                     </a>
 
- <!--  ITEM'S COST COUNTER OF THE CART   -->
+                    <!--  ITEM'S COST COUNTER OF THE CART   -->
                     <div class="CartBlock-block">
                         <span class="CartBlock-price">{{ cart_total_sum }} $</span>
                     </div>
-<!--  ITEM'S COST COUNTER OF THE CART   -->
+                    <!--  ITEM'S COST COUNTER OF THE CART   -->
 
                 </div>
             </div>
-<!--    CART END -->
+            <!--    CART END -->
 
             <div class="row-block Header-trigger"><a class="menuTrigger" href="#navigate">
                 <div class="menuTrigger-content">Показать навигацию

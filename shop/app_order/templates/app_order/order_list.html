@@ -61,20 +61,20 @@
                                 <div class="row-block">
                                     <a class="Order-title" href="{% url 'app_order:order_detail' pk=order.pk %}">Заказ&#32;
                                         <span class="Order-numberOrder">№00{{order.id}}</span>&#32;от&#32;
-                                        <span class="Order-dateOrder">{{ order.created| date:" d.m.Y" }}</span>
+                                        <span class="Order-dateOrder">{{ order.created|date:"j F o" }}</span>
                                     </a>
                                 </div>
                                 <div class="row-block">
                                     <div class="Order-info Order-info_delivery">
                                         <div class="Order-infoType">Тип доставки:
                                         </div>
-                                        <div class="Order-infoContent">{{ order.delivery }}
+                                        <div class="Order-infoContent">{{ order.get_delivery_display }}
                                         </div>
                                     </div>
                                     <div class="Order-info Order-info_pay">
                                         <div class="Order-infoType">Оплата:
                                         </div>
-                                        <div class="Order-infoContent">{{order.pay_type}}
+                                        <div class="Order-infoContent">{{order.get_pay_display}}
                                         </div>
                                     </div>
                                     <div class="Order-info">

@@ -27,7 +27,11 @@ class CartHandler:
 
     def _get_or_create_order_item(self):
         item = self._get_item()
-        order_item, created = CartItem.objects.get_or_create(user=self.user, item=item, ordered=False)
+        order_item, created = CartItem.objects.get_or_create(
+            user=self.user,
+            item=item,
+            price=item.price,
+            is_paid=False)
         return order_item
 
     def _get_cart_to_add(self):
