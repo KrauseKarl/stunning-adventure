@@ -25,8 +25,8 @@ class Order(models.Model):
         ('my_card', 'Онлайн картой'),
         ('some_card', 'Онлайн со случайного чужого счета')
     )
-    cart = models.ForeignKey(Cart, on_delete=models.CASCADE)
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    cart = models.ForeignKey(Cart, on_delete=models.CASCADE, related_name='cart_order')
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='user_order')
 
     name = models.CharField(max_length=250)
     email = models.EmailField(max_length=250)
