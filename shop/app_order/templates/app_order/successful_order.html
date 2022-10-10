@@ -23,17 +23,20 @@
             </div>
         </div>
     </div>
+
     <div class="Section">
         <div class="wrap">
             <div class="form Register">
                 <div class="Payment-card">
-                    <div class="form-group"><h3>Заказ оформлен успешно</h3></div>
-                    <div class="form-group"><h3>Заказ ожидает оплаты</h3></div>
-                    <div class="form-group"><a href="#" class="btn btn_success">Оплатить</a></div>
+                    <div class="form-group">
+                        <label class="form-label">Заказ оформлен успешно</label>
+                    </div>
+                    <div class="form-group">
+                        <a class="btn btn_success Payment-generate" href="{% url 'app_order:pay' %}">Оплатить заказ</a>
+                    </div>
                 </div>
-                </form>
-
             </div>
         </div>
     </div>
-    {% endblock %}
+</div>
+{% endblock %}

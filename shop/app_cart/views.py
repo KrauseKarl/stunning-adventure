@@ -15,9 +15,8 @@ class AddItemToCart(TemplateView):
         user = request.user
         kwargs['path'] = request.META.get('HTTP_REFERER')
         cart = CartHandler(user, **kwargs)
-        cart._get_cart()
         order = cart.add_to_cart(user=user, **kwargs)
-        messages.info(self.request, "Товар добавлен в корзину")
+        # messages.info(self.request, "Товар добавлен в корзину")
         return order
 
 

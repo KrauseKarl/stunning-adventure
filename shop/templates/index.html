@@ -146,7 +146,7 @@
 
                     <!--  ITEM'S COST COUNTER OF THE CART   -->
                     <div class="CartBlock-block">
-                        <span class="CartBlock-price">{{ cart_total_sum }} $</span>
+                        <span class="CartBlock-price">{{ cart_total_sum }}$</span>
                     </div>
                     <!--  ITEM'S COST COUNTER OF THE CART   -->
 
@@ -173,27 +173,28 @@
                         </div>
                     </div>
                     <div class="CategoriesButton-content">
-                        {% for cat in categories %}
-                        {% if not cat.parent_category %}
+                        {% for category in categories %}
+                        {% if not category.parent_category  %}
                         <div class="CategoriesButton-link">
-                            <a href="{% url 'app_item:item_category' category=cat.slug %}">
+                            <a href="{% url 'app_item:item_category' category=category.slug %}">
                                 <div class="CategoriesButton-icon">
-                                    <img src="{{cat.image.url}}" width="15px"/>
+                                    <img src="{{category.image.url}}" width="15px"/>
                                 </div>
-                                <span class="CategoriesButton-text">{{cat.title}}({{cat.item_count}})</span>
+                                <span class="CategoriesButton-text">{{category.title}}({{category.item_count}})</span>
 
-                                {% if cat.sub_categories.all.count > 0 %}
+                                {% if category.sub_categories.all.count > 0 %}
                                 <a class="CategoriesButton-arrow" href="#"></a>
                                 <div class="CategoriesButton-submenu">
-                                    {% for c in cat.sub_categories.all %}
+
+                                    {% for sub_category in category.sub_categories.all %}
                                     <a class="CategoriesButton-link"
-                                       href="{% url 'app_item:item_category' category=c.slug %}">
+                                       href="{% url 'app_item:item_category' category=sub_category.slug %}">
                                         <div class="CategoriesButton-icon">
-                                            <img src="{{ c.image.url }}" width="15px"/>
+                                            <img src="{{ sub_category.image.url }}" width="15px"/>
                                         </div>
                                         <span class="CategoriesButton-text">
-                                                        {{c.title|truncatechars:10}} ({{c.items.count }})
-                                                    </span>
+                                            {{sub_category.title|truncatechars:10}} ({{sub_category.items.count }})
+                                        </span>
                                     </a>
                                     {% endfor %}
                                 </div>

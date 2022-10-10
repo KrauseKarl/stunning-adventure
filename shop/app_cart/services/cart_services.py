@@ -10,7 +10,6 @@ from app_item.models import Item
 
 
 def get_cart(user):
-
     cart, created = Cart.objects.get_or_create(user=user, ordered=False)
     return cart
 
@@ -22,36 +21,21 @@ class CartHandler:
         self.path = kwargs['path']
         self.queryset = self._get_cart()
 
-    def _get_item(self):
-        return get_object_or_404(Item, pk=self.item)
-
-    def _get_or_create_order_item(self):
-        item = self._get_item()
-        order_item, created = CartItem.objects.get_or_create(
-            user=self.user,
-            item=item,
-            price=item.price,
-            is_paid=False)
-        return order_item
-
-    def _get_cart_to_add(self):
-        return Cart.objects.filter(user=self.user, ordered=False)
-
     def add_to_cart(self, **kwargs):
 
         item = self._get_item()
-        order_item = self._get_or_create_order_item()
+        item_for_cart = self._get_or_create_item_for_cart()
         try:
             cart = self._get_cart()
             if cart.items.filter(item__pk=item.pk).exists():
-                order_item.quantity += 1
-                order_item.save()
+                item_for_cart.quantity += 1
+                item_for_cart.save()
             else:
-                cart.items.add(order_item)
+                cart.items.add(item_for_cart)
                 cart.save()
         except ObjectDoesNotExist:
             cart = Cart.objects.create(user=self.user)
-            cart.items.add(order_item)
+            cart.items.add(item_for_cart)
             cart.save()
 
         @receiver(post_save, sender=CartItem)
@@ -61,24 +45,41 @@ class CartHandler:
 
         return redirect(self.path)
 
-    def _get_or_404_order_item(self):
+    def remove_from_cart(self, user, **kwargs):
         item = self._get_item()
-        order_item = get_object_or_404(CartItem, user=self.user, item=item, ordered=False)
+        cart = self._get_cart()
+        item_for_cart = get_object_or_404(CartItem, user=user, item=item, is_paid=False)
 
-        return order_item
+        if item_for_cart in cart.items.all():
+            try:
+                cart.items.get(id=item_for_cart.id).delete()
+            except ObjectDoesNotExist:
+                pass
+        return redirect(self.path)
+
+    def _get_item(self):
+        return get_object_or_404(Item, pk=self.item)
 
     def _get_cart(self):
         cart, created = Cart.objects.get_or_create(user=self.user, ordered=False)
         return cart
 
-    def remove_from_cart(self, user, **kwargs):
+    def _get_or_create_item_for_cart(self):
         item = self._get_item()
-        cart = self._get_cart()
-        order_item = get_object_or_404(CartItem, user=user, item=item, ordered=False)
+        item_for_cat, created = CartItem.objects.get_or_create(
+            user=self.user,
+            item=item,
+            price=item.price,
+            is_paid=False)
+        return item_for_cat
 
-        if order_item in cart.items.all():
-            try:
-                cart.items.get(id=order_item.id).delete()
-            except ObjectDoesNotExist:
-                pass
-        return redirect(self.path)
+    # def _get_cart_to_add(self):
+    #     return Cart.objects.filter(user=self.user, ordered=False)
+
+    # def _get_or_404_order_item(self):
+    #     item = self._get_item()
+    #     order_item = get_object_or_404(CartItem, user=self.user, item=item, is_paid=False)
+    #
+    #     return order_item
+
+

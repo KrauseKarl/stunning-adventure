@@ -59,7 +59,14 @@ class ItemList(FilterMixin, TagMixin, ListView):
 
 
     def get(self, request, category=None, tag=None, order_by=None, color=None, **kwargs):
-
+        if not request.session.session_key:
+            request.session.create()
+        session_id = request.session.session_key
+        print('#########################')
+        print('request.user', request.user)
+        print('request.session.session_key________________', request.session.session_key)
+        print('session_id_________________________________', session_id)
+        print('#########################')
         if category:
             category = get_object_or_404(Category, slug=category)
             queryset = self.queryset.filter(category=category.id)
