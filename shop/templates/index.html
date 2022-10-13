@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="ru">
+{% load cache %}
 <head>
     <title>Megano</title>
     <meta name="description" content="Описание страницы">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <link href="/assets/favicon.ico" rel="shortcut icon">
     <link href="/assets/img/icons/favicon.ico" rel="shortcut icon">
 
     <link rel="preload" href="/assets/fonts/Roboto/Roboto-Regular.woff" as="font">
@@ -163,6 +165,7 @@
     </div>
     <div class="Header-searchWrap">
         <div class="wrap">
+            {% cache 600 department_navbar %}
             <div class="Header-categories">
                 <div class="CategoriesButton">
                     <div class="CategoriesButton-title">
@@ -207,6 +210,7 @@
                     </div>
                 </div>
             </div>
+            {% endcache %}
             <div class="Header-searchLink"><img src="/assets/img/icons/search.svg" alt="search.svg"/>
             </div>
             <div class="Header-search">
@@ -380,6 +384,8 @@
 <script type="text/javascript" src="/assets/plg/range/ion.rangeSlider.min.js"></script>
 <script type="text/javascript" src="/assets/plg/Slider/slick.min.js"></script>
 <script type="text/javascript" src="/assets/js/scripts.js"></script>
+<script type="text/javascript" src="/assets/js/my_scripts.js"></script>
 </body>
 </html>
-</html>
+
+

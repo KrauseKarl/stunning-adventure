@@ -61,8 +61,7 @@
                         <div class="ProductCard-cart">
                             <div class="ProductCard-cartElement ProductCard-cartElement_amount">
                                 <div class="Amount Amount_product">
-                                    <button class="Amount-remove" type="button">
-                                    </button>
+                                    <button class="Amount-remove" type="button"></button>
                                     <input class="Amount-input form-input" name="amount" type="text" value="1"/>
                                     <button class="Amount-add" type="button">
                                     </button>
@@ -82,7 +81,7 @@
                                 <a class="btn btn_primary" href="{% url 'app_cart:add_cart' pk=item.pk %}#maz">
                                     <img class="btn-icon" src="/assets/img/icons/card/cart_white.svg"
                                          alt="cart_white.svg"/>
-                                    <span class="btn-content">+  в корзину</span></a>
+                                    <span class="btn-content " id="add_item">+  в корзину</span></a>
                                 {% endif %}
                             </div>
                         </div>
@@ -174,7 +173,7 @@
                                     Отзыва
                                     {% elif item.item_comments.count == 1 %}
                                     Отзыв
-                                    {% elif  item.item_comments.count > 4 %} Отзывов
+                                    {% elif item.item_comments.count > 4 %} Отзывов
                                     {% else %} 0 отзывов
                                     {% endif %}
                                 </h3>
@@ -182,6 +181,7 @@
                             <div class="Comments">
 
                                 {% for comment in item.item_comments.all %}
+
                                 <div class="Comment">
                                     <div class="Comment-column Comment-column_pict">
                                         {% if comment.user.is_authenticated and comment.user.profile.avatar %}
@@ -196,7 +196,6 @@
                                     <div class="Comment-column">
                                         <header class="Comment-header">
                                             <div>
-
                                                 <strong class="Comment-title">{{ comment.user.get_full_name }}</strong>
                                                 <span class="Comment-date">
 <!--                                                {{comment.created_at|naturaltime}}-->
@@ -207,7 +206,7 @@
                                                 </span>
                                             </div>
                                         </header>
-                                        <div class="Comment-content">{{comment.review}}</div>
+                                        <div class="Comment-content" >{{comment.review}}</div>
                                         {% if request.user == comment.user %}
                                         <a class="CommentHandleButton"
                                            href="{% url 'app_item:comment_delete' pk=item.pk comment_id=comment.id %}">
@@ -215,14 +214,19 @@
                                         <a class="CommentHandleButton"
                                            href="{% url 'app_item:comment_edit' pk=item.pk comment_id=comment.id %}">
                                             редактировать</a>
-
                                         {% endif %}
                                     </div>
                                 </div>
                                 {% endfor %}
+                                <div>
+                                    <button type="button" class="btn btn_danger btn_lg"  id="hide_comment">Скрыть</button>
+                                    <button type="button" class="btn btn_primary btn_lg" id="show_comment"
+                                            data-actions-icnt="comments-show">Показать</button>
+                                </div>
+                                <!--COMMENT FORM -->
 
                             </div>
-                            {% if  request.user.is_authenticated %}
+                            {% if request.user.is_authenticated %}
                             <header class="Section-header Section-header_product">
                                 <h3 class="Section-title">Добавить отзыв</h3>
                             </header>

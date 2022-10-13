@@ -3,7 +3,7 @@ from django.contrib.auth.mixins import PermissionRequiredMixin
 from django.shortcuts import render
 from django.views.generic import CreateView, TemplateView, ListView, DetailView
 
-from app_cart.models import Cart
+from app_cart.models import Cart, CartItem
 from app_item.models import Item
 from app_order.forms import OrderForm
 from app_order.models import Order
@@ -28,8 +28,7 @@ class OrderCreate(CreateView):
         city = form.cleaned_data.get('city')
         address = form.cleaned_data.get('address')
         total_sum = form.cleaned_data.get('total_sum')
-        Order.objects.create(
-            cart=cart,
+        order = Order.objects.create(
             user=user,
             name=name,
             email=email,
@@ -45,6 +44,7 @@ class OrderCreate(CreateView):
         items = cart.items.all()  # TODO service def _get_all_items_of_cart()
         for item_is_paid in items:
             item_is_paid.is_paid = True  # TODO service def _set_item_is_paid()
+            item_is_paid.order = order
             item_is_paid.save()
             item = Item.objects.get(id=item_is_paid.item.id)  # TODO service def _get_item()
 
@@ -75,7 +75,7 @@ class OrderList(PermissionRequiredMixin, ListView):
     model = Order
     template_name = 'app_order/order_list.html'
     context_object_name = 'orders'
-    permission_required = 'app_order.view_order'
+    permission_required = ('app_order.view_order', 'app_order.change_order')
 
     def get_queryset(self):
         if self.request.user.is_authenticated:
@@ -96,3 +96,8 @@ class OrderDetail(UserPassesTestMixin, DetailView):  # UserPassesTestMixin Permi
         if user == order.user:
             return True
         return False
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['items_is_paid'] = CartItem.objects.filter(order=self.get_object()) # TODO service def _get_has_paid_items
+        return context

@@ -1,5 +1,4 @@
 from django.db import models
-from app_cart.models import Cart
 from django.contrib.auth.models import User
 
 
@@ -19,7 +18,7 @@ class Order(models.Model):
         ('online', 'Онлайн картой'),
         ('someone', 'Онлайн со случайного чужого счета')
     )
-    cart = models.ForeignKey(Cart, on_delete=models.SET_NULL, null=True, related_name='cart_order')
+
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='user_order')
 
     name = models.CharField(max_length=250, verbose_name='имя получателя')

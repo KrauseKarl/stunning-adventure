@@ -844,8 +844,7 @@ var Comments = function(){
                     $comments = $this.prev('.Comments').find('.Comments-wrap_toggle');
                 $this.data('text-alt', $this.text());
                 $this.text(text);
-                $comments
-                    .toggleClass('Comments-wrap_HIDE');
+                $comments.toggleClass('Comments-wrap_HIDE');
                 $('.fixScrollBlock').trigger('render.airStickyBlock');
             });
         }

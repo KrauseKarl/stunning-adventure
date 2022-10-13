@@ -91,3 +91,7 @@ main {
 		font-size: 15px;
 	}
 }
+.hide_comment {
+    display:none;
+    transition: all .6s ease;
+}

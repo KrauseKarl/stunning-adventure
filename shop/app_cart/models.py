@@ -1,7 +1,7 @@
-from django.contrib.auth.models import User
 from django.db import models
-
+from django.contrib.auth.models import User
 from app_item.models import Item
+from app_order.models import Order
 
 
 class CartItem(models.Model):
@@ -10,6 +10,7 @@ class CartItem(models.Model):
     quantity = models.IntegerField(default=1)
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='user_add_items')
     is_paid = models.BooleanField(default=False)
+    order = models.ForeignKey(Order, on_delete=models.CASCADE, blank=True, null=True, related_name='items_is_paid')
 
     objects = models.Manager()
 

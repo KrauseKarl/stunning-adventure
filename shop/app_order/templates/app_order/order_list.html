@@ -63,6 +63,15 @@
                                         <span class="Order-numberOrder">№00{{order.id}}</span>&#32;от&#32;
                                         <span class="Order-dateOrder">{{ order.created|date:"j F o" }}</span>
                                     </a>
+                                    <div  style="margin-top:30px;display:flex; justify-contents:center">
+                                        {% for item in order.items_is_paid.all|slice:":5" %}
+                                        <div style="display:inline;  margin:10px;">
+                                            <img src="{{item.item.image.url}}" width="50" height="50px"
+                                                 style="border-radius: 12px; box-shadow: 0 0 6px; padding: 5px">
+                                        </div>
+                                        {% endfor %}
+
+                                    </div>
                                 </div>
                                 <div class="row-block">
                                     <div class="Order-info Order-info_delivery">
@@ -80,7 +89,8 @@
                                     <div class="Order-info">
                                         <div class="Order-infoType">Общая стоимость:
                                         </div>
-                                        <div class="Order-infoContent"><span class="Order-price">200.99$</span>
+                                        <div class="Order-infoContent"><span
+                                                class="Order-price">{{order.total_sum}}$</span>
                                         </div>
                                     </div>
                                     <div class="Order-info Order-info_status">
