@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function(){
     console.log(scrollbar);
     document.querySelector('[href="#openModal"]').addEventListener('click',function(){
       document.body.style.overflow = 'hidden';
+
       document.querySelector('#openModal').style.marginLeft = scrollbar;
     });
     document.querySelector('[href="#close"]').addEventListener('click',function(){

@@ -4606,7 +4606,7 @@ a.Cart-title {
   }
 }
 .Slider_carousel {
-  background: none;
+  /*background: none;*/
   height: auto;
   width: 100%;
 }

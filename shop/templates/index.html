@@ -9,12 +9,12 @@
     <link href="/assets/favicon.ico" rel="shortcut icon">
     <link href="/assets/img/icons/favicon.ico" rel="shortcut icon">
 
-    <link rel="preload" href="/assets/fonts/Roboto/Roboto-Regular.woff"         as="font">
-    <link rel="preload" href="/assets/fonts/Roboto/Roboto-Italic.woff"          as="font">
-    <link rel="preload" href="/assets/fonts/Roboto/Roboto-Bold.woff"            as="font">
-    <link rel="preload" href="/assets/fonts/Roboto/Roboto-Bold_Italic.woff"     as="font">
-    <link rel="preload" href="/assets/fonts/Roboto/Roboto-Light.woff"           as="font">
-    <link rel="preload" href="/assets/fonts/Roboto/Roboto-Light_Italic.woff"    as="font">
+    <link rel="preload" href="/assets/fonts/Roboto/Roboto-Regular.woff" as="font">
+    <link rel="preload" href="/assets/fonts/Roboto/Roboto-Italic.woff" as="font">
+    <link rel="preload" href="/assets/fonts/Roboto/Roboto-Bold.woff" as="font">
+    <link rel="preload" href="/assets/fonts/Roboto/Roboto-Bold_Italic.woff" as="font">
+    <link rel="preload" href="/assets/fonts/Roboto/Roboto-Light.woff" as="font">
+    <link rel="preload" href="/assets/fonts/Roboto/Roboto-Light_Italic.woff" as="font">
 
     <link rel="stylesheet" type="text/css" href="/assets/css/fonts.css?v=65245665">
     <link rel="stylesheet" type="text/css" href="/assets/css/basic.css?v=65245665">
@@ -134,26 +134,23 @@
 
                         <!--  ITEM'S COUNTER OF THE CART   -->
 
-                        {% with total_items=request.user.user_cart.first.items.count %}
-                        {% if total_items > 0 %}
-                        <span class="CartBlock-amount">
-                                    {{ total_items }}
-                            </span>
-                        {% endif %}
-                        {% endwith %}
+                                <span class="CartBlock-amount">{{ all_items }}</span>
 
                         <!--  ITEM'S COUNTER OF THE CART   -->
 
                     </a>
                     <!--  ITEM'S COST COUNTER OF THE CART   -->
                     <div class="CartBlock-block">
-                        <span class="CartBlock-price">{{ cart_total_sum }}$</span>
+                        <span class="CartBlock-price">{{ cart_total_sum  }}$</span>
                     </div>
-                    <a class="CartBlock-block" href="{% url 'app_order:order_list'  %}">
+                    <!--  ITEM'S COST COUNTER OF THE CART   -->
+
+                    <!--    ORDERS  -->
+                    <a class="CartBlock-block" href="{% url 'app_order:order_list'   %}">
                         <img class="CartBlock-img" src="/assets/img/icons/orders.svg" width="25" height="25"
                              alt="order.svg"/>
                     </a>
-                    <!--  ITEM'S COST COUNTER OF THE CART   -->
+                    <!--    ORDERS  END-->
 
                 </div>
             </div>
@@ -380,9 +377,12 @@
         </div>
     </div>
 </footer>
-<script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
-<script src="https://code.jquery.com/jquery-3.5.0.js" integrity="sha256-r/AaFHrszJtwpe+tHyNi/XCfMxYpbsRg2Uqn0x3s2zc=" crossorigin="anonymous"></script>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+        crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.0.js" integrity="sha256-r/AaFHrszJtwpe+tHyNi/XCfMxYpbsRg2Uqn0x3s2zc="
+        crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <!--<script type="text/javascript" src="/assets/plg/jQuery/jquery-3.5.0.slim.min.js"></script>-->
 <script type="text/javascript" src="/assets/plg/form/jquery.form.js"></script>
 <script type="text/javascript" src="/assets/plg/form/jquery.maskedinput.min.js"></script>
