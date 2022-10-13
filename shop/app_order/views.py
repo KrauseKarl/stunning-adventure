@@ -80,7 +80,7 @@ class OrderList(PermissionRequiredMixin, ListView):
     def get_queryset(self):
         if self.request.user.is_authenticated:
             user = self.request.user
-            queryset = Order.objects.filter(user=user)  # TODO service def _get_order()
+            queryset = Order.objects.filter(user=user).order_by('-created')  # TODO service def _get_order()
             return queryset
         return False
 

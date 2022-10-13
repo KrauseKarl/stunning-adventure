@@ -1,26 +1,31 @@
 // АВТОЗАПОЛЕНИЕ ПОЛЕ ЗАКАЗА
-//document.querySelector('#step_4').addEventListener('click', function () {
-//        var name = document.getElementById('name').value
-//        var telephone = document.getElementById('telephone').value
-//        var email = document.getElementById('email').value
-//        var delivery_or = document.getElementById('delivery_or').innerText;
-//        var city = document.getElementById('city').value
-//        var address = document.getElementById('address').value
-//        var pay_my = document.getElementById('pay_my').innerText;
-//
-//        document.getElementById('name_result').innerHTML = name
-//        document.getElementById('telephone_result').innerHTML =  telephone
-//        document.getElementById('email_result').innerHTML =  email
-//        document.getElementById('pay_result').innerHTML =  pay_my
-//        document.getElementById('delivery_result').innerHTML = delivery_or
-//        document.getElementById('city_result').innerHTML =  city
-//        document.getElementById('address_result').innerHTML =  address
-//        document.getElementById('pay_result').innerHTML =  pay_my
-//
-//        localStorage.removeItem('order');
-//        }
-//    )
 
+$(document).ready( function() {
+    $('#step_4').on('click', function () {
+            var deliveryValue = $('input[name="delivery"]:checked').val();
+            var delivery = $('span[id="'+deliveryValue+'"]').text()
+            var payValue = $('input[name="pay"]:checked').val();
+            var pay = $('span[id="'+payValue+'"]').text()
+            var name = $('#name').val()
+            var telephone = $('#telephone').val()
+            var email = $('#email').val()
+            var city = $('#city').val()
+            var address = $('#address').val()
+
+            $('#name_result').text($('#name').val());
+            $('#telephone_result').html($('#telephone').val());
+            $('#email_result').html($('#email').val());
+            $('#city_result').text($('#city').val());
+            $('#address_result').html($('#address').val());
+            $('#delivery_result').html(delivery)
+            $('#pay_result').html(pay)
+        }
+    )
+    }
+);
+// АВТОЗАПОЛЕНИЕ ПОЛЕ ЗАКАЗА END
+
+// РАССКРЫТИЕ КОММЕНТАРИЕВ
 $(".Comment:gt(0)").hide();
 $("#hide_comment").css('display','none')
 var comm = $(".Comment")
@@ -42,16 +47,13 @@ $("#show_comment").on('click', function() {
 
   }
 );
+  РАССКРЫТИЕ КОММЕНТАРИЕВ END
 
 
+// Модальное окно
 
-
-
-//// Модальное окно
-//
 //// открыть по кнопке
 //$('.js-button-campaign').click(function() {
-//
 //	$('.js-overlay-campaign').fadeIn();
 //	$('.js-overlay-campaign').addClass('disabled');
 //});
@@ -82,7 +84,6 @@ $("#show_comment").on('click', function() {
 //		}
 //	}, 5000);
 //});
-//
 
 //
 //$(document).ready(function(){

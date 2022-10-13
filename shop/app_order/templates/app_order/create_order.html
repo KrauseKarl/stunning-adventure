@@ -50,9 +50,12 @@
 
 
             <div class="Section-content">
+                <!--     ORDER FORM -->
                 <form class="form" action="" method="post">
                     {% csrf_token %}
-                    <!--   Шаг 1. Параметры пользователя-->
+
+                    <!--   Шаг 1. Параметры пользователя -->
+
                     <div class="Order-block Order-block_OPEN" id="step1">
                         <header class="Section-header Section-header_sm">
                             <h2 class="Section-title">Шаг 1. Параметры пользователя</h2>
@@ -89,6 +92,7 @@
                     </div>
 
                     <!-- Шаг 2. Способ доставки-->
+
                     <div class="Order-block" id="step2">
                         <header class="Section-header Section-header_sm">
                             <h2 class="Section-title">Шаг 2. Способ доставки</h2>
@@ -96,16 +100,16 @@
                         <div class="form-group">
                             <div>
                                 <label class="toggle">
-                                    <input type="radio"  name="delivery" value="standard" checked="checked"/>
+                                    <input type="radio"  name="delivery" id='delivery_standard' value="standard" checked="checked"/>
                                     <span class="toggle-box"></span>
-                                    <span class="toggle-text" id="delivery_or">Обычная доставка</span>
+                                    <span class="toggle-text" id="standard">Обычная доставка</span>
                                 </label>
                             </div>
                             <div>
                                 <label class="toggle">
-                                    <input type="radio"  name="delivery" value="express"/>
+                                    <input type="radio"  name="delivery" id="delivery_express" value="express" />
                                     <span class="toggle-box"></span>
-                                    <span class="toggle-text" id="delivery_ex">Экспресс доставка</span>
+                                    <span class="toggle-text" id="express">Экспресс доставка</span>
                                 </label>
                             </div>
                         </div>
@@ -125,6 +129,10 @@
                             <a class="btn btn_success Order-next" href="#step3">Дальше</a>
                         </div>
                     </div>
+
+
+                    <!--    Шаг 3. Способ оплаты     -->
+
                     <div class="Order-block" id="step3">
                         <header class="Section-header Section-header_sm">
                             <h2 class="Section-title">Шаг 3. Способ оплаты</h2>
@@ -132,16 +140,16 @@
                         <div class="form-group">
                             <div>
                                 <label class="toggle">
-                                    <input type="radio" name="pay"  value="online" checked="checked"/>
+                                    <input type="radio" name="pay" id="pay_by_card" value="online" checked="checked"/>
                                     <span class="toggle-box"></span>
-                                    <span class="toggle-text" id="pay_my">Онлайн картой</span>
+                                    <span class="toggle-text" id="online">Онлайн картой</span>
                                 </label>
                             </div>
                             <div>
                                 <label class="toggle">
-                                    <input type="radio" name="pay" id="pay_other" value="someone"/>
+                                    <input type="radio" name="pay" id="pay_by_account" value="someone"/>
                                     <span class="toggle-box"></span>
-                                    <span class="toggle-text">Онлайн со случайного чужого счета</span>
+                                    <span class="toggle-text" id="someone">Онлайн со случайного чужого счета</span>
                                 </label>
                             </div>
                         </div>
@@ -151,7 +159,7 @@
                     </div>
 
 
-                    <!--                -->
+                    <!--    Шаг 4. Подтверждение заказа          -->
 
                     <div class="Order-block" id="step4">
                         <header class="Section-header Section-header_sm">
@@ -212,30 +220,30 @@
                             </div>
                             <div class="Cart Cart_order">
                                 {% for item in request.user.user_cart.first.items.all %}
-                                {% if not item.ordered %}
-                                <div class="Cart-product">
-                                    <div class="Cart-block Cart-block_row">
-                                        <div class="Cart-block Cart-block_pict">
-                                            <a class="Cart-pict" href="#">
-                                                <img class="Cart-img" src="{{ item.item.image.url}}"
-                                                     alt="card.jpg"/></a>
-                                        </div>
-                                        <div class="Cart-block Cart-block_info">
-                                            <a class="Cart-title" href="#">{{ item.item.title }}</a>
-                                            <div class="Cart-desc">{{ item.item.description }}
+                                    {% if not item.ordered %}
+                                        <div class="Cart-product">
+                                        <div class="Cart-block Cart-block_row">
+                                            <div class="Cart-block Cart-block_pict">
+                                                <a class="Cart-pict" href="#">
+                                                    <img class="Cart-img" src="{{ item.item.image.url}}"
+                                                         alt="card.jpg"/></a>
+                                            </div>
+                                            <div class="Cart-block Cart-block_info">
+                                                <a class="Cart-title" href="#">{{ item.item.title }}</a>
+                                                <div class="Cart-desc">{{ item.item.description }}
+                                                </div>
+                                            </div>
+                                            <div class="Cart-block Cart-block_price">
+                                                <div class="Cart-price">${{ item.item.get_price }}
+                                                </div>
                                             </div>
                                         </div>
-                                        <div class="Cart-block Cart-block_price">
-                                            <div class="Cart-price">${{ item.item.get_price }}
+                                        <div class="Cart-block Cart-block_row">
+                                            <div class="Cart-block Cart-block_amount">{{ item.quantity }} шт.
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="Cart-block Cart-block_row">
-                                        <div class="Cart-block Cart-block_amount">{{ item.quantity }} шт.
-                                        </div>
-                                    </div>
-                                </div>
-                                {% endif %}
+                                    {% endif %}
                                 {% endfor %}
 
                                 <div class="Cart-total">
@@ -254,6 +262,8 @@
                         </div>
                     </div>
                 </form>
+                <!--     ORDER FORM -->
+
             </div>
         </div>
     </div>
