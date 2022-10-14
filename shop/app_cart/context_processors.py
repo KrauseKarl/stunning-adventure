@@ -29,7 +29,7 @@ def get_all_items_in_cart(request):
 
 def cart(request):
     try:
-        cart = Cart.objects.get(user=request.user)
+        cart = Cart.objects.get(user=_get_user(request))
         return {'cart': cart}
     except:
         return {'cart': None}

@@ -12,7 +12,7 @@ class Profile(models.Model):
     date_joined = models.DateTimeField(auto_now_add=True, null=True)  # readonly_fields = ['date_joined',   ]
     review_items = models.ManyToManyField(Item, related_name='item_views', blank=True)
 
-
+    objects = models.Manager()
     # is_active = models.BooleanField(default=False)
     # is_staff = models.BooleanField(default=False)
 

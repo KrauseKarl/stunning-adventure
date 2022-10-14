@@ -646,6 +646,11 @@ Profile().init();
 var Cart = function(){
     return {
         init: function(){
+        $("a.btn.btn_success.btn_full").on('click', function() {
+          var item_id  = $(this).id;
+          alert(item_id);
+          console.log(item_id);
+        })
         }
     };
 };

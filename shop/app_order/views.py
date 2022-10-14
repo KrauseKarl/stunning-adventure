@@ -4,9 +4,12 @@ from django.shortcuts import render
 from django.views.generic import CreateView, TemplateView, ListView, DetailView
 
 from app_cart.models import Cart, CartItem
+from app_cart.services.cart_services import *
 from app_item.models import Item
 from app_order.forms import OrderForm
 from app_order.models import Order
+from app_order.services.order_services import get_order
+from app_user.services.user_service import get_user
 
 
 class OrderCreate(CreateView):
@@ -15,10 +18,10 @@ class OrderCreate(CreateView):
     form_class = OrderForm
 
     def form_valid(self, form):
-        # 1 user
-        user = self.request.user
-        # 2 cart(user)  # TODO service def _get_user_cart()
-        cart = Cart.objects.filter(user=user, ordered=False).order_by('-created').first()
+
+        user = get_user(self.request.user)                      # find user by func(user_service.get_user)
+
+        cart = get_active_cart(user)                              # find cart  by
         # 3 create order (user, cart, form) # TODO service def _create_order(user, cart, form)
         name = form.cleaned_data.get('name')
         email = form.cleaned_data.get('email')
@@ -80,7 +83,7 @@ class OrderList(PermissionRequiredMixin, ListView):
     def get_queryset(self):
         if self.request.user.is_authenticated:
             user = self.request.user
-            queryset = Order.objects.filter(user=user).order_by('-created')  # TODO service def _get_order()
+            queryset = get_order(user)  # TODO service def _get_order()
             return queryset
         return False
 

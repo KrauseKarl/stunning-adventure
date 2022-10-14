@@ -41,7 +41,7 @@
                 <a class="menu-link" href="{% url 'app_user:profile' user.id %}">Профиль</a>
             </li>
             <li class="menu-item">
-                <a class="menu-link" href="{% url 'app_order:order_list' pk=user.id %}">История заказов</a>
+                <a class="menu-link" href="{% url 'app_order:order_list'  %}">История заказов</a>
             </li>
             <li class="menu-item">
                 <a class="menu-link" href="{% url 'app_user:history_view' user.id %}">История просмотра</a>

@@ -148,7 +148,8 @@
                                     </div>
                                 </div>
                                 <div class="modal-footer-my">
-                                    <a class="btn btn_success btn_full" href="{% url 'app_cart:add_cart' pk=item.pk %} ">
+                                    <a class="btn btn_success btn_full" id="{{item.pk}}"
+                                       href="{% url 'app_cart:add_cart' pk=item.pk %} ">
                                         <span>Добавить в корзину</span>
                                     </a>
                                 </div>

@@ -10,6 +10,7 @@ class OrderItemInline(admin.StackedInline):
 
 class CartItemAdmin(admin.ModelAdmin):
     list_display = ['item', 'quantity', 'user', 'is_paid']
+    list_filter = ('user', 'is_paid',)
 
 
 class CartAdmin(admin.ModelAdmin):

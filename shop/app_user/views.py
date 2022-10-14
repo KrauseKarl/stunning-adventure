@@ -3,6 +3,7 @@ from django.contrib.auth import authenticate, login
 from django.contrib.auth.base_user import BaseUserManager
 from django.contrib.auth.views import LoginView, LogoutView, PasswordResetView
 from django.contrib.messages.views import SuccessMessageMixin
+from django.http import HttpResponseRedirect
 from django.shortcuts import render, redirect
 from django.template.loader import render_to_string
 from django.urls import reverse_lazy, reverse
@@ -12,6 +13,8 @@ from django.utils.encoding import force_bytes, force_str
 from django.utils.http import urlsafe_base64_decode, urlsafe_base64_encode
 from django.contrib.sites.shortcuts import get_current_site
 
+from app_cart.models import Cart, CartItem
+from app_item.models import Item
 from app_order.models import Order
 from app_user.forms import RegisterUserForm, UpdateUserForm
 from app_user.models import Profile
@@ -23,6 +26,10 @@ class UserLoginView(LoginView):
     template_name = 'users/login.html'
     redirect_field_name = None
     redirect_authenticated_user = True
+
+    # def dispatch(self, request, *args, **kwargs):
+    #
+    #     return super().dispatch(request, *args, **kwargs)
 
     def get_success_url(self):
         return reverse('app_user:account', kwargs={'pk': self.request.user.pk})
@@ -93,8 +100,6 @@ class CreateProfile(SuccessMessageMixin, CreateView):
         #     return redirect('app_user:register')
 
     def form_invalid(self, form):
-
-
         messages = 'Такой пользователь уже зарегистрирован'
         return self.render_to_response(self.get_context_data(form=form, messages=messages))
 
@@ -154,7 +159,6 @@ def account_activate(request, uidb64, token):
         return redirect('app_user:invalid_activation')
 
 
-
 class ActivatedAccount(TemplateView):
     model = User
     template_name = 'users/activated_successfully.html'
@@ -173,4 +177,3 @@ class InvalidActivatedAccount(TemplateView):
         context = self.get_context_data(**kwargs)
         context['user'] = self.request.user
         return self.render_to_response(context)
-
