@@ -78,6 +78,8 @@ TEMPLATES = [
                 'app_item.context_processors.categories',
                 'app_cart.context_processors.get_cart',
                 'app_cart.context_processors.cart',
+                'app_cart.context_processors.get_all_items_in_cart',
+                'app_order.context_processors.order',
             ],
         },
     },

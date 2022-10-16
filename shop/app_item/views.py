@@ -57,9 +57,7 @@ class ItemList(FilterMixin, TagMixin, ListView):
     context_object_name = 'items'
     queryset = Item.objects.filter(is_available=True).order_by('-reviews')
 
-
     def get(self, request, category=None, tag=None, order_by=None, color=None, **kwargs):
-
         if category:
             category = get_object_or_404(Category, slug=category)
             queryset = self.queryset.filter(category=category.id)

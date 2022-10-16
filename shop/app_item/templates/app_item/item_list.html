@@ -85,7 +85,7 @@
                     </div>
                     <!--     TAGS   END     -->
                 </div>
-                 <div class="Section-columnSection">
+                <div class="Section-columnSection">
                     <header class="Section-header">
                         <strong class="Section-title">Popular tags
                         </strong>
@@ -97,7 +97,7 @@
 
                             {% for tag in tags %}
                             <a class="btn btn_default btn_sm"
-                                href="{% url 'app_item:item_tag' tag=tag.slug %}">{{tag.title}}</a>
+                               href="{% url 'app_item:item_tag' tag=tag.slug %}">{{tag.title}}</a>
                             {% endfor %}
                         </div>
                     </div>
@@ -125,33 +125,67 @@
 
                 <div class="Cards">
                     {% for item in items %}
+
+
+                     <!--    MODAL   -->
+                    <div id="openModal{{item.pk}}" class="modal-my">
+                        <div class="modal-dialog-my">
+                            <div class="modal-content-my">
+                                <div class="modal-header-my">
+                                    <h1 class="modal-title-my">Добавить товар в корзину</h1>
+                                    <a href="#close" title="Close" class="close-my">×</a>
+                                </div>
+                                <div class="modal-body-my">
+                                    <div style="display:inline;  margin:10px;">
+                                        <img src="{{item.image.url}}" width=150" height="150px"
+                                             style="border-radius: 12px; box-shadow: 0 0 6px; padding: 5px">
+                                    </div>
+                                    <div class="modal-body-my modal-price-my">
+                                        <strong class="Card-title">{{item.title}}</strong>
+                                        <div class="Card-cost">
+                                            <span class="Card-price">${{item.price}}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer-my">
+                                    <a class="btn btn_success btn_full" id="{{item.pk}}"
+                                       href="{% url 'app_cart:add_cart' pk=item.pk %} ">
+                                        <span>Добавить в корзину</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--    MODAL   -->
+
+
+
                     <div class="{% if forloop.counter < 5 %}Card
                                 {% elif forloop.counter < 7 %}Card hide_md
                                 {% else %}Card hide_md hide_1450
                                 {% endif %}">
                         <a class="Card-picture" href="{% url 'app_item:item_detail' item.pk %}">
-
-                            <img src="{{item.image.url }}" alt="card.jpg"/>
+                            <img id="image_item" src="{{item.image.url }}" alt="card.jpg"/>
                         </a>
                         <div class="Card-content">
-                            <strong class="Card-title">
-                                <a href="product.html">{{item.title|truncatechars:10}}|{{item.reviews}}|{{item.comments}}</a>
+                            <strong class="Card-title" >
+                                <a href="{% url 'app_item:item_detail' item.pk %}" data-value="{{item.title}}">
+                                     {{item.title|truncatechars:10}}|{{item.stock}}|{{item.comments}}</a>
                             </strong>
                             <div class="Card-description">
                                 <div class="Card-cost">
-                                    <span class="Card-price">${{item.price}}</span>
+                                    <span class="Card-price" id="price_item">${{item.price}}</span>
                                 </div>
                                 <div class="Card-category">{% if item.category.parent_category %}
                                     {{item.category.parent_category}} / {{item.category}}
                                     {% else %}{{item.category}}
                                     {% endif %}
                                 </div>
-
                                 <div class="Card-hover">
-                                    <a class="Card-btn" href="{% url 'app_cart:add_cart' pk=item.pk %}">
-                                        <img src="/assets/img/icons/card/cart.svg" alt="cart.svg"/></a>
+                                    <a href="#openModal{{item.pk}}">
+                                        <img src="/assets/img/icons/card/cart.svg" alt="cart.svg"/>
+                                    </a>
                                 </div>
-
                             </div>
                         </div>
                     </div>
@@ -184,6 +218,7 @@
         </div>
     </div>
 </div>
+
 
 
 {% endblock %}

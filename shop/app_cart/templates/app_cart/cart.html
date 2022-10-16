@@ -87,22 +87,67 @@
                 </div>
                 {% endfor %}
 
+                <!-- TOTAL SUM AND TOTAL QUANTITY OF THE CART -->
                 {% if cart.items.count > 0 %}
                 <div class="Cart-total">
                     <div class="Cart-block Cart-block_total">
                         <strong class="Cart-title">Итого:</strong>
-                        <span class="Cart-total-quantity">{{cart.get_total_quantity}} </span>|
-                         <span class="Cart-total-price" data-value="{{ cart.get_total_price }} ">{{cart.get_total_price }} $ </span>
+                        <span class="Cart-total-price" data-value="{{ cart.get_total_price }} ">{{cart.get_total_price }}$</span>
+                        &#160;&#160;&#160;&#160;
+                        <strong class="Cart-title">Количество товаров:</strong>
+                        <span class="Cart-total-quantity Cart-total-price">{{cart.get_total_quantity}}</span>
                     </div>
                     <div class="Cart-block">
-<!--                        <a class="btn btn_success btn_lg" href="order.html" onclick="alert('заказ оформлен')">Оформить заказ</a>-->
-<!--                    <div class="btn btn_success btn_lg js-button-campaign"><span>Оформить заказ</span></div>-->
+                        <!-- <a class="btn btn_success btn_lg" href="order.html" onclick="alert('заказ оформлен')">Оформить заказ</a>-->
+                        <!--                        <div class="btn btn_success btn_lg js-button-campaign"><span>Оформить заказ</span></div>-->
+
+                        {% if cart.items.all %}
+                        <a href="#openModal" class="btn btn_success btn_lg ">
+                             <span>Оформить заказ</span>
+                        </a>
+                        {% else %}
+                         <a href="{% url 'main_page'  %}" class="btn btn_success btn_lg js-button-campaign">
+                               <span>Вернуться к покупкам</span></a>
+                        {% endif %}
+
+
+
+<!--    MODAL   -->
+<div id="openModal" class="modal-my">
+    <div class="modal-dialog-my">
+        <div class="modal-content-my">
+            <div class="modal-header-my">
+                <h2 class="modal-title-my">Оформить заказ</h2>
+                <a href="#close" title="Close" class="close-my">×</a>
+            </div>
+            <div class="modal-body-my">
+                    {% for item in cart.items.all|slice:":5" %}
+                    <div style="display:inline;  margin:10px;">
+                        <img src="{{item.item.image.url}}" width="80" height="80px"
+                             style="border-radius: 12px; box-shadow: 0 0 6px; padding: 5px">
+                    {% endfor %}
+            </div>
+            <div class="modal-body-my modal-price-my">
+                <strong class="Cart-title">Итого:</strong>
+                <span class="Cart-total-price" data-value="{{ cart.get_total_price }} ">
+                    {{cart.get_total_price }}$</span>
+            </div>
+            </div>
+            <div class="modal-footer-my">
+                <a href="{% url 'app_order:order_create'  %}" class="btn  btn_primary btn_full">
+                    <span>Оформить заказ</span></a>
+            </div>
+        </div>
+    </div>
+</div>
+<!--    MODAL   -->
+
                     </div>
                 </div>
+                <!-- TOTAL SUM AND TOTAL QUANTITY OF THE CART END-->
+
                 {% endif %}
             </form>
-               <a href="{% url 'app_order:order_create' pk=cart.user.pk %}" class="btn btn_success btn_lg js-button-campaign">
-                   <span>Оформить заказ</span></a>
         </div>
     </div>
 
@@ -110,14 +155,5 @@
 
 </div>
 
-    <div class="overlay js-overlay-campaign">
-        <div class="popup js-popup-campaign">
-            <h2>Внимание, акция!</h2>
-            На протяжении 40 лет BMW 3 серии представляет собой идеальное воплощение спортивного седана.
-            В шестом поколении комбинация динамики, непревзойденной управляемости, инновационных функций и
-            максимальной практичности впечатляет как никогда раньше.
-            <div class="close-popup js-close-campaign"></div>
-        </div>
-    </div>
 
 {% endblock %}

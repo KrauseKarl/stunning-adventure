@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="ru">
+{% load cache %}
 <head>
     <title>Megano</title>
     <meta name="description" content="Описание страницы">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <link href="/assets/favicon.ico" rel="shortcut icon">
     <link href="/assets/img/icons/favicon.ico" rel="shortcut icon">
 
     <link rel="preload" href="/assets/fonts/Roboto/Roboto-Regular.woff" as="font">
@@ -28,25 +30,36 @@
             <div class="row ControlPanel-row">
                 <div class="row-block">
                     <div class="row ControlPanel-rowSplit">
-                        <div class="row-block"><a class="ControlPanel-title" href="#">Free Delivery</a>
+                        <div class="row-block">
+                            <a class="ControlPanel-title" href="#">Free Delivery</a>
                         </div>
-                        <div class="row-block hide_700"><span class="ControlPanel-title">Follow Us</span>
+                        <div class="row-block hide_700">
+                            <span class="ControlPanel-title">Follow Us</span>
                             <ul class="menu menu_img menu_smallImg ControlPanel-menu">
-                                <li class="menu-item"><a class="menu-link" href="#">
-                                    <img src="/assets/img/icons/socialHeader/fb.svg" alt="fb.svg"/>
-                                </a>
+                                <li class="menu-item">
+                                    <a class="menu-link" href="#">
+                                        <img src="/assets/img/icons/socialHeader/fb.svg" alt="fb.svg"/>
+                                    </a>
                                 </li>
-                                <li class="menu-item"><a class="menu-link" href="#"><img
-                                        src="/assets/img/icons/socialHeader/tw.svg" alt="tw.svg"/></a>
+                                <li class="menu-item">
+                                    <a class="menu-link" href="#">
+                                        <img src="/assets/img/icons/socialHeader/tw.svg" alt="tw.svg"/>
+                                    </a>
                                 </li>
-                                <li class="menu-item"><a class="menu-link" href="#"><img
-                                        src="/assets/img/icons/socialHeader/in.svg" alt="in.svg"/></a>
+                                <li class="menu-item">
+                                    <a class="menu-link" href="#">
+                                        <img src="/assets/img/icons/socialHeader/in.svg" alt="in.svg"/>
+                                    </a>
                                 </li>
-                                <li class="menu-item"><a class="menu-link" href="#"><img
-                                        src="/assets/img/icons/socialHeader/pt.svg" alt="pt.svg"/></a>
+                                <li class="menu-item">
+                                    <a class="menu-link" href="#">
+                                        <img src="/assets/img/icons/socialHeader/pt.svg" alt="pt.svg"/>
+                                    </a>
                                 </li>
-                                <li class="menu-item"><a class="menu-link" href="#"><img
-                                        src="/assets/img/icons/socialHeader/mail.svg" alt="mail.svg"/></a>
+                                <li class="menu-item">
+                                    <a class="menu-link" href="#">
+                                        <img src="/assets/img/icons/socialHeader/mail.svg" alt="mail.svg"/>
+                                    </a>
                                 </li>
                             </ul>
                         </div>
@@ -84,11 +97,14 @@
     </div>
     <div class="wrap">
         <div class="row Header-rowMain">
-            <div class="row-block Header-logo"><a class="logo" href="{% url 'main_page' %}">
-                <img class="logo-image" src="/assets/img/logo.png" alt="logo.png"/></a>
+            <div class="row-block Header-logo">
+                <a class="logo" href="{% url 'main_page' %}">
+<!--                    <img class="logo-image" src="/assets/img/logo.png" alt="logo.png"/>-->
+                    {{ request.user}} {{ request.session.my_cart|slice:":2" }}...
+                </a>
             </div>
 
-<!--    NAVBAR  -->
+            <!--    NAVBAR  -->
             <nav class="row-block row-block_right Header-menu">
                 <div class="menuModal" id="navigate">
                     <ul class="menu menu_main">
@@ -109,37 +125,37 @@
                     </ul>
                 </div>
             </nav>
-<!--    NAVBAR END -->
+            <!--    NAVBAR END -->
 
-<!--    CART  -->
+            <!--    CART  -->
             <div class="row-block">
                 <div class="CartBlock">
                     <a class="CartBlock-block" href="{% url 'app_cart:cart' %}">
                         <img class="CartBlock-img" src="/assets/img/icons/cart.svg" alt="cart.svg"/>
 
-<!--  ITEM'S COUNTER OF THE CART   -->
-                        <span class="CartBlock-amount">
-                            {% with total_items=request.user.user_add_items.count  %}
-                                {% if total_items > 0 %}
-                                    {{ total_items }}
-                                {% else %}
-                                    0
-                                {% endif %}
-                            {% endwith %}
-                        </span>
-<!--  ITEM'S COUNTER OF THE CART   -->
+                        <!--  ITEM'S COUNTER OF THE CART   -->
+
+                                <span class="CartBlock-amount">{{ all_items }}</span>
+
+                        <!--  ITEM'S COUNTER OF THE CART   -->
 
                     </a>
-
- <!--  ITEM'S COST COUNTER OF THE CART   -->
+                    <!--  ITEM'S COST COUNTER OF THE CART   -->
                     <div class="CartBlock-block">
-                        <span class="CartBlock-price">{{ cart_total_sum }} $</span>
+                        <span class="CartBlock-price">{{ cart_total_sum  }}$</span>
                     </div>
-<!--  ITEM'S COST COUNTER OF THE CART   -->
+                    <!--  ITEM'S COST COUNTER OF THE CART   -->
+
+                    <!--    ORDERS  -->
+                    <a class="CartBlock-block" href="{% url 'app_order:order_list'   %}">
+                        <img class="CartBlock-img" src="/assets/img/icons/orders.svg" width="25" height="25"
+                             alt="order.svg"/>
+                    </a>
+                    <!--    ORDERS  END-->
 
                 </div>
             </div>
-<!--    CART END -->
+            <!--    CART END -->
 
             <div class="row-block Header-trigger"><a class="menuTrigger" href="#navigate">
                 <div class="menuTrigger-content">Показать навигацию
@@ -150,6 +166,7 @@
     </div>
     <div class="Header-searchWrap">
         <div class="wrap">
+            {% cache 600 department_navbar %}
             <div class="Header-categories">
                 <div class="CategoriesButton">
                     <div class="CategoriesButton-title">
@@ -160,27 +177,28 @@
                         </div>
                     </div>
                     <div class="CategoriesButton-content">
-                        {% for cat in categories %}
-                        {% if not cat.parent_category %}
+                        {% for category in categories %}
+                        {% if not category.parent_category %}
                         <div class="CategoriesButton-link">
-                            <a href="{% url 'app_item:item_category' category=cat.slug %}">
+                            <a href="{% url 'app_item:item_category' category=category.slug %}">
                                 <div class="CategoriesButton-icon">
-                                    <img src="{{cat.image.url}}" width="15px"/>
+                                    <img src="{{category.image.url}}" width="15px"/>
                                 </div>
-                                <span class="CategoriesButton-text">{{cat.title}}({{cat.item_count}})</span>
+                                <span class="CategoriesButton-text">{{category.title}}({{category.item_count}})</span>
 
-                                {% if cat.sub_categories.all.count > 0 %}
+                                {% if category.sub_categories.all.count > 0 %}
                                 <a class="CategoriesButton-arrow" href="#"></a>
                                 <div class="CategoriesButton-submenu">
-                                    {% for c in cat.sub_categories.all %}
+
+                                    {% for sub_category in category.sub_categories.all %}
                                     <a class="CategoriesButton-link"
-                                       href="{% url 'app_item:item_category' category=c.slug %}">
+                                       href="{% url 'app_item:item_category' category=sub_category.slug %}">
                                         <div class="CategoriesButton-icon">
-                                            <img src="{{ c.image.url }}" width="15px"/>
+                                            <img src="{{ sub_category.image.url }}" width="15px"/>
                                         </div>
                                         <span class="CategoriesButton-text">
-                                                        {{c.title|truncatechars:10}} ({{c.items.count }})
-                                                    </span>
+                                            {{sub_category.title|truncatechars:10}} ({{sub_category.items.count }})
+                                        </span>
                                     </a>
                                     {% endfor %}
                                 </div>
@@ -193,6 +211,7 @@
                     </div>
                 </div>
             </div>
+            {% endcache %}
             <div class="Header-searchLink"><img src="/assets/img/icons/search.svg" alt="search.svg"/>
             </div>
             <div class="Header-search">
@@ -359,13 +378,22 @@
         </div>
     </div>
 </footer>
-<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
-<script type="text/javascript" src="/assets/plg/jQuery/jquery-3.5.0.slim.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+        crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.0.js" integrity="sha256-r/AaFHrszJtwpe+tHyNi/XCfMxYpbsRg2Uqn0x3s2zc="
+        crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<!--<script type="text/javascript" src="/assets/plg/jQuery/jquery-3.5.0.slim.min.js"></script>-->
 <script type="text/javascript" src="/assets/plg/form/jquery.form.js"></script>
 <script type="text/javascript" src="/assets/plg/form/jquery.maskedinput.min.js"></script>
+
 <script type="text/javascript" src="/assets/plg/range/ion.rangeSlider.min.js"></script>
 <script type="text/javascript" src="/assets/plg/Slider/slick.min.js"></script>
 <script type="text/javascript" src="/assets/js/scripts.js"></script>
+<script type="text/javascript" src="/assets/js/my_scripts.js"></script>
+<script type="text/javascript" src="/assets/js/new.js"></script>
 </body>
 </html>
-</html>
+
+

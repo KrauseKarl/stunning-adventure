@@ -7,13 +7,12 @@ from app_item.models import Item
 
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='profile')
-    group = models.ForeignKey(Group, on_delete=models.CASCADE, related_name='profiles')
     avatar = models.ImageField(upload_to='avatar/')
     telephone = models.CharField(max_length=10)
     date_joined = models.DateTimeField(auto_now_add=True, null=True)  # readonly_fields = ['date_joined',   ]
     review_items = models.ManyToManyField(Item, related_name='item_views', blank=True)
 
-
+    objects = models.Manager()
     # is_active = models.BooleanField(default=False)
     # is_staff = models.BooleanField(default=False)
 

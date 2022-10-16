@@ -33,12 +33,17 @@
                     <div class="Section-columnContent">
                         <div class="NavigateProfile">
                             <ul class="menu menu_vt">
-                                <li class="menu-item"><a class="menu-link" href="account.html">Личный кабинет</a>
+                                <li class="menu-item">
+                                    <a class="menu-link" href="{% url 'app_user:account' user.id %}">
+                                        Личный кабинет</a>
                                 </li>
-                                <li class="menu-item"><a class="menu-link" href="profile.html">Профиль</a>
+                                <li class="menu-item">
+                                    <a class="menu-link" href="{% url 'app_user:profile' user.id %}">
+                                        Профиль</a>
                                 </li>
-                                <li class="menu-item_ACTIVE menu-item"><a class="menu-link" href="historyorder.html">История
-                                    заказов</a>
+                                <li class="menu-item_ACTIVE menu-item">
+                                    <a class="menu-link" href="{% url 'app_user:history_view' user.id %}">
+                                        История заказов</a>
                                 </li>
 
                             </ul>
@@ -54,28 +59,38 @@
                         <div class="Order-personal">
                             <div class="row">
                                 <div class="row-block">
-                                    <a class="Order-title" href="oneorder.html">Заказ&#32;
+                                    <a class="Order-title" href="{% url 'app_order:order_detail' pk=order.pk %}">Заказ&#32;
                                         <span class="Order-numberOrder">№00{{order.id}}</span>&#32;от&#32;
-                                        <span class="Order-dateOrder">{{ order.created| date:" d.m.Y" }}</span>
+                                        <span class="Order-dateOrder">{{ order.created|date:"j F o" }}</span>
                                     </a>
+                                    <div  style="margin-top:30px;display:flex; justify-contents:center">
+                                        {% for item in order.items_is_paid.all|slice:":5" %}
+                                        <div style="display:inline;  margin:10px;">
+                                            <img src="{{item.item.image.url}}" width="50" height="50px"
+                                                 style="border-radius: 12px; box-shadow: 0 0 6px; padding: 5px">
+                                        </div>
+                                        {% endfor %}
+
+                                    </div>
                                 </div>
                                 <div class="row-block">
                                     <div class="Order-info Order-info_delivery">
                                         <div class="Order-infoType">Тип доставки:
                                         </div>
-                                        <div class="Order-infoContent">{{ order.delivery }}
+                                        <div class="Order-infoContent">{{ order.get_delivery_display }}
                                         </div>
                                     </div>
                                     <div class="Order-info Order-info_pay">
                                         <div class="Order-infoType">Оплата:
                                         </div>
-                                        <div class="Order-infoContent">{{order.pay_type}}
+                                        <div class="Order-infoContent">{{order.get_pay_display}}
                                         </div>
                                     </div>
                                     <div class="Order-info">
                                         <div class="Order-infoType">Общая стоимость:
                                         </div>
-                                        <div class="Order-infoContent"><span class="Order-price">200.99$</span>
+                                        <div class="Order-infoContent"><span
+                                                class="Order-price">{{order.total_sum}}$</span>
                                         </div>
                                     </div>
                                     <div class="Order-info Order-info_status">

@@ -1,6 +1,8 @@
 from dataclasses import dataclass, InitVar
 from datetime import datetime, timezone
 from typing import List, Dict, Union
+
+from django.core.exceptions import ObjectDoesNotExist
 from django.db.models.query import QuerySet
 from django.contrib.auth.models import User
 from django.core.cache.utils import make_template_fragment_key
@@ -21,6 +23,13 @@ def get_ip(request):
 def get_session_key(request):
     session_key = request.META.get('session_key', None)
     return session_key
+
+
+def get_item(item):
+    try:
+        return Item.objects.get(id=item)
+    except ObjectDoesNotExist:
+        return None
 
 
 class CountView:
