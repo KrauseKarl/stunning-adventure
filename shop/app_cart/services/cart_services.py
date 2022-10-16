@@ -28,7 +28,6 @@ def get_active_cart(request, user):
                 price = float(i['price'])
                 cart_item = CartItem.objects.create(item=item, price=price, user=user)
 
-                print(cart_item)
                 cart.items.add(cart_item)
                 cart.save()
             del request.session['my_cart']

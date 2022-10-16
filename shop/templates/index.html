@@ -100,7 +100,7 @@
             <div class="row-block Header-logo">
                 <a class="logo" href="{% url 'main_page' %}">
 <!--                    <img class="logo-image" src="/assets/img/logo.png" alt="logo.png"/>-->
-                    {{ request.user}} {{ request.session.my_cart|slice:":2" }}...
+                    {{ request.user.get_full_name}} {{ request.session.my_cart|slice:":2" }}...
                 </a>
             </div>
 

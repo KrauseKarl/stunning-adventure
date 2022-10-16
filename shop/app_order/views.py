@@ -19,9 +19,9 @@ class OrderCreate(CreateView):
 
     def form_valid(self, form):
 
-        user = get_user(self.request.user)                      # find user by func(user_service.get_user)
+        user = get_user(self.request)                      # find user by func(user_service.get_user)
 
-        cart = get_active_cart(user)                              # find cart  by
+        cart = get_active_cart(self.request, user)                              # find cart  by
         # 3 create order (user, cart, form) # TODO service def _create_order(user, cart, form)
         name = form.cleaned_data.get('name')
         email = form.cleaned_data.get('email')
